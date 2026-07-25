@@ -1,9 +1,9 @@
 # Rebuild the paper's figures.
 #
 #   make figures    # everything the shipped data supports
-#   make all        # also the figures needing BENCHMAXX_DATA
+#   make all        # also the figures needing BENCHMARK_OPT_DATA
 #
-# Output goes to repro/out (override with BENCHMAXX_FIGURES).
+# Output goes to repro/out (override with BENCHMARK_OPT_FIGURES).
 
 PY ?= python
 
@@ -23,7 +23,7 @@ CELL_FIGS = \
 	regen_whitebox_figs.py \
 	ortho_switch_fig.py
 
-# Need a full results root in BENCHMAXX_DATA; see REPRODUCE.md.
+# Need a full results root in BENCHMARK_OPT_DATA; see REPRODUCE.md.
 DATA_FIGS = \
 	masking_datasets_fig.py \
 	masking_voice_fig.py \
@@ -35,12 +35,12 @@ figures:
 	@echo "== consfull_fig.py robustness"
 	@cd figures && $(PY) consfull_fig.py robustness
 	@echo
-	@echo "Wrote $$(ls $${BENCHMAXX_FIGURES:-out}/*.png | wc -l) PNGs to $${BENCHMAXX_FIGURES:-repro/out}"
+	@echo "Wrote $$(ls $${BENCHMARK_OPT_FIGURES:-out}/*.png | wc -l) PNGs to $${BENCHMARK_OPT_FIGURES:-repro/out}"
 
 all: figures
 	@for f in $(DATA_FIGS); do echo "== $$f"; (cd figures && $(PY) $$f) || exit 1; done
 
-# Re-derive the shipped cells from raw model outputs. Needs BENCHMAXX_DATA.
+# Re-derive the shipped cells from raw model outputs. Needs BENCHMARK_OPT_DATA.
 cells:
 	$(PY) precompute_cells.py
 

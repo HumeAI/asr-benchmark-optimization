@@ -1,7 +1,7 @@
 """Orthographic switch rate: does a model's spelling follow the corpus?
 
 For a convention family whose arms sound identical (see
-:mod:`benchmaxx.conventions`), split the clips by which arm the *reference*
+:mod:`benchmark_optimization.conventions`), split the clips by which arm the *reference*
 uses. A model that transcribes audio has one habit and keeps it, so it scores
 high on the arm matching its habit and near zero on the other. A model whose
 output follows the reference scores high on both.
@@ -19,7 +19,7 @@ Two ways to obtain the arms, with different confounds:
 
 ``within-dataset``
     Both arms appear inside one corpus. This holds for compound spacing
-    (:data:`benchmaxx.conventions.SPACING_PAIRS`) and is the cleanest test:
+    (:data:`benchmark_optimization.conventions.SPACING_PAIRS`) and is the cleanest test:
     speaker, register, and recording conditions are matched by construction.
 
 ``cross-dataset``

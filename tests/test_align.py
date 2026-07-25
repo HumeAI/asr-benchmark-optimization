@@ -1,4 +1,4 @@
-from benchmaxx import align
+from benchmark_optimization import align
 
 
 def test_missed_indices_covers_delete_and_replace():

@@ -1,7 +1,7 @@
 """Orthographic switch rate, one panel per convention scope.
 
 Rebuilds the paper's switch-rate panels from ``repro/data/ortho_switch.json``,
-which ``repro/precompute_cells.py`` derives with :mod:`benchmaxx.ortho`. Unlike
+which ``repro/precompute_cells.py`` derives with :mod:`benchmark_optimization.ortho`. Unlike
 ``paired_grids.py`` — the original generator, which re-reads every model's raw
 output — this runs offline in a clean clone.
 

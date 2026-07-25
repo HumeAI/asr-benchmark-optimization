@@ -107,7 +107,7 @@ class PredictionSet:
 
         ``numbers`` additionally rewrites spelled-out numbers as digits, so a
         word/digit formatting difference does not register as a reference error.
-        See :func:`benchmaxx.normalize.canonicalize_numbers`.
+        See :func:`benchmark_optimization.normalize.canonicalize_numbers`.
         """
         from .normalize import canonicalize_numbers, normalize
 

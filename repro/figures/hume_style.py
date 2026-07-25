@@ -132,7 +132,7 @@ _FELLIX_SEARCH_PATHS: tuple[Path, ...] = (
     Path.home() / "Library" / "Fonts",
     Path("/Library/Fonts"),
     # Fellix .otf shipped with the Hume study-runner on the cluster
-    Path(os.environ.get("BENCHMAXX_FONT_DIR", "")) if os.environ.get("BENCHMAXX_FONT_DIR") else Path("/nonexistent"),
+    Path(os.environ.get("BENCHMARK_OPT_FONT_DIR", "")) if os.environ.get("BENCHMARK_OPT_FONT_DIR") else Path("/nonexistent"),
     Path(os.environ.get("HUME_FELLIX_DIR", "")) if os.environ.get("HUME_FELLIX_DIR") else Path(""),
 )
 

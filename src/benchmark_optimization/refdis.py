@@ -102,7 +102,7 @@ def find_ref_edits(
     """Find reference errors in one clip and score every model against them.
 
     ``ref_tokens`` must already be normalized and tokenized (see
-    :func:`benchmaxx.normalize.tokenize`); ``panel_hyps`` and ``model_hyps`` map
+    :func:`benchmark_optimization.normalize.tokenize`); ``panel_hyps`` and ``model_hyps`` map
     model name to a normalized hypothesis string. The panel may overlap the
     models under test — a panel member is scored like any other model, and its
     own vote is what it is.

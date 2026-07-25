@@ -1,4 +1,4 @@
-# benchmaxx — quantifying benchmark optimization in ASR
+# Quantifying Benchmark Optimization in ASR Models
 
 Code for *Quantifying Benchmark Optimization in ASR Models*.
 
@@ -62,7 +62,7 @@ predictions/
 ### Reference disagreement
 
 ```bash
-benchmaxx ref-disagreement \
+benchmark-optimization ref-disagreement \
   --preds predictions/ \
   --panel whisper-large-v3,voxtral-mini-3b,qwen3-asr-0.6b,moonshine-streaming-medium
 ```
@@ -91,7 +91,7 @@ validated the flagged edits against human judgement.
 ### Orthographic switch rate
 
 ```bash
-benchmaxx switch-rate --preds predictions/ --spacing
+benchmark-optimization switch-rate --preds predictions/ --spacing
 ```
 
 ```
@@ -126,7 +126,7 @@ Two ways to get the arms, with different confounds:
   honorific comparison uses two read-speech corpora with opposite conventions.
 
 Convention families live in
-[`src/benchmaxx/conventions.py`](src/benchmaxx/conventions.py), with the
+[`src/benchmark_optimization/conventions.py`](src/benchmark_optimization/conventions.py), with the
 acoustic-identity check recorded for each and the reason each rejected family
 was rejected. Adding a family is a few lines; the bar is that a fluent speaker
 renders both arms identically.
@@ -134,7 +134,7 @@ renders both arms identically.
 ### As a library
 
 ```python
-from benchmaxx import load_dir, conventions, ortho, refdis, tokenize
+from benchmark_optimization import load_dir, conventions, ortho, refdis, tokenize
 
 preds = load_dir("predictions/")
 print(preds.coverage())            # clips per model — catches partial runs
@@ -201,7 +201,7 @@ clean clone. The audio-side probes need model weights and the source corpora.
 ## Layout
 
 ```
-src/benchmaxx/        prediction-only probes — the reusable part
+src/benchmark_optimization/        prediction-only probes — the reusable part
   align.py            word-level alignment primitives
   refdis.py           reference-error reproduction
   ortho.py            orthographic switch rate
@@ -228,5 +228,5 @@ docs/                 leaderboard integration notes
 
 ## License
 
-Apache-2.0. The en-GB→en-US spelling map in `src/benchmaxx/data/` is from
+Apache-2.0. The en-GB→en-US spelling map in `src/benchmark_optimization/data/` is from
 [openai/whisper](https://github.com/openai/whisper) (MIT).

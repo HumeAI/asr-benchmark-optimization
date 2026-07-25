@@ -170,7 +170,7 @@ FAMILIES: tuple[Family, ...] = (
 # because both arms are common inside a single read-speech corpus, which makes
 # them the cleanest within-dataset switch test available. Individually each is
 # too rare for a tight interval, so they are normally pooled — see
-# :data:`SPACING_ARMS` and :func:`benchmaxx.ortho.pooled_switch_rate`. Arms are
+# :data:`SPACING_ARMS` and :func:`benchmark_optimization.ortho.pooled_switch_rate`. Arms are
 # ordered (spaced, solid) consistently so positional pooling is well defined.
 SPACING_PAIRS: tuple[Family, ...] = (
     _f("sp_anyone", "en", [("any one", r"(?i)\bany one\b"), ("anyone", r"(?i)\banyone\b")]),

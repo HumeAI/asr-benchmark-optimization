@@ -2,10 +2,10 @@
 
 The repository ships small derived "cells" under ``repro/data`` so that figures
 rebuild in a clean clone. This script regenerates the cells that come from raw
-per-model outputs, which are too large to ship. It needs ``BENCHMAXX_DATA``
+per-model outputs, which are too large to ship. It needs ``BENCHMARK_OPT_DATA``
 pointing at a results root laid out as:
 
-    $BENCHMAXX_DATA/
+    $BENCHMARK_OPT_DATA/
       datasets/{corpus}/{split}/manifest.parquet      # __key__, language, text
       results/{corpus}/{split}/{model}/{run}/*.wsds   # __key__, hyp[, hyp_raw]
                                                      # plus a DONE marker per run
@@ -16,13 +16,13 @@ because the switch probe needs un-normalized text.
 Currently regenerates:
 
 ``ortho_switch.json``
-    Orthographic switch rates, computed with :mod:`benchmaxx.ortho`. Two cells:
+    Orthographic switch rates, computed with :mod:`benchmark_optimization.ortho`. Two cells:
     the within-LibriSpeech pooled spacing group, and the cross-corpus honorific
     comparison between VoxPopuli and LibriSpeech.
 
 Usage::
 
-    BENCHMAXX_DATA=/path/to/results python repro/precompute_cells.py
+    BENCHMARK_OPT_DATA=/path/to/results python repro/precompute_cells.py
 """
 
 from __future__ import annotations
@@ -35,7 +35,7 @@ import polars as pl
 import pyarrow.ipc as ipc
 
 import paths as P
-from benchmaxx import conventions, ortho
+from benchmark_optimization import conventions, ortho
 
 LIBRI = ["librispeech-clean", "librispeech-other"]
 VOX = "voxpopuli"

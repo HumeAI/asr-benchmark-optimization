@@ -28,7 +28,7 @@ transcript, the share of those disagreements where the model under test
 reproduces the reference instead.
 
 ```bash
-benchmaxx ref-disagreement --preds predictions/ --panel <four models>
+benchmark-optimization ref-disagreement --preds predictions/ --panel <four models>
 ```
 
 VoxPopuli is the right corpus because its references derive from official
@@ -62,7 +62,7 @@ The share of clips where a model's spelling of an acoustically-invisible
 distinction follows the reference's, minimized over arms. Chance is 0.5.
 
 ```bash
-benchmaxx switch-rate --preds predictions/ --families sp_anyone,sp_everyone,sp_someone,sp_anything
+benchmark-optimization switch-rate --preds predictions/ --spacing
 ```
 
 Two variants, and the choice matters:
@@ -78,11 +78,11 @@ Two variants, and the choice matters:
 
 ## Implementation sketch
 
-The integration is small. `benchmaxx` is pure Python with `transformers` as its
+The integration is small. `benchmark_optimization` is pure Python with `transformers` as its
 only dependency, and reads the leaderboard's manifests natively:
 
 ```python
-from benchmaxx import load_manifests, conventions, ortho, refdis
+from benchmark_optimization import load_manifests, conventions, ortho, refdis
 
 preds = load_manifests({m: f"results/{m}/librispeech.jsonl" for m in MODELS})
 spacing = ortho.pooled_switch_rate(

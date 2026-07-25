@@ -7,7 +7,7 @@ cd repro && make figures
 
 That rebuilds **19 of the paper's 24 figures** into `repro/out`, with no inputs
 beyond what is in this repository. The other five re-score raw per-model output
-and need `BENCHMAXX_DATA` (below).
+and need `BENCHMARK_OPT_DATA` (below).
 
 ## What is shipped, and what is not
 
@@ -26,7 +26,7 @@ are not ours to redistribute.
 | `data/consensus/*_aggregate.json` | accept-ref leaderboards per corpus |
 | `data/consensus/vox_en_*_samples.json` | every flagged reference error with per-model verdicts |
 | `data/ortho_ppl*/…parquet` | per-clip NLL for the orthographic white-box arms |
-| `data/ortho_switch.json` | orthographic switch rates, computed by `benchmaxx.ortho` |
+| `data/ortho_switch.json` | orthographic switch rates, computed by `benchmark_optimization.ortho` |
 
 Not shipped: source audio, per-clip transcription dumps, TTS renders, model
 weights. `daikon` is a private held-out control — only its aggregate numbers
@@ -52,13 +52,13 @@ Every figure the paper includes, its generator, and what it needs.
 | `orthohon_voice2x2.png` | `orthohon_voice2x2_fig.py` | shipped |
 | `patch_dissociation.png` | `patch_dissociation_fig.py` | shipped |
 | `steer_input_level.png`, `steer_activation_level.png` | `steer_causal_fig.py` | shipped |
-| `masking_blackbox_datasets.png` | `masking_datasets_fig.py` | **`BENCHMAXX_DATA`** |
-| `masking_voice.png` | `masking_voice_fig.py` | **`BENCHMAXX_DATA`** |
-| `pair_spacing.png`, `pair_mister.png`, `pair_spacing_white.png` | `paired_grids.py` | **`BENCHMAXX_DATA`** |
+| `masking_blackbox_datasets.png` | `masking_datasets_fig.py` | **`BENCHMARK_OPT_DATA`** |
+| `masking_voice.png` | `masking_voice_fig.py` | **`BENCHMARK_OPT_DATA`** |
+| `pair_spacing.png`, `pair_mister.png`, `pair_spacing_white.png` | `paired_grids.py` | **`BENCHMARK_OPT_DATA`** |
 
 The three `paired_grids.py` figures pair a switch-rate panel with a white-box
 NLL panel. **The switch-rate panels are reproducible from shipped data** via
-`ortho_switch_fig.py`, which recomputes them with `benchmaxx.ortho` from
+`ortho_switch_fig.py`, which recomputes them with `benchmark_optimization.ortho` from
 `data/ortho_switch.json`; only the NLL panels need the raw root. The library's
 switch rates were checked against `paired_grids.py` on the paper's data and
 agree exactly (46 models on pooled spacing, 43 on the honorific comparison, max
@@ -66,7 +66,7 @@ difference 0.000000).
 
 ## Verifying the extraction
 
-`benchmaxx.refdis` is a rewrite of the internal script behind the paper's
+`benchmark_optimization.refdis` is a rewrite of the internal script behind the paper's
 reference-disagreement numbers, so it is checked rather than assumed:
 
 ```bash
@@ -80,10 +80,10 @@ published leaderboard comes out identical.
 
 ## Using a full results root
 
-Set `BENCHMAXX_DATA` to a directory laid out as:
+Set `BENCHMARK_OPT_DATA` to a directory laid out as:
 
 ```
-$BENCHMAXX_DATA/
+$BENCHMARK_OPT_DATA/
   datasets/{corpus}/{split}/manifest.parquet        # __key__, language, text
   datasets/{corpus}/{split}/truncation_meta.parquet # __key__, hidden_ref  (masked variants)
   results/{corpus}/{split}/{model}/{run}/*.wsds     # __key__, hyp[, hyp_raw]; DONE marker per run
@@ -97,13 +97,13 @@ Then:
 
 ```bash
 cd repro
-BENCHMAXX_DATA=/path/to/results make all     # all 24 figures
-BENCHMAXX_DATA=/path/to/results make cells   # re-derive data/ortho_switch.json
+BENCHMARK_OPT_DATA=/path/to/results make all     # all 24 figures
+BENCHMARK_OPT_DATA=/path/to/results make cells   # re-derive data/ortho_switch.json
 ```
 
-Environment variables: `BENCHMAXX_CELLS` (derived data, default `repro/data`),
-`BENCHMAXX_FIGURES` (output, default `repro/out`), `BENCHMAXX_DATA` (raw root),
-`BENCHMAXX_FONT_DIR` (optional directory holding the Fellix family used in the
+Environment variables: `BENCHMARK_OPT_CELLS` (derived data, default `repro/data`),
+`BENCHMARK_OPT_FIGURES` (output, default `repro/out`), `BENCHMARK_OPT_DATA` (raw root),
+`BENCHMARK_OPT_FONT_DIR` (optional directory holding the Fellix family used in the
 paper; matplotlib's default font is used when unset, so figures render slightly
 differently from the published PDF).
 
@@ -120,7 +120,7 @@ cannot run from prediction files:
 
 ```bash
 pip install -e ".[probes]"     # torch, torchaudio, soundfile
-export BENCHMAXX_DATA=/path/to/results BENCHMAXX_MODELS=/path/to/weights
+export BENCHMARK_OPT_DATA=/path/to/results BENCHMARK_OPT_MODELS=/path/to/weights
 python repro/probes/probe_decoder_memorization.py --help
 ```
 
@@ -129,4 +129,4 @@ the `omni` backend needed an internal loader that is not part of this release,
 so its family is gated off, with the teacher-forcing logic kept as a reference
 implementation. And these scripts are research code, lifted with paths
 parameterized and internal imports replaced — they are less polished than
-`src/benchmaxx`, which is the part meant for reuse.
+`src/benchmark_optimization`, which is the part meant for reuse.

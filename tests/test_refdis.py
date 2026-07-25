@@ -5,7 +5,7 @@ regression in the alignment or thresholding shows up as a wrong verdict rather
 than as a slightly different number.
 """
 
-from benchmaxx import refdis
+from benchmark_optimization import refdis
 
 # Four panel models, matching the paper's panel size. The competence gate
 # requires each to reproduce at least half the reference, so hypotheses are

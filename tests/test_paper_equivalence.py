@@ -1,6 +1,6 @@
 """Verify this implementation reproduces the paper's published numbers.
 
-``benchmaxx.refdis`` is an extraction of the internal script that produced the
+``benchmark_optimization.refdis`` is an extraction of the internal script that produced the
 paper's reference-disagreement results. The extraction was rewritten for
 clarity, so it needs checking against the original rather than trusting that it
 still means the same thing.
@@ -21,7 +21,7 @@ from pathlib import Path
 
 import pytest
 
-from benchmaxx import refdis
+from benchmark_optimization import refdis
 
 DATA = Path(__file__).resolve().parent.parent / "repro" / "data" / "consensus"
 SAMPLES = DATA / "vox_en_newwl4_samples.json"

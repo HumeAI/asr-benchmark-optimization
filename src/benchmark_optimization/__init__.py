@@ -2,12 +2,12 @@
 
 Two probes run on prediction files alone, with no audio and no model weights:
 
-:mod:`benchmaxx.refdis`
+:mod:`benchmark_optimization.refdis`
     Reference-error reproduction. Where a panel of models agrees against the
     reference transcript, does the model under test follow the panel or the
     reference?
 
-:mod:`benchmaxx.ortho`
+:mod:`benchmark_optimization.ortho`
     Orthographic switch rate. For written distinctions that sound identical,
     does the model's spelling track the corpus it is being evaluated on?
 
@@ -18,7 +18,7 @@ answer different questions.
 
 Quick start::
 
-    from benchmaxx import load_dir, ortho, conventions
+    from benchmark_optimization import load_dir, ortho, conventions
 
     preds = load_dir("predictions/")           # one JSONL per model
     results = ortho.switch_rates(conventions.families_for("en"), list(preds.clips()))

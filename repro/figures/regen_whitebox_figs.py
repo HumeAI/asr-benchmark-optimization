@@ -183,7 +183,7 @@ if P.DATA is not None:
         for r in pl.read_parquet(P.data("datasets", variant, "test", "truncation_meta.parquet")).iter_rows(named=True)
     }
 else:
-    print("  skipping masked black-box panel: BENCHMAXX_DATA not set")
+    print("  skipping masked black-box panel: BENCHMARK_OPT_DATA not set")
 for m in PAPER_MODELS if meta else []:
     p = P.data("results", variant, m, "test", "results.jsonl")
     if not p.exists():

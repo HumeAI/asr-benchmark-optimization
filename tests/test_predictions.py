@@ -2,7 +2,7 @@ import json
 
 import pytest
 
-from benchmaxx import predictions
+from benchmark_optimization import predictions
 
 
 def _write_manifest(path, rows):

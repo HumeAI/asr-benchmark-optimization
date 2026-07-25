@@ -28,7 +28,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import paths as P  # noqa: E402
 
 # Raw dataset manifests and per-model result shards. Re-scoring from scratch
-# needs a full results root (BENCHMAXX_DATA); the shipped cells under repro/data
+# needs a full results root (BENCHMARK_OPT_DATA); the shipped cells under repro/data
 # already hold the scored output, so the figures never touch these.
 DR = str(P.data("datasets")) if P.DATA else None
 RR = str(P.data("results")) if P.DATA else None

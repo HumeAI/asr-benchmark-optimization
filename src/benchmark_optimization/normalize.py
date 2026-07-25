@@ -101,7 +101,7 @@ def canonicalize_numbers(text: str, language: str | None = "en") -> str:
     matters outside English, where ``BasicTextNormalizer`` leaves number words
     alone.
 
-    Requires ``text2num`` (``pip install "benchmaxx[numbers]"``); a no-op without
+    Requires ``text2num`` (``pip install "asr-benchmark-optimization[numbers]"``); a no-op without
     it, and a no-op for languages it does not cover. Applied to references and
     hypotheses alike, so the comparison stays fair.
     """

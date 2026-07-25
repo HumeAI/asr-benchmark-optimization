@@ -29,7 +29,7 @@ import soundfile as sf
 import torch
 import torchaudio
 
-import roots as _paths  # data/model roots from BENCHMAXX_DATA / BENCHMAXX_MODELS
+import roots as _paths  # data/model roots from BENCHMARK_OPT_DATA / BENCHMARK_OPT_MODELS
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger("align_words")

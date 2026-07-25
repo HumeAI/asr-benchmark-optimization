@@ -1,6 +1,6 @@
 import pytest
 
-from benchmaxx import conventions, ortho
+from benchmark_optimization import conventions, ortho
 
 
 def _clips(arm_a_ref, arm_b_ref, hyp_fn, n=10):

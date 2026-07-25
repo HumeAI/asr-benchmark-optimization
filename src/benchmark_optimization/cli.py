@@ -1,9 +1,9 @@
-"""Command line entry point: ``benchmaxx``.
+"""Command line entry point: ``benchmark_optimization``.
 
 Two subcommands, one per probe that runs on prediction files alone:
 
-    benchmaxx ref-disagreement --preds DIR --panel a,b,c,d
-    benchmaxx switch-rate      --preds DIR
+    benchmark-optimization ref-disagreement --preds DIR --panel a,b,c,d
+    benchmark-optimization switch-rate      --preds DIR
 
 The third probe family in the paper, masked-entity recovery, needs the audio
 and model weights and so lives in ``repro/probes/`` rather than here.
@@ -192,7 +192,7 @@ def cmd_switch_rate(args) -> None:
 
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
-        prog="benchmaxx",
+        prog="asr-benchmark-optimization",
         description="Quantify benchmark optimization in ASR models from prediction files.",
     )
     sub = p.add_subparsers(dest="cmd", required=True)

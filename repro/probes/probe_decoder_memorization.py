@@ -43,7 +43,7 @@ except ImportError:
     _LogitsProcessor = object
     LogitsProcessorList = None
 
-import roots as _paths  # data/model roots from BENCHMAXX_DATA / BENCHMAXX_MODELS
+import roots as _paths  # data/model roots from BENCHMARK_OPT_DATA / BENCHMARK_OPT_MODELS
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger("memprobe")
@@ -1113,7 +1113,7 @@ def hidden_token_indices(probe: Probe, ids: list[int], hidden_words: list[str], 
     # so a model that decodes a spelled number as digits (e.g. "two"->"2") still matches.
     cands = [base]
     try:
-        from benchmaxx.normalize import normalize
+        from benchmark_optimization.normalize import normalize
         nf = normalize(base, "en").strip()
         if nf and nf != base:
             cands.append(nf)

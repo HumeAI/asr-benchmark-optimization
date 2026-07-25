@@ -1,0 +1,740 @@
+{
+ "datasets": {
+  "libclone_same": "ttsclone-libnum-libclone-mask-num-all-numexp-silence",
+  "libclone_diff": "ttsclone-libnum-libclone-rs-mask-num-all-numexp-silence",
+  "freshlv_same": "ttsclone-libnum-freshlv-mask-num-all-numexp-silence",
+  "freshlv_diff": "ttsclone-libnum-freshlv-rs-mask-num-all-numexp-silence",
+  "generic_same": "ttsclone-libnum-generic-mask-num-all-numexp-silence",
+  "generic_diff": "ttsclone-libnum-generic-rs-mask-num-all-numexp-silence",
+  "real": "librispeech-clean-mask-num-all-numexp-silence"
+ },
+ "n_shared_sentences": 154,
+ "models": {
+  "cohere-transcribe": {
+   "real": {
+    "rate": 0.5548,
+    "n": 155,
+    "ci": [
+     0.4762,
+     0.6308
+    ]
+   },
+   "libclone_same": {
+    "rate": 0.5195,
+    "n": 154,
+    "ci": [
+     0.4411,
+     0.597
+    ]
+   },
+   "libclone_diff": {
+    "rate": 0.5148,
+    "n": 305,
+    "ci": [
+     0.4588,
+     0.5703
+    ]
+   },
+   "libclone_pooled": {
+    "rate": 0.5163,
+    "n": 459,
+    "ci": [
+     0.4707,
+     0.5617
+    ]
+   },
+   "freshlv_pooled": {
+    "rate": 0.3485,
+    "n": 462,
+    "ci": [
+     0.3064,
+     0.393
+    ]
+   },
+   "generic_pooled": {
+    "rate": 0.2944,
+    "n": 462,
+    "ci": [
+     0.2546,
+     0.3375
+    ]
+   },
+   "contrast_libclone_vs_freshlv": {
+    "n_sentences": 154,
+    "mean_diff": 0.1667,
+    "ci": [
+     0.1169,
+     0.2186
+    ]
+   },
+   "contrast_same_vs_diff": {
+    "n_sentences": 154,
+    "mean_diff": 0.0065,
+    "ci": [
+     -0.0487,
+     0.0617
+    ]
+   }
+  },
+  "canary-qwen-2.5b": {
+   "real": {
+    "rate": 0.471,
+    "n": 155,
+    "ci": [
+     0.394,
+     0.5493
+    ]
+   },
+   "libclone_same": {
+    "rate": 0.4026,
+    "n": 154,
+    "ci": [
+     0.3284,
+     0.4815
+    ]
+   },
+   "libclone_diff": {
+    "rate": 0.3934,
+    "n": 305,
+    "ci": [
+     0.3403,
+     0.4493
+    ]
+   },
+   "libclone_pooled": {
+    "rate": 0.3965,
+    "n": 459,
+    "ci": [
+     0.3528,
+     0.4419
+    ]
+   },
+   "freshlv_pooled": {
+    "rate": 0.2727,
+    "n": 462,
+    "ci": [
+     0.2341,
+     0.3151
+    ]
+   },
+   "generic_pooled": {
+    "rate": 0.2186,
+    "n": 462,
+    "ci": [
+     0.1833,
+     0.2585
+    ]
+   },
+   "contrast_libclone_vs_freshlv": {
+    "n_sentences": 154,
+    "mean_diff": 0.1234,
+    "ci": [
+     0.0801,
+     0.171
+    ]
+   },
+   "contrast_same_vs_diff": {
+    "n_sentences": 154,
+    "mean_diff": 0.0097,
+    "ci": [
+     -0.0584,
+     0.0779
+    ]
+   }
+  },
+  "kimi-audio-7b": {
+   "real": {
+    "rate": 0.3677,
+    "n": 155,
+    "ci": [
+     0.2959,
+     0.446
+    ]
+   },
+   "libclone_same": {
+    "rate": 0.4545,
+    "n": 154,
+    "ci": [
+     0.378,
+     0.5333
+    ]
+   },
+   "libclone_diff": {
+    "rate": 0.4197,
+    "n": 305,
+    "ci": [
+     0.3656,
+     0.4757
+    ]
+   },
+   "libclone_pooled": {
+    "rate": 0.4314,
+    "n": 459,
+    "ci": [
+     0.3868,
+     0.4771
+    ]
+   },
+   "freshlv_pooled": {
+    "rate": 0.342,
+    "n": 462,
+    "ci": [
+     0.3002,
+     0.3864
+    ]
+   },
+   "generic_pooled": {
+    "rate": 0.2792,
+    "n": 462,
+    "ci": [
+     0.2403,
+     0.3218
+    ]
+   },
+   "contrast_libclone_vs_freshlv": {
+    "n_sentences": 154,
+    "mean_diff": 0.0887,
+    "ci": [
+     0.0476,
+     0.132
+    ]
+   },
+   "contrast_same_vs_diff": {
+    "n_sentences": 154,
+    "mean_diff": 0.0357,
+    "ci": [
+     -0.0227,
+     0.0942
+    ]
+   }
+  },
+  "whisper-large-v3": {
+   "real": {
+    "rate": 0.3484,
+    "n": 155,
+    "ci": [
+     0.2779,
+     0.4262
+    ]
+   },
+   "libclone_same": {
+    "rate": 0.4091,
+    "n": 154,
+    "ci": [
+     0.3346,
+     0.488
+    ]
+   },
+   "libclone_diff": {
+    "rate": 0.3836,
+    "n": 305,
+    "ci": [
+     0.3308,
+     0.4393
+    ]
+   },
+   "libclone_pooled": {
+    "rate": 0.3922,
+    "n": 459,
+    "ci": [
+     0.3486,
+     0.4375
+    ]
+   },
+   "freshlv_pooled": {
+    "rate": 0.2944,
+    "n": 462,
+    "ci": [
+     0.2546,
+     0.3375
+    ]
+   },
+   "generic_pooled": {
+    "rate": 0.2078,
+    "n": 462,
+    "ci": [
+     0.1733,
+     0.2471
+    ]
+   },
+   "contrast_libclone_vs_freshlv": {
+    "n_sentences": 154,
+    "mean_diff": 0.0963,
+    "ci": [
+     0.0498,
+     0.1429
+    ]
+   },
+   "contrast_same_vs_diff": {
+    "n_sentences": 154,
+    "mean_diff": 0.0292,
+    "ci": [
+     -0.0325,
+     0.0909
+    ]
+   }
+  },
+  "granite-speech-4.1-2b": {
+   "real": {
+    "rate": 0.4,
+    "n": 155,
+    "ci": [
+     0.3262,
+     0.4786
+    ]
+   },
+   "libclone_same": {
+    "rate": 0.4675,
+    "n": 154,
+    "ci": [
+     0.3905,
+     0.5462
+    ]
+   },
+   "libclone_diff": {
+    "rate": 0.4328,
+    "n": 305,
+    "ci": [
+     0.3784,
+     0.4889
+    ]
+   },
+   "libclone_pooled": {
+    "rate": 0.4444,
+    "n": 459,
+    "ci": [
+     0.3996,
+     0.4902
+    ]
+   },
+   "freshlv_pooled": {
+    "rate": 0.3398,
+    "n": 462,
+    "ci": [
+     0.2981,
+     0.3842
+    ]
+   },
+   "generic_pooled": {
+    "rate": 0.2706,
+    "n": 462,
+    "ci": [
+     0.2321,
+     0.3128
+    ]
+   },
+   "contrast_libclone_vs_freshlv": {
+    "n_sentences": 154,
+    "mean_diff": 0.1039,
+    "ci": [
+     0.0584,
+     0.1515
+    ]
+   },
+   "contrast_same_vs_diff": {
+    "n_sentences": 154,
+    "mean_diff": 0.0357,
+    "ci": [
+     -0.026,
+     0.0974
+    ]
+   }
+  },
+  "phi4-multimodal": {
+   "real": {
+    "rate": 0.2774,
+    "n": 155,
+    "ci": [
+     0.213,
+     0.3526
+    ]
+   },
+   "libclone_same": {
+    "rate": 0.2338,
+    "n": 154,
+    "ci": [
+     0.1739,
+     0.3066
+    ]
+   },
+   "libclone_diff": {
+    "rate": 0.2426,
+    "n": 305,
+    "ci": [
+     0.1979,
+     0.2937
+    ]
+   },
+   "libclone_pooled": {
+    "rate": 0.2397,
+    "n": 459,
+    "ci": [
+     0.2029,
+     0.2808
+    ]
+   },
+   "freshlv_pooled": {
+    "rate": 0.1494,
+    "n": 462,
+    "ci": [
+     0.1197,
+     0.1847
+    ]
+   },
+   "generic_pooled": {
+    "rate": 0.1299,
+    "n": 462,
+    "ci": [
+     0.1022,
+     0.1636
+    ]
+   },
+   "contrast_libclone_vs_freshlv": {
+    "n_sentences": 154,
+    "mean_diff": 0.0898,
+    "ci": [
+     0.053,
+     0.1266
+    ]
+   },
+   "contrast_same_vs_diff": {
+    "n_sentences": 154,
+    "mean_diff": -0.0065,
+    "ci": [
+     -0.0552,
+     0.0455
+    ]
+   }
+  },
+  "parakeet-tdt-0.6b-v2": {
+   "real": {
+    "rate": 0.4194,
+    "n": 155,
+    "ci": [
+     0.3445,
+     0.4981
+    ]
+   },
+   "libclone_same": {
+    "rate": 0.4026,
+    "n": 154,
+    "ci": [
+     0.3284,
+     0.4815
+    ]
+   },
+   "libclone_diff": {
+    "rate": 0.3803,
+    "n": 305,
+    "ci": [
+     0.3277,
+     0.436
+    ]
+   },
+   "libclone_pooled": {
+    "rate": 0.3878,
+    "n": 459,
+    "ci": [
+     0.3443,
+     0.4331
+    ]
+   },
+   "freshlv_pooled": {
+    "rate": 0.2944,
+    "n": 462,
+    "ci": [
+     0.2546,
+     0.3375
+    ]
+   },
+   "generic_pooled": {
+    "rate": 0.2424,
+    "n": 462,
+    "ci": [
+     0.2056,
+     0.2835
+    ]
+   },
+   "contrast_libclone_vs_freshlv": {
+    "n_sentences": 154,
+    "mean_diff": 0.0931,
+    "ci": [
+     0.0498,
+     0.1385
+    ]
+   },
+   "contrast_same_vs_diff": {
+    "n_sentences": 154,
+    "mean_diff": 0.0227,
+    "ci": [
+     -0.039,
+     0.0844
+    ]
+   }
+  },
+  "higgs-audio-v3-8b-stt-v2": {
+   "real": {
+    "rate": 0.3871,
+    "n": 155,
+    "ci": [
+     0.314,
+     0.4656
+    ]
+   },
+   "libclone_same": {
+    "rate": 0.4221,
+    "n": 154,
+    "ci": [
+     0.3469,
+     0.501
+    ]
+   },
+   "libclone_diff": {
+    "rate": 0.3967,
+    "n": 305,
+    "ci": [
+     0.3434,
+     0.4526
+    ]
+   },
+   "libclone_pooled": {
+    "rate": 0.4052,
+    "n": 459,
+    "ci": [
+     0.3613,
+     0.4507
+    ]
+   },
+   "freshlv_pooled": {
+    "rate": 0.3182,
+    "n": 462,
+    "ci": [
+     0.2774,
+     0.362
+    ]
+   },
+   "generic_pooled": {
+    "rate": 0.1645,
+    "n": 462,
+    "ci": [
+     0.1335,
+     0.201
+    ]
+   },
+   "contrast_libclone_vs_freshlv": {
+    "n_sentences": 154,
+    "mean_diff": 0.0866,
+    "ci": [
+     0.0433,
+     0.132
+    ]
+   },
+   "contrast_same_vs_diff": {
+    "n_sentences": 154,
+    "mean_diff": 0.026,
+    "ci": [
+     -0.0422,
+     0.0942
+    ]
+   }
+  },
+  "moonshine-streaming-medium": {
+   "real": {
+    "rate": 0.071,
+    "n": 155,
+    "ci": [
+     0.0401,
+     0.1226
+    ]
+   },
+   "libclone_same": {
+    "rate": 0.0779,
+    "n": 154,
+    "ci": [
+     0.0451,
+     0.1313
+    ]
+   },
+   "libclone_diff": {
+    "rate": 0.1344,
+    "n": 305,
+    "ci": [
+     0.1007,
+     0.1773
+    ]
+   },
+   "libclone_pooled": {
+    "rate": 0.1155,
+    "n": 459,
+    "ci": [
+     0.0894,
+     0.148
+    ]
+   },
+   "freshlv_pooled": {
+    "rate": 0.0844,
+    "n": 462,
+    "ci": [
+     0.0624,
+     0.1133
+    ]
+   },
+   "generic_pooled": {
+    "rate": 0.0584,
+    "n": 462,
+    "ci": [
+     0.0405,
+     0.0837
+    ]
+   },
+   "contrast_libclone_vs_freshlv": {
+    "n_sentences": 154,
+    "mean_diff": 0.0303,
+    "ci": [
+     0.0043,
+     0.0584
+    ]
+   },
+   "contrast_same_vs_diff": {
+    "n_sentences": 154,
+    "mean_diff": -0.0552,
+    "ci": [
+     -0.1006,
+     -0.013
+    ]
+   }
+  },
+  "qwen3-asr-0.6b": {
+   "real": {
+    "rate": 0.1161,
+    "n": 155,
+    "ci": [
+     0.0747,
+     0.1761
+    ]
+   },
+   "libclone_same": {
+    "rate": 0.1688,
+    "n": 154,
+    "ci": [
+     0.1179,
+     0.2359
+    ]
+   },
+   "libclone_diff": {
+    "rate": 0.1213,
+    "n": 305,
+    "ci": [
+     0.0893,
+     0.1627
+    ]
+   },
+   "libclone_pooled": {
+    "rate": 0.1373,
+    "n": 459,
+    "ci": [
+     0.1088,
+     0.1718
+    ]
+   },
+   "freshlv_pooled": {
+    "rate": 0.1039,
+    "n": 462,
+    "ci": [
+     0.0793,
+     0.1351
+    ]
+   },
+   "generic_pooled": {
+    "rate": 0.0498,
+    "n": 462,
+    "ci": [
+     0.0334,
+     0.0736
+    ]
+   },
+   "contrast_libclone_vs_freshlv": {
+    "n_sentences": 154,
+    "mean_diff": 0.0325,
+    "ci": [
+     0.0,
+     0.0671
+    ]
+   },
+   "contrast_same_vs_diff": {
+    "n_sentences": 154,
+    "mean_diff": 0.0487,
+    "ci": [
+     -0.0065,
+     0.1071
+    ]
+   }
+  },
+  "voxtral-mini-3b": {
+   "real": {
+    "rate": 0.2839,
+    "n": 155,
+    "ci": [
+     0.2188,
+     0.3594
+    ]
+   },
+   "libclone_same": {
+    "rate": 0.2987,
+    "n": 154,
+    "ci": [
+     0.232,
+     0.3752
+    ]
+   },
+   "libclone_diff": {
+    "rate": 0.2852,
+    "n": 305,
+    "ci": [
+     0.2375,
+     0.3383
+    ]
+   },
+   "libclone_pooled": {
+    "rate": 0.2898,
+    "n": 459,
+    "ci": [
+     0.2501,
+     0.3329
+    ]
+   },
+   "freshlv_pooled": {
+    "rate": 0.2749,
+    "n": 462,
+    "ci": [
+     0.2362,
+     0.3173
+    ]
+   },
+   "generic_pooled": {
+    "rate": 0.1623,
+    "n": 462,
+    "ci": [
+     0.1315,
+     0.1987
+    ]
+   },
+   "contrast_libclone_vs_freshlv": {
+    "n_sentences": 154,
+    "mean_diff": 0.0141,
+    "ci": [
+     -0.0325,
+     0.0617
+    ]
+   },
+   "contrast_same_vs_diff": {
+    "n_sentences": 154,
+    "mean_diff": 0.0162,
+    "ci": [
+     -0.0455,
+     0.0747
+    ]
+   }
+  }
+ }
+}

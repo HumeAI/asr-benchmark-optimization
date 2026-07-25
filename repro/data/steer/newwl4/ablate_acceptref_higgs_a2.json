@@ -1,0 +1,43 @@
+{
+ "none": {
+  "accept_ref": 0.1861,
+  "n_ref": 206,
+  "n_eligible": 1107,
+  "wilson95": [
+   0.1643,
+   0.2101
+  ]
+ },
+ "ablate": {
+  "accept_ref": 0.1742,
+  "n_ref": 193,
+  "n_eligible": 1108,
+  "wilson95": [
+   0.153,
+   0.1976
+  ]
+ },
+ "random": {
+  "accept_ref": 0.1834,
+  "n_ref": 203,
+  "n_eligible": 1107,
+  "wilson95": [
+   0.1617,
+   0.2073
+  ]
+ },
+ "flips_ablate": {
+  "ref_at_none": 206,
+  "ref_to_consensus": 35,
+  "consensus_to_ref": 22,
+  "deplow_rate_of_ref": 0.1699
+ },
+ "flips_random": {
+  "ref_at_none": 206,
+  "ref_to_consensus": 8,
+  "consensus_to_ref": 5,
+  "deplow_rate_of_ref": 0.0388
+ },
+ "n_clips": 772,
+ "n_runs": 1110
+}

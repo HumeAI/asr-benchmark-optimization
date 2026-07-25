@@ -1,0 +1,137 @@
+{
+  "dataset": "ep-fresh-vox",
+  "language": "en",
+  "split": "test",
+  "whitelist": [
+    "kimi-audio-7b",
+    "moonshine-streaming-medium",
+    "qwen3-asr-0.6b",
+    "voxtral-mini-3b"
+  ],
+  "params": {
+    "majority_pct": 0.75,
+    "min_run_len": 1,
+    "include_middle": true,
+    "min_ref_match_pct": 0.5,
+    "min_consensus_cer": 0.3
+  },
+  "prominence": {
+    "clips_analyzed": 1992,
+    "clips_flagged": 1203,
+    "clip_flag_rate": 0.6039,
+    "clips_with_delete": 702,
+    "clips_with_insert": 799,
+    "total_ref_tokens": 54193,
+    "spurious_ref_tokens_delete": 1324,
+    "missing_ref_tokens_insert": 2266,
+    "spurious_word_rate": 0.02443,
+    "word_error_rate_combined": 0.06624,
+    "n_runs": 1850
+  },
+  "benchmaxx_leaderboard": [
+    {
+      "model": "omni-3b-llm",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.266,
+      "accepted_ref": 475,
+      "followed_consensus": 1311,
+      "eligible_runs": 1786
+    },
+    {
+      "model": "phi4-multimodal",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.2436,
+      "accepted_ref": 444,
+      "followed_consensus": 1379,
+      "eligible_runs": 1823
+    },
+    {
+      "model": "granite-speech-3.3-8b",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.2172,
+      "accepted_ref": 398,
+      "followed_consensus": 1434,
+      "eligible_runs": 1832
+    },
+    {
+      "model": "canary-qwen-2.5b",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.1741,
+      "accepted_ref": 322,
+      "followed_consensus": 1528,
+      "eligible_runs": 1850
+    },
+    {
+      "model": "cohere-transcribe",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.1518,
+      "accepted_ref": 280,
+      "followed_consensus": 1564,
+      "eligible_runs": 1844
+    },
+    {
+      "model": "parakeet-tdt-0.6b-v2",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.1503,
+      "accepted_ref": 278,
+      "followed_consensus": 1572,
+      "eligible_runs": 1850
+    },
+    {
+      "model": "granite-speech-4.1-2b",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.1463,
+      "accepted_ref": 270,
+      "followed_consensus": 1575,
+      "eligible_runs": 1845
+    },
+    {
+      "model": "qwen3-asr-1.7b",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.113,
+      "accepted_ref": 209,
+      "followed_consensus": 1641,
+      "eligible_runs": 1850
+    },
+    {
+      "model": "whisper-large-v3",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.1086,
+      "accepted_ref": 199,
+      "followed_consensus": 1633,
+      "eligible_runs": 1832
+    },
+    {
+      "model": "kimi-audio-7b",
+      "in_whitelist": true,
+      "benchmaxx_score": 0.0984,
+      "accepted_ref": 182,
+      "followed_consensus": 1668,
+      "eligible_runs": 1850
+    },
+    {
+      "model": "voxtral-mini-3b",
+      "in_whitelist": true,
+      "benchmaxx_score": 0.0816,
+      "accepted_ref": 151,
+      "followed_consensus": 1699,
+      "eligible_runs": 1850
+    },
+    {
+      "model": "moonshine-streaming-medium",
+      "in_whitelist": true,
+      "benchmaxx_score": 0.0552,
+      "accepted_ref": 102,
+      "followed_consensus": 1745,
+      "eligible_runs": 1847
+    },
+    {
+      "model": "qwen3-asr-0.6b",
+      "in_whitelist": true,
+      "benchmaxx_score": 0.0503,
+      "accepted_ref": 93,
+      "followed_consensus": 1757,
+      "eligible_runs": 1850
+    }
+  ]
+}

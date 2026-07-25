@@ -1,0 +1,89 @@
+{
+  "dataset": "daikon",
+  "language": "en",
+  "split": "test",
+  "whitelist": [
+    "whisper-large-v3",
+    "voxtral-mini-3b",
+    "kimi-audio-7b",
+    "gemini-3.1-flash-lite-preview"
+  ],
+  "params": {
+    "majority_pct": 0.75,
+    "min_run_len": 1,
+    "include_middle": true,
+    "min_ref_match_pct": 0.5,
+    "min_consensus_cer": 0.3
+  },
+  "prominence": {
+    "clips_analyzed": 450,
+    "clips_flagged": 215,
+    "clip_flag_rate": 0.4778,
+    "clips_with_delete": 214,
+    "clips_with_insert": 2,
+    "total_ref_tokens": 20894,
+    "spurious_ref_tokens_delete": 482,
+    "missing_ref_tokens_insert": 2,
+    "spurious_word_rate": 0.02307,
+    "word_error_rate_combined": 0.02316,
+    "n_runs": 368
+  },
+  "benchmaxx_leaderboard": [
+    {
+      "model": "gemini-3.1-flash-lite-preview",
+      "in_whitelist": true,
+      "benchmaxx_score": 0.4565,
+      "accepted_ref": 168,
+      "followed_consensus": 200,
+      "eligible_runs": 368
+    },
+    {
+      "model": "granite-speech-3.3-8b",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.1967,
+      "accepted_ref": 72,
+      "followed_consensus": 294,
+      "eligible_runs": 366
+    },
+    {
+      "model": "granite-speech-4.0-1b",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.1848,
+      "accepted_ref": 68,
+      "followed_consensus": 300,
+      "eligible_runs": 368
+    },
+    {
+      "model": "cohere-transcribe",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.0986,
+      "accepted_ref": 36,
+      "followed_consensus": 329,
+      "eligible_runs": 365
+    },
+    {
+      "model": "kimi-audio-7b",
+      "in_whitelist": true,
+      "benchmaxx_score": 0.0353,
+      "accepted_ref": 13,
+      "followed_consensus": 355,
+      "eligible_runs": 368
+    },
+    {
+      "model": "whisper-large-v3",
+      "in_whitelist": true,
+      "benchmaxx_score": 0.0163,
+      "accepted_ref": 6,
+      "followed_consensus": 362,
+      "eligible_runs": 368
+    },
+    {
+      "model": "voxtral-mini-3b",
+      "in_whitelist": true,
+      "benchmaxx_score": 0.0136,
+      "accepted_ref": 5,
+      "followed_consensus": 363,
+      "eligible_runs": 368
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+ "none": {
+  "accept_ref": 0.0156,
+  "n_ref": 11,
+  "n_eligible": 707,
+  "wilson95": [
+   0.0087,
+   0.0276
+  ]
+ },
+ "induce_a4": {
+  "accept_ref": 0.0721,
+  "n_ref": 51,
+  "n_eligible": 707,
+  "wilson95": [
+   0.0553,
+   0.0936
+  ]
+ },
+ "induce_a8": {
+  "accept_ref": 0.0693,
+  "n_ref": 49,
+  "n_eligible": 707,
+  "wilson95": [
+   0.0528,
+   0.0904
+  ]
+ },
+ "random_a8": {
+  "accept_ref": 0.0127,
+  "n_ref": 9,
+  "n_eligible": 707,
+  "wilson95": [
+   0.0067,
+   0.024
+  ]
+ },
+ "flips_induce_a4": {
+  "ref_at_none": 11,
+  "ref_to_consensus": 0,
+  "consensus_to_ref": 40,
+  "deplow_rate_of_ref": 0.0
+ },
+ "flips_induce_a8": {
+  "ref_at_none": 11,
+  "ref_to_consensus": 2,
+  "consensus_to_ref": 40,
+  "deplow_rate_of_ref": 0.1818
+ },
+ "flips_random_a8": {
+  "ref_at_none": 11,
+  "ref_to_consensus": 3,
+  "consensus_to_ref": 1,
+  "deplow_rate_of_ref": 0.2727
+ },
+ "n_clips": 495,
+ "n_runs": 707,
+ "layer": 37
+}

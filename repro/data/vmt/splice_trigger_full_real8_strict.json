@@ -1,0 +1,1509 @@
+{
+ "arm": "real8",
+ "consensus": {
+  "cohere-transcribe": {
+   "role": "suspect",
+   "baseline": {
+    "ref": 206,
+    "n": 714,
+    "rate": 0.2885,
+    "ci": [
+     0.2565,
+     0.3228
+    ]
+   },
+   "voxsuf8": {
+    "ref": 180,
+    "n": 619,
+    "rate": 0.2908,
+    "ci": [
+     0.2564,
+     0.3278
+    ]
+   },
+   "ctlsuf8": {
+    "ref": 42,
+    "n": 704,
+    "rate": 0.0597,
+    "ci": [
+     0.0444,
+     0.0797
+    ]
+   },
+   "vox_minus_ctl": {
+    "delta": 0.2222,
+    "ci": [
+     0.1879,
+     0.2565
+    ],
+    "n": 612
+   },
+   "n_gated_bases": 568
+  },
+  "canary-qwen-2.5b": {
+   "role": "suspect",
+   "baseline": {
+    "ref": 155,
+    "n": 714,
+    "rate": 0.2171,
+    "ci": [
+     0.1884,
+     0.2488
+    ]
+   },
+   "voxsuf8": {
+    "ref": 157,
+    "n": 714,
+    "rate": 0.2199,
+    "ci": [
+     0.1911,
+     0.2517
+    ]
+   },
+   "ctlsuf8": {
+    "ref": 33,
+    "n": 711,
+    "rate": 0.0464,
+    "ci": [
+     0.0332,
+     0.0645
+    ]
+   },
+   "vox_minus_ctl": {
+    "delta": 0.173,
+    "ci": [
+     0.1449,
+     0.2025
+    ],
+    "n": 711
+   },
+   "n_gated_bases": 568
+  },
+  "granite-speech-4.1-2b": {
+   "role": "suspect",
+   "baseline": {
+    "ref": 149,
+    "n": 714,
+    "rate": 0.2087,
+    "ci": [
+     0.1805,
+     0.24
+    ]
+   },
+   "voxsuf8": {
+    "ref": 144,
+    "n": 714,
+    "rate": 0.2017,
+    "ci": [
+     0.1739,
+     0.2327
+    ]
+   },
+   "ctlsuf8": {
+    "ref": 148,
+    "n": 714,
+    "rate": 0.2073,
+    "ci": [
+     0.1792,
+     0.2385
+    ]
+   },
+   "vox_minus_ctl": {
+    "delta": -0.0056,
+    "ci": [
+     -0.0238,
+     0.0126
+    ],
+    "n": 714
+   },
+   "n_gated_bases": 568
+  },
+  "phi4-multimodal": {
+   "role": "suspect",
+   "baseline": {
+    "ref": 129,
+    "n": 714,
+    "rate": 0.1807,
+    "ci": [
+     0.1542,
+     0.2106
+    ]
+   },
+   "voxsuf8": {
+    "ref": 123,
+    "n": 713,
+    "rate": 0.1725,
+    "ci": [
+     0.1466,
+     0.202
+    ]
+   },
+   "ctlsuf8": {
+    "ref": 31,
+    "n": 706,
+    "rate": 0.0439,
+    "ci": [
+     0.0311,
+     0.0617
+    ]
+   },
+   "vox_minus_ctl": {
+    "delta": 0.1305,
+    "ci": [
+     0.105,
+     0.1574
+    ],
+    "n": 705
+   },
+   "n_gated_bases": 568
+  },
+  "parakeet-tdt-0.6b-v2": {
+   "role": "suspect",
+   "baseline": {
+    "ref": 122,
+    "n": 714,
+    "rate": 0.1709,
+    "ci": [
+     0.145,
+     0.2002
+    ]
+   },
+   "voxsuf8": {
+    "ref": 127,
+    "n": 713,
+    "rate": 0.1781,
+    "ci": [
+     0.1518,
+     0.2079
+    ]
+   },
+   "ctlsuf8": {
+    "ref": 47,
+    "n": 713,
+    "rate": 0.0659,
+    "ci": [
+     0.0499,
+     0.0866
+    ]
+   },
+   "vox_minus_ctl": {
+    "delta": 0.111,
+    "ci": [
+     0.0857,
+     0.1362
+    ],
+    "n": 712
+   },
+   "n_gated_bases": 568
+  },
+  "omni-3b-llm": {
+   "role": "suspect",
+   "baseline": {
+    "ref": 78,
+    "n": 714,
+    "rate": 0.1092,
+    "ci": [
+     0.0884,
+     0.1343
+    ]
+   },
+   "voxsuf8": {
+    "ref": 80,
+    "n": 709,
+    "rate": 0.1128,
+    "ci": [
+     0.0916,
+     0.1382
+    ]
+   },
+   "ctlsuf8": {
+    "ref": 55,
+    "n": 707,
+    "rate": 0.0778,
+    "ci": [
+     0.0603,
+     0.0999
+    ]
+   },
+   "vox_minus_ctl": {
+    "delta": 0.0341,
+    "ci": [
+     0.0171,
+     0.0526
+    ],
+    "n": 703
+   },
+   "n_gated_bases": 568
+  },
+  "moonshine-streaming-medium": {
+   "role": "honest",
+   "baseline": {
+    "ref": 10,
+    "n": 714,
+    "rate": 0.014,
+    "ci": [
+     0.0076,
+     0.0256
+    ]
+   },
+   "voxsuf8": {
+    "ref": 25,
+    "n": 714,
+    "rate": 0.035,
+    "ci": [
+     0.0238,
+     0.0512
+    ]
+   },
+   "ctlsuf8": {
+    "ref": 19,
+    "n": 714,
+    "rate": 0.0266,
+    "ci": [
+     0.0171,
+     0.0412
+    ]
+   },
+   "vox_minus_ctl": {
+    "delta": 0.0084,
+    "ci": [
+     -0.0028,
+     0.0196
+    ],
+    "n": 714
+   },
+   "n_gated_bases": 568
+  },
+  "whisper-large-v3": {
+   "role": "honest",
+   "baseline": {
+    "ref": 21,
+    "n": 703,
+    "rate": 0.0299,
+    "ci": [
+     0.0196,
+     0.0452
+    ]
+   },
+   "voxsuf8": {
+    "ref": 17,
+    "n": 698,
+    "rate": 0.0244,
+    "ci": [
+     0.0153,
+     0.0387
+    ]
+   },
+   "ctlsuf8": {
+    "ref": 16,
+    "n": 709,
+    "rate": 0.0226,
+    "ci": [
+     0.0139,
+     0.0363
+    ]
+   },
+   "vox_minus_ctl": {
+    "delta": 0.0014,
+    "ci": [
+     -0.0072,
+     0.0101
+    ],
+    "n": 696
+   },
+   "n_gated_bases": 568
+  },
+  "kimi-audio-7b": {
+   "role": "honest",
+   "baseline": {
+    "ref": 12,
+    "n": 713,
+    "rate": 0.0168,
+    "ci": [
+     0.0097,
+     0.0292
+    ]
+   },
+   "voxsuf8": {
+    "ref": 15,
+    "n": 710,
+    "rate": 0.0211,
+    "ci": [
+     0.0128,
+     0.0346
+    ]
+   },
+   "ctlsuf8": {
+    "ref": 17,
+    "n": 709,
+    "rate": 0.024,
+    "ci": [
+     0.015,
+     0.0381
+    ]
+   },
+   "vox_minus_ctl": {
+    "delta": -0.0028,
+    "ci": [
+     -0.0113,
+     0.0057
+    ],
+    "n": 706
+   },
+   "n_gated_bases": 568
+  },
+  "qwen3-asr-0.6b": {
+   "role": "honest",
+   "baseline": {
+    "ref": 11,
+    "n": 714,
+    "rate": 0.0154,
+    "ci": [
+     0.0086,
+     0.0274
+    ]
+   },
+   "voxsuf8": {
+    "ref": 31,
+    "n": 714,
+    "rate": 0.0434,
+    "ci": [
+     0.0308,
+     0.061
+    ]
+   },
+   "ctlsuf8": {
+    "ref": 15,
+    "n": 714,
+    "rate": 0.021,
+    "ci": [
+     0.0128,
+     0.0344
+    ]
+   },
+   "vox_minus_ctl": {
+    "delta": 0.0224,
+    "ci": [
+     0.0098,
+     0.0364
+    ],
+    "n": 714
+   },
+   "n_gated_bases": 568
+  },
+  "voxtral-mini-3b": {
+   "role": "honest",
+   "baseline": {
+    "ref": 9,
+    "n": 714,
+    "rate": 0.0126,
+    "ci": [
+     0.0066,
+     0.0238
+    ]
+   },
+   "voxsuf8": {
+    "ref": 17,
+    "n": 714,
+    "rate": 0.0238,
+    "ci": [
+     0.0149,
+     0.0378
+    ]
+   },
+   "ctlsuf8": {
+    "ref": 14,
+    "n": 701,
+    "rate": 0.02,
+    "ci": [
+     0.0119,
+     0.0332
+    ]
+   },
+   "vox_minus_ctl": {
+    "delta": 0.0014,
+    "ci": [
+     -0.0057,
+     0.0086
+    ],
+    "n": 701
+   },
+   "n_gated_bases": 568
+  },
+  "higgs-audio-v3-8b-stt-v2": {
+   "role": "suspect",
+   "baseline": {
+    "ref": 146,
+    "n": 714,
+    "rate": 0.2045,
+    "ci": [
+     0.1765,
+     0.2356
+    ]
+   },
+   "voxsuf8": {
+    "ref": 132,
+    "n": 691,
+    "rate": 0.191,
+    "ci": [
+     0.1635,
+     0.222
+    ]
+   },
+   "ctlsuf8": {
+    "ref": 19,
+    "n": 609,
+    "rate": 0.0312,
+    "ci": [
+     0.0201,
+     0.0482
+    ]
+   },
+   "vox_minus_ctl": {
+    "delta": 0.1556,
+    "ci": [
+     0.1242,
+     0.1854
+    ],
+    "n": 604
+   },
+   "n_gated_bases": 568
+  }
+ },
+ "masked": {
+  "cohere-transcribe": {
+   "role": "suspect",
+   "baseline": {
+    "k": 42,
+    "n": 157,
+    "rate": 0.2675,
+    "ci": [
+     0.2044,
+     0.3417
+    ]
+   },
+   "voxsuf8": {
+    "k": 33,
+    "n": 157,
+    "rate": 0.2102,
+    "ci": [
+     0.1538,
+     0.2805
+    ]
+   },
+   "ctlsuf8": {
+    "k": 18,
+    "n": 157,
+    "rate": 0.1146,
+    "ci": [
+     0.0738,
+     0.1739
+    ]
+   },
+   "vox_minus_ctl": {
+    "delta": 0.0955,
+    "ci": [
+     0.0382,
+     0.1592
+    ],
+    "n": 157
+   }
+  },
+  "canary-qwen-2.5b": {
+   "role": "suspect",
+   "baseline": {
+    "k": 22,
+    "n": 157,
+    "rate": 0.1401,
+    "ci": [
+     0.0944,
+     0.2031
+    ]
+   },
+   "voxsuf8": {
+    "k": 24,
+    "n": 157,
+    "rate": 0.1529,
+    "ci": [
+     0.1049,
+     0.2174
+    ]
+   },
+   "ctlsuf8": {
+    "k": 18,
+    "n": 157,
+    "rate": 0.1146,
+    "ci": [
+     0.0738,
+     0.1739
+    ]
+   },
+   "vox_minus_ctl": {
+    "delta": 0.0382,
+    "ci": [
+     -0.0064,
+     0.0828
+    ],
+    "n": 157
+   }
+  },
+  "granite-speech-4.1-2b": {
+   "role": "suspect",
+   "baseline": {
+    "k": 18,
+    "n": 157,
+    "rate": 0.1146,
+    "ci": [
+     0.0738,
+     0.1739
+    ]
+   },
+   "voxsuf8": {
+    "k": 19,
+    "n": 157,
+    "rate": 0.121,
+    "ci": [
+     0.0789,
+     0.1813
+    ]
+   },
+   "ctlsuf8": {
+    "k": 21,
+    "n": 157,
+    "rate": 0.1338,
+    "ci": [
+     0.0892,
+     0.1958
+    ]
+   },
+   "vox_minus_ctl": {
+    "delta": -0.0127,
+    "ci": [
+     -0.0446,
+     0.0191
+    ],
+    "n": 157
+   }
+  },
+  "phi4-multimodal": {
+   "role": "suspect",
+   "baseline": {
+    "k": 18,
+    "n": 157,
+    "rate": 0.1146,
+    "ci": [
+     0.0738,
+     0.1739
+    ]
+   },
+   "voxsuf8": {
+    "k": 19,
+    "n": 157,
+    "rate": 0.121,
+    "ci": [
+     0.0789,
+     0.1813
+    ]
+   },
+   "ctlsuf8": {
+    "k": 14,
+    "n": 157,
+    "rate": 0.0892,
+    "ci": [
+     0.0539,
+     0.1441
+    ]
+   },
+   "vox_minus_ctl": {
+    "delta": 0.0318,
+    "ci": [
+     -0.0127,
+     0.0764
+    ],
+    "n": 157
+   }
+  },
+  "parakeet-tdt-0.6b-v2": {
+   "role": "suspect",
+   "baseline": {
+    "k": 16,
+    "n": 157,
+    "rate": 0.1019,
+    "ci": [
+     0.0637,
+     0.1591
+    ]
+   },
+   "voxsuf8": {
+    "k": 13,
+    "n": 157,
+    "rate": 0.0828,
+    "ci": [
+     0.049,
+     0.1365
+    ]
+   },
+   "ctlsuf8": {
+    "k": 13,
+    "n": 157,
+    "rate": 0.0828,
+    "ci": [
+     0.049,
+     0.1365
+    ]
+   },
+   "vox_minus_ctl": {
+    "delta": 0.0,
+    "ci": [
+     -0.0318,
+     0.0318
+    ],
+    "n": 157
+   }
+  },
+  "omni-3b-llm": {
+   "role": "suspect",
+   "baseline": {
+    "k": 8,
+    "n": 157,
+    "rate": 0.051,
+    "ci": [
+     0.026,
+     0.0973
+    ]
+   },
+   "voxsuf8": {
+    "k": 6,
+    "n": 157,
+    "rate": 0.0382,
+    "ci": [
+     0.0176,
+     0.0809
+    ]
+   },
+   "ctlsuf8": {
+    "k": 7,
+    "n": 157,
+    "rate": 0.0446,
+    "ci": [
+     0.0218,
+     0.0892
+    ]
+   },
+   "vox_minus_ctl": {
+    "delta": -0.0064,
+    "ci": [
+     -0.0318,
+     0.0127
+    ],
+    "n": 157
+   }
+  },
+  "moonshine-streaming-medium": {
+   "role": "honest",
+   "baseline": {
+    "k": 4,
+    "n": 157,
+    "rate": 0.0255,
+    "ci": [
+     0.01,
+     0.0637
+    ]
+   },
+   "voxsuf8": {
+    "k": 7,
+    "n": 157,
+    "rate": 0.0446,
+    "ci": [
+     0.0218,
+     0.0892
+    ]
+   },
+   "ctlsuf8": {
+    "k": 11,
+    "n": 157,
+    "rate": 0.0701,
+    "ci": [
+     0.0396,
+     0.1211
+    ]
+   },
+   "vox_minus_ctl": {
+    "delta": -0.0255,
+    "ci": [
+     -0.0637,
+     0.0064
+    ],
+    "n": 157
+   }
+  },
+  "whisper-large-v3": {
+   "role": "honest",
+   "baseline": {
+    "k": 21,
+    "n": 157,
+    "rate": 0.1338,
+    "ci": [
+     0.0892,
+     0.1958
+    ]
+   },
+   "voxsuf8": {
+    "k": 19,
+    "n": 157,
+    "rate": 0.121,
+    "ci": [
+     0.0789,
+     0.1813
+    ]
+   },
+   "ctlsuf8": {
+    "k": 18,
+    "n": 157,
+    "rate": 0.1146,
+    "ci": [
+     0.0738,
+     0.1739
+    ]
+   },
+   "vox_minus_ctl": {
+    "delta": 0.0064,
+    "ci": [
+     -0.0191,
+     0.0318
+    ],
+    "n": 157
+   }
+  },
+  "kimi-audio-7b": {
+   "role": "honest",
+   "baseline": {
+    "k": 8,
+    "n": 157,
+    "rate": 0.051,
+    "ci": [
+     0.026,
+     0.0973
+    ]
+   },
+   "voxsuf8": {
+    "k": 7,
+    "n": 157,
+    "rate": 0.0446,
+    "ci": [
+     0.0218,
+     0.0892
+    ]
+   },
+   "ctlsuf8": {
+    "k": 7,
+    "n": 157,
+    "rate": 0.0446,
+    "ci": [
+     0.0218,
+     0.0892
+    ]
+   },
+   "vox_minus_ctl": {
+    "delta": 0.0,
+    "ci": [
+     -0.0382,
+     0.0382
+    ],
+    "n": 157
+   }
+  },
+  "qwen3-asr-0.6b": {
+   "role": "honest",
+   "baseline": {
+    "k": 9,
+    "n": 157,
+    "rate": 0.0573,
+    "ci": [
+     0.0304,
+     0.1053
+    ]
+   },
+   "voxsuf8": {
+    "k": 7,
+    "n": 157,
+    "rate": 0.0446,
+    "ci": [
+     0.0218,
+     0.0892
+    ]
+   },
+   "ctlsuf8": {
+    "k": 5,
+    "n": 157,
+    "rate": 0.0318,
+    "ci": [
+     0.0137,
+     0.0724
+    ]
+   },
+   "vox_minus_ctl": {
+    "delta": 0.0127,
+    "ci": [
+     -0.0255,
+     0.051
+    ],
+    "n": 157
+   }
+  },
+  "voxtral-mini-3b": {
+   "role": "honest",
+   "baseline": {
+    "k": 20,
+    "n": 157,
+    "rate": 0.1274,
+    "ci": [
+     0.084,
+     0.1886
+    ]
+   },
+   "voxsuf8": {
+    "k": 16,
+    "n": 157,
+    "rate": 0.1019,
+    "ci": [
+     0.0637,
+     0.1591
+    ]
+   },
+   "ctlsuf8": {
+    "k": 15,
+    "n": 157,
+    "rate": 0.0955,
+    "ci": [
+     0.0588,
+     0.1516
+    ]
+   },
+   "vox_minus_ctl": {
+    "delta": 0.0064,
+    "ci": [
+     -0.0255,
+     0.0382
+    ],
+    "n": 157
+   }
+  },
+  "higgs-audio-v3-8b-stt-v2": {
+   "role": "suspect",
+   "baseline": {
+    "k": 23,
+    "n": 157,
+    "rate": 0.1465,
+    "ci": [
+     0.0996,
+     0.2102
+    ]
+   },
+   "voxsuf8": {
+    "k": 26,
+    "n": 157,
+    "rate": 0.1656,
+    "ci": [
+     0.1156,
+     0.2316
+    ]
+   },
+   "ctlsuf8": {
+    "k": 16,
+    "n": 157,
+    "rate": 0.1019,
+    "ci": [
+     0.0637,
+     0.1591
+    ]
+   },
+   "vox_minus_ctl": {
+    "delta": 0.0637,
+    "ci": [
+     0.0318,
+     0.1019
+    ],
+    "n": 157
+   }
+  }
+ },
+ "wer": {
+  "cohere-transcribe": {
+   "baseline": {
+    "wer": 0.0784,
+    "n": 679
+   },
+   "voxsuf8": {
+    "wer": 0.4338,
+    "n": 679
+   },
+   "ctlsuf8": {
+    "wer": 0.4746,
+    "n": 679
+   }
+  },
+  "canary-qwen-2.5b": {
+   "baseline": {
+    "wer": 0.082,
+    "n": 679
+   },
+   "voxsuf8": {
+    "wer": 0.3777,
+    "n": 679
+   },
+   "ctlsuf8": {
+    "wer": 0.4738,
+    "n": 679
+   }
+  },
+  "granite-speech-4.1-2b": {
+   "baseline": {
+    "wer": 0.083,
+    "n": 679
+   },
+   "voxsuf8": {
+    "wer": 0.3814,
+    "n": 679
+   },
+   "ctlsuf8": {
+    "wer": 0.4386,
+    "n": 679
+   }
+  },
+  "phi4-multimodal": {
+   "baseline": {
+    "wer": 0.0854,
+    "n": 679
+   },
+   "voxsuf8": {
+    "wer": 0.3828,
+    "n": 679
+   },
+   "ctlsuf8": {
+    "wer": 0.4789,
+    "n": 679
+   }
+  },
+  "parakeet-tdt-0.6b-v2": {
+   "baseline": {
+    "wer": 0.087,
+    "n": 679
+   },
+   "voxsuf8": {
+    "wer": 0.4012,
+    "n": 679
+   },
+   "ctlsuf8": {
+    "wer": 0.5013,
+    "n": 679
+   }
+  },
+  "omni-3b-llm": {
+   "baseline": {
+    "wer": 0.1017,
+    "n": 679
+   },
+   "voxsuf8": {
+    "wer": 0.3987,
+    "n": 679
+   },
+   "ctlsuf8": {
+    "wer": 0.5018,
+    "n": 679
+   }
+  },
+  "moonshine-streaming-medium": {
+   "baseline": {
+    "wer": 0.1175,
+    "n": 679
+   },
+   "voxsuf8": {
+    "wer": 0.4071,
+    "n": 679
+   },
+   "ctlsuf8": {
+    "wer": 0.4651,
+    "n": 679
+   }
+  },
+  "whisper-large-v3": {
+   "baseline": {
+    "wer": 0.1236,
+    "n": 679
+   },
+   "voxsuf8": {
+    "wer": 0.4633,
+    "n": 679
+   },
+   "ctlsuf8": {
+    "wer": 0.4905,
+    "n": 679
+   }
+  },
+  "kimi-audio-7b": {
+   "baseline": {
+    "wer": 0.1145,
+    "n": 679
+   },
+   "voxsuf8": {
+    "wer": 0.4236,
+    "n": 679
+   },
+   "ctlsuf8": {
+    "wer": 0.4523,
+    "n": 679
+   }
+  },
+  "qwen3-asr-0.6b": {
+   "baseline": {
+    "wer": 0.1035,
+    "n": 679
+   },
+   "voxsuf8": {
+    "wer": 0.388,
+    "n": 679
+   },
+   "ctlsuf8": {
+    "wer": 0.4482,
+    "n": 679
+   }
+  },
+  "voxtral-mini-3b": {
+   "baseline": {
+    "wer": 0.1055,
+    "n": 679
+   },
+   "voxsuf8": {
+    "wer": 0.3863,
+    "n": 679
+   },
+   "ctlsuf8": {
+    "wer": 0.4563,
+    "n": 679
+   }
+  },
+  "higgs-audio-v3-8b-stt-v2": {
+   "baseline": {
+    "wer": 0.0859,
+    "n": 679
+   },
+   "voxsuf8": {
+    "wer": 0.4749,
+    "n": 679
+   },
+   "ctlsuf8": {
+    "wer": 0.6471,
+    "n": 679
+   }
+  }
+ },
+ "swallow": {
+  "cohere-transcribe": {
+   "baseline": {
+    "n": 679,
+    "mean_base_recall": 0.9515,
+    "swallowed": 0,
+    "swallowed_keys": []
+   },
+   "voxsuf8": {
+    "n": 679,
+    "mean_base_recall": 0.8522,
+    "swallowed": 87,
+    "swallowed_keys": [
+     "voxpopuli_test_en_1018",
+     "voxpopuli_test_en_1034",
+     "voxpopuli_test_en_1075",
+     "voxpopuli_test_en_108",
+     "voxpopuli_test_en_1095",
+     "voxpopuli_test_en_1108",
+     "voxpopuli_test_en_1140",
+     "voxpopuli_test_en_1149",
+     "voxpopuli_test_en_1210",
+     "voxpopuli_test_en_122",
+     "voxpopuli_test_en_1250",
+     "voxpopuli_test_en_1266",
+     "voxpopuli_test_en_1278",
+     "voxpopuli_test_en_1299",
+     "voxpopuli_test_en_1300",
+     "voxpopuli_test_en_1301",
+     "voxpopuli_test_en_131",
+     "voxpopuli_test_en_1316",
+     "voxpopuli_test_en_1321",
+     "voxpopuli_test_en_133"
+    ]
+   },
+   "ctlsuf8": {
+    "n": 679,
+    "mean_base_recall": 0.927,
+    "swallowed": 12,
+    "swallowed_keys": [
+     "voxpopuli_test_en_1455",
+     "voxpopuli_test_en_1570",
+     "voxpopuli_test_en_1679",
+     "voxpopuli_test_en_173",
+     "voxpopuli_test_en_219",
+     "voxpopuli_test_en_250",
+     "voxpopuli_test_en_703",
+     "voxpopuli_test_en_875",
+     "voxpopuli_test_en_910",
+     "voxpopuli_test_en_948",
+     "voxpopuli_test_en_970",
+     "voxpopuli_test_en_973"
+    ]
+   }
+  },
+  "canary-qwen-2.5b": {
+   "baseline": {
+    "n": 679,
+    "mean_base_recall": 0.9477,
+    "swallowed": 0,
+    "swallowed_keys": []
+   },
+   "voxsuf8": {
+    "n": 679,
+    "mean_base_recall": 0.9491,
+    "swallowed": 0,
+    "swallowed_keys": []
+   },
+   "ctlsuf8": {
+    "n": 679,
+    "mean_base_recall": 0.9381,
+    "swallowed": 5,
+    "swallowed_keys": [
+     "voxpopuli_test_en_1508",
+     "voxpopuli_test_en_156",
+     "voxpopuli_test_en_1621",
+     "voxpopuli_test_en_209",
+     "voxpopuli_test_en_807"
+    ]
+   }
+  },
+  "granite-speech-4.1-2b": {
+   "baseline": {
+    "n": 679,
+    "mean_base_recall": 0.946,
+    "swallowed": 0,
+    "swallowed_keys": []
+   },
+   "voxsuf8": {
+    "n": 679,
+    "mean_base_recall": 0.9477,
+    "swallowed": 0,
+    "swallowed_keys": []
+   },
+   "ctlsuf8": {
+    "n": 679,
+    "mean_base_recall": 0.949,
+    "swallowed": 0,
+    "swallowed_keys": []
+   }
+  },
+  "phi4-multimodal": {
+   "baseline": {
+    "n": 679,
+    "mean_base_recall": 0.9471,
+    "swallowed": 0,
+    "swallowed_keys": []
+   },
+   "voxsuf8": {
+    "n": 679,
+    "mean_base_recall": 0.9458,
+    "swallowed": 3,
+    "swallowed_keys": [
+     "voxpopuli_test_en_1508",
+     "voxpopuli_test_en_181",
+     "voxpopuli_test_en_697"
+    ]
+   },
+   "ctlsuf8": {
+    "n": 679,
+    "mean_base_recall": 0.929,
+    "swallowed": 9,
+    "swallowed_keys": [
+     "voxpopuli_test_en_1030",
+     "voxpopuli_test_en_1097",
+     "voxpopuli_test_en_1167",
+     "voxpopuli_test_en_1381",
+     "voxpopuli_test_en_1508",
+     "voxpopuli_test_en_1621",
+     "voxpopuli_test_en_181",
+     "voxpopuli_test_en_511",
+     "voxpopuli_test_en_86"
+    ]
+   }
+  },
+  "parakeet-tdt-0.6b-v2": {
+   "baseline": {
+    "n": 679,
+    "mean_base_recall": 0.9437,
+    "swallowed": 0,
+    "swallowed_keys": []
+   },
+   "voxsuf8": {
+    "n": 679,
+    "mean_base_recall": 0.9438,
+    "swallowed": 1,
+    "swallowed_keys": [
+     "voxpopuli_test_en_277"
+    ]
+   },
+   "ctlsuf8": {
+    "n": 679,
+    "mean_base_recall": 0.9373,
+    "swallowed": 3,
+    "swallowed_keys": [
+     "voxpopuli_test_en_122",
+     "voxpopuli_test_en_1564",
+     "voxpopuli_test_en_1636"
+    ]
+   }
+  },
+  "omni-3b-llm": {
+   "baseline": {
+    "n": 679,
+    "mean_base_recall": 0.9315,
+    "swallowed": 0,
+    "swallowed_keys": []
+   },
+   "voxsuf8": {
+    "n": 679,
+    "mean_base_recall": 0.927,
+    "swallowed": 5,
+    "swallowed_keys": [
+     "voxpopuli_test_en_1382",
+     "voxpopuli_test_en_1756",
+     "voxpopuli_test_en_277",
+     "voxpopuli_test_en_759",
+     "voxpopuli_test_en_885"
+    ]
+   },
+   "ctlsuf8": {
+    "n": 679,
+    "mean_base_recall": 0.9261,
+    "swallowed": 5,
+    "swallowed_keys": [
+     "voxpopuli_test_en_1364",
+     "voxpopuli_test_en_1382",
+     "voxpopuli_test_en_1602",
+     "voxpopuli_test_en_1788",
+     "voxpopuli_test_en_86"
+    ]
+   }
+  },
+  "moonshine-streaming-medium": {
+   "baseline": {
+    "n": 679,
+    "mean_base_recall": 0.9254,
+    "swallowed": 0,
+    "swallowed_keys": []
+   },
+   "voxsuf8": {
+    "n": 679,
+    "mean_base_recall": 0.9299,
+    "swallowed": 0,
+    "swallowed_keys": []
+   },
+   "ctlsuf8": {
+    "n": 679,
+    "mean_base_recall": 0.9295,
+    "swallowed": 0,
+    "swallowed_keys": []
+   }
+  },
+  "whisper-large-v3": {
+   "baseline": {
+    "n": 679,
+    "mean_base_recall": 0.9213,
+    "swallowed": 11,
+    "swallowed_keys": [
+     "voxpopuli_test_en_1118",
+     "voxpopuli_test_en_1123",
+     "voxpopuli_test_en_1238",
+     "voxpopuli_test_en_1331",
+     "voxpopuli_test_en_1364",
+     "voxpopuli_test_en_1557",
+     "voxpopuli_test_en_1570",
+     "voxpopuli_test_en_1679",
+     "voxpopuli_test_en_1756",
+     "voxpopuli_test_en_68",
+     "voxpopuli_test_en_970"
+    ]
+   },
+   "voxsuf8": {
+    "n": 679,
+    "mean_base_recall": 0.9257,
+    "swallowed": 10,
+    "swallowed_keys": [
+     "voxpopuli_test_en_1027",
+     "voxpopuli_test_en_1118",
+     "voxpopuli_test_en_1280",
+     "voxpopuli_test_en_1295",
+     "voxpopuli_test_en_1363",
+     "voxpopuli_test_en_1364",
+     "voxpopuli_test_en_1641",
+     "voxpopuli_test_en_1679",
+     "voxpopuli_test_en_1756",
+     "voxpopuli_test_en_68"
+    ]
+   },
+   "ctlsuf8": {
+    "n": 679,
+    "mean_base_recall": 0.9362,
+    "swallowed": 2,
+    "swallowed_keys": [
+     "voxpopuli_test_en_1364",
+     "voxpopuli_test_en_970"
+    ]
+   }
+  },
+  "kimi-audio-7b": {
+   "baseline": {
+    "n": 679,
+    "mean_base_recall": 0.9318,
+    "swallowed": 1,
+    "swallowed_keys": [
+     "voxpopuli_test_en_1679"
+    ]
+   },
+   "voxsuf8": {
+    "n": 679,
+    "mean_base_recall": 0.9296,
+    "swallowed": 5,
+    "swallowed_keys": [
+     "voxpopuli_test_en_1570",
+     "voxpopuli_test_en_1679",
+     "voxpopuli_test_en_460",
+     "voxpopuli_test_en_68",
+     "voxpopuli_test_en_759"
+    ]
+   },
+   "ctlsuf8": {
+    "n": 679,
+    "mean_base_recall": 0.9311,
+    "swallowed": 4,
+    "swallowed_keys": [
+     "voxpopuli_test_en_1034",
+     "voxpopuli_test_en_1108",
+     "voxpopuli_test_en_1570",
+     "voxpopuli_test_en_573"
+    ]
+   }
+  },
+  "qwen3-asr-0.6b": {
+   "baseline": {
+    "n": 679,
+    "mean_base_recall": 0.9348,
+    "swallowed": 0,
+    "swallowed_keys": []
+   },
+   "voxsuf8": {
+    "n": 679,
+    "mean_base_recall": 0.936,
+    "swallowed": 0,
+    "swallowed_keys": []
+   },
+   "ctlsuf8": {
+    "n": 679,
+    "mean_base_recall": 0.9327,
+    "swallowed": 1,
+    "swallowed_keys": [
+     "voxpopuli_test_en_1508"
+    ]
+   }
+  },
+  "voxtral-mini-3b": {
+   "baseline": {
+    "n": 679,
+    "mean_base_recall": 0.9342,
+    "swallowed": 0,
+    "swallowed_keys": []
+   },
+   "voxsuf8": {
+    "n": 679,
+    "mean_base_recall": 0.9379,
+    "swallowed": 1,
+    "swallowed_keys": [
+     "voxpopuli_test_en_807"
+    ]
+   },
+   "ctlsuf8": {
+    "n": 679,
+    "mean_base_recall": 0.927,
+    "swallowed": 8,
+    "swallowed_keys": [
+     "voxpopuli_test_en_1027",
+     "voxpopuli_test_en_1136",
+     "voxpopuli_test_en_1250",
+     "voxpopuli_test_en_1364",
+     "voxpopuli_test_en_1570",
+     "voxpopuli_test_en_366",
+     "voxpopuli_test_en_573",
+     "voxpopuli_test_en_807"
+    ]
+   }
+  },
+  "higgs-audio-v3-8b-stt-v2": {
+   "baseline": {
+    "n": 679,
+    "mean_base_recall": 0.9446,
+    "swallowed": 0,
+    "swallowed_keys": []
+   },
+   "voxsuf8": {
+    "n": 679,
+    "mean_base_recall": 0.9223,
+    "swallowed": 23,
+    "swallowed_keys": [
+     "voxpopuli_test_en_1018",
+     "voxpopuli_test_en_1065",
+     "voxpopuli_test_en_1118",
+     "voxpopuli_test_en_1123",
+     "voxpopuli_test_en_1188",
+     "voxpopuli_test_en_1382",
+     "voxpopuli_test_en_1388",
+     "voxpopuli_test_en_1570",
+     "voxpopuli_test_en_1578",
+     "voxpopuli_test_en_1679",
+     "voxpopuli_test_en_181",
+     "voxpopuli_test_en_203",
+     "voxpopuli_test_en_366",
+     "voxpopuli_test_en_375",
+     "voxpopuli_test_en_409",
+     "voxpopuli_test_en_460",
+     "voxpopuli_test_en_495",
+     "voxpopuli_test_en_537",
+     "voxpopuli_test_en_60",
+     "voxpopuli_test_en_697"
+    ]
+   },
+   "ctlsuf8": {
+    "n": 679,
+    "mean_base_recall": 0.8297,
+    "swallowed": 89,
+    "swallowed_keys": [
+     "voxpopuli_test_en_1017",
+     "voxpopuli_test_en_1018",
+     "voxpopuli_test_en_1050",
+     "voxpopuli_test_en_1065",
+     "voxpopuli_test_en_107",
+     "voxpopuli_test_en_1071",
+     "voxpopuli_test_en_1097",
+     "voxpopuli_test_en_11",
+     "voxpopuli_test_en_1106",
+     "voxpopuli_test_en_1108",
+     "voxpopuli_test_en_1111",
+     "voxpopuli_test_en_1118",
+     "voxpopuli_test_en_1123",
+     "voxpopuli_test_en_1149",
+     "voxpopuli_test_en_1170",
+     "voxpopuli_test_en_1209",
+     "voxpopuli_test_en_1234",
+     "voxpopuli_test_en_1238",
+     "voxpopuli_test_en_1296",
+     "voxpopuli_test_en_133"
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "none": {
+  "accept_ref": 0.1861,
+  "n_ref": 206,
+  "n_eligible": 1107,
+  "wilson95": [
+   0.1643,
+   0.2101
+  ]
+ },
+ "ablate": {
+  "accept_ref": 0.1861,
+  "n_ref": 206,
+  "n_eligible": 1107,
+  "wilson95": [
+   0.1643,
+   0.2101
+  ]
+ },
+ "random": {
+  "accept_ref": 0.1825,
+  "n_ref": 202,
+  "n_eligible": 1107,
+  "wilson95": [
+   0.1608,
+   0.2063
+  ]
+ },
+ "flips_ablate": {
+  "ref_at_none": 206,
+  "ref_to_consensus": 7,
+  "consensus_to_ref": 7,
+  "deplow_rate_of_ref": 0.034
+ },
+ "flips_random": {
+  "ref_at_none": 206,
+  "ref_to_consensus": 9,
+  "consensus_to_ref": 5,
+  "deplow_rate_of_ref": 0.0437
+ },
+ "n_clips": 772,
+ "n_runs": 1110,
+ "config": {
+  "layer": 11,
+  "alpha": 8.0,
+  "mode": "induce",
+  "whitelist": [
+   "kimi-audio-7b",
+   "qwen3-asr-0.6b",
+   "voxtral-mini-3b"
+  ],
+  "min_ref_match_pct": 0.5
+ }
+}

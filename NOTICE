@@ -1,0 +1,10 @@
+benchmaxx — Quantifying Benchmark Optimization in ASR Models
+Copyright 2026 Hume AI
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This product includes the following third-party material:
+
+* src/benchmaxx/data/english_spelling.json — the en-GB to en-US spelling map
+  from openai/whisper (whisper/normalizers/english.json), MIT licensed.
+  https://github.com/openai/whisper

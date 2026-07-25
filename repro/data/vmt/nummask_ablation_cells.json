@@ -1,0 +1,260 @@
+{
+ "cohere-transcribe": {
+  "full": [
+   44,
+   157
+  ],
+  "donor": [
+   21,
+   157
+  ],
+  "voxdonor": [
+   35,
+   157
+  ],
+  "truncated": [
+   19,
+   157
+  ],
+  "activation": [
+   27,
+   157
+  ],
+  "steer_none": [
+   43,
+   157
+  ],
+  "steer_random": [
+   42,
+   157
+  ]
+ },
+ "canary-qwen-2.5b": {
+  "full": [
+   28,
+   157
+  ],
+  "donor": [
+   23,
+   157
+  ],
+  "voxdonor": [
+   31,
+   157
+  ],
+  "truncated": [
+   15,
+   157
+  ],
+  "activation": [
+   15,
+   157
+  ],
+  "steer_none": [
+   27,
+   157
+  ],
+  "steer_random": [
+   27,
+   157
+  ]
+ },
+ "granite-speech-4.1-2b": {
+  "full": [
+   27,
+   157
+  ],
+  "donor": [
+   29,
+   157
+  ],
+  "voxdonor": [
+   26,
+   157
+  ],
+  "truncated": [
+   14,
+   157
+  ],
+  "activation": [
+   20,
+   157
+  ],
+  "steer_none": [
+   23,
+   157
+  ],
+  "steer_random": [
+   24,
+   157
+  ]
+ },
+ "phi4-multimodal": {
+  "full": [
+   19,
+   157
+  ],
+  "donor": [
+   16,
+   157
+  ],
+  "voxdonor": [
+   20,
+   157
+  ],
+  "truncated": [
+   3,
+   157
+  ],
+  "activation": [
+   21,
+   157
+  ],
+  "steer_none": [
+   18,
+   157
+  ],
+  "steer_random": [
+   19,
+   157
+  ]
+ },
+ "parakeet-tdt-0.6b-v2": {
+  "full": [
+   23,
+   157
+  ],
+  "donor": [
+   19,
+   157
+  ],
+  "voxdonor": [
+   20,
+   157
+  ],
+  "truncated": [
+   12,
+   157
+  ],
+  "activation": [
+   12,
+   157
+  ],
+  "steer_none": [
+   23,
+   157
+  ],
+  "steer_random": [
+   23,
+   157
+  ]
+ },
+ "higgs-audio-v3-8b-stt-v2": {
+  "full": [
+   29,
+   157
+  ],
+  "donor": [
+   19,
+   157
+  ],
+  "voxdonor": [
+   30,
+   157
+  ],
+  "truncated": [
+   27,
+   157
+  ]
+ },
+ "moonshine-streaming-medium": {
+  "full": [
+   8,
+   157
+  ],
+  "donor": [
+   17,
+   157
+  ],
+  "voxdonor": [
+   8,
+   157
+  ],
+  "truncated": [
+   4,
+   157
+  ]
+ },
+ "whisper-large-v3": {
+  "full": [
+   22,
+   157
+  ],
+  "donor": [
+   21,
+   157
+  ],
+  "voxdonor": [
+   21,
+   157
+  ],
+  "truncated": [
+   13,
+   157
+  ]
+ },
+ "kimi-audio-7b": {
+  "full": [
+   14,
+   157
+  ],
+  "donor": [
+   15,
+   157
+  ],
+  "voxdonor": [
+   11,
+   157
+  ],
+  "truncated": [
+   7,
+   157
+  ]
+ },
+ "qwen3-asr-0.6b": {
+  "full": [
+   10,
+   157
+  ],
+  "donor": [
+   10,
+   157
+  ],
+  "voxdonor": [
+   8,
+   157
+  ],
+  "truncated": [
+   9,
+   157
+  ]
+ },
+ "voxtral-mini-3b": {
+  "full": [
+   24,
+   157
+  ],
+  "donor": [
+   18,
+   157
+  ],
+  "voxdonor": [
+   19,
+   157
+  ],
+  "truncated": [
+   21,
+   157
+  ]
+ }
+}

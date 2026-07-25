@@ -1,0 +1,622 @@
+{
+  "voxtral-mini-3b": {
+    "role": "honest",
+    "vox": {
+      "ref": 10,
+      "n": 817,
+      "rate": 0.012
+    },
+    "epfresh": {
+      "ref": 11,
+      "n": 840,
+      "rate": 0.013
+    },
+    "generic": {
+      "ref": 9,
+      "n": 823,
+      "rate": 0.011
+    },
+    "real": {
+      "ref": 10,
+      "n": 846,
+      "rate": 0.012
+    },
+    "pert-noise10db": {
+      "ref": 8,
+      "n": 846,
+      "rate": 0.009
+    },
+    "pert-reverb0.6": {
+      "ref": 17,
+      "n": 846,
+      "rate": 0.02
+    },
+    "pert-mp316k": {
+      "ref": 5,
+      "n": 846,
+      "rate": 0.006
+    },
+    "realrir-lo": {
+      "ref": 5,
+      "n": 846,
+      "rate": 0.006
+    },
+    "realrir-mid": {
+      "ref": 7,
+      "n": 826,
+      "rate": 0.008
+    },
+    "realrir-hi": {
+      "ref": 7,
+      "n": 826,
+      "rate": 0.008
+    }
+  },
+  "whisper-large-v3": {
+    "role": "honest",
+    "vox": {
+      "ref": 12,
+      "n": 816,
+      "rate": 0.015
+    },
+    "epfresh": {
+      "ref": 12,
+      "n": 840,
+      "rate": 0.014
+    },
+    "generic": {
+      "ref": 8,
+      "n": 823,
+      "rate": 0.01
+    },
+    "real": {
+      "ref": 21,
+      "n": 826,
+      "rate": 0.025
+    },
+    "pert-noise10db": {
+      "ref": 17,
+      "n": 841,
+      "rate": 0.02
+    },
+    "pert-reverb0.6": {
+      "ref": 22,
+      "n": 845,
+      "rate": 0.026
+    },
+    "pert-mp316k": {
+      "ref": 14,
+      "n": 842,
+      "rate": 0.017
+    },
+    "realrir-lo": {
+      "ref": 12,
+      "n": 843,
+      "rate": 0.014
+    },
+    "realrir-mid": {
+      "ref": 11,
+      "n": 820,
+      "rate": 0.013
+    },
+    "realrir-hi": {
+      "ref": 21,
+      "n": 825,
+      "rate": 0.025
+    }
+  },
+  "kimi-audio-7b": {
+    "role": "honest",
+    "vox": {
+      "ref": 10,
+      "n": 817,
+      "rate": 0.012
+    },
+    "epfresh": {
+      "ref": 12,
+      "n": 840,
+      "rate": 0.014
+    },
+    "generic": {
+      "ref": 14,
+      "n": 823,
+      "rate": 0.017
+    },
+    "real": {
+      "ref": 14,
+      "n": 845,
+      "rate": 0.017
+    },
+    "pert-noise10db": {
+      "ref": 22,
+      "n": 845,
+      "rate": 0.026
+    },
+    "pert-reverb0.6": {
+      "ref": 23,
+      "n": 846,
+      "rate": 0.027
+    },
+    "pert-mp316k": {
+      "ref": 8,
+      "n": 841,
+      "rate": 0.01
+    },
+    "realrir-lo": {
+      "ref": 9,
+      "n": 846,
+      "rate": 0.011
+    },
+    "realrir-mid": {
+      "ref": 10,
+      "n": 826,
+      "rate": 0.012
+    },
+    "realrir-hi": {
+      "ref": 17,
+      "n": 827,
+      "rate": 0.021
+    }
+  },
+  "moonshine-streaming-medium": {
+    "role": "honest",
+    "vox": {
+      "ref": 9,
+      "n": 813,
+      "rate": 0.011
+    },
+    "epfresh": {
+      "ref": 13,
+      "n": 832,
+      "rate": 0.016
+    },
+    "generic": {
+      "ref": 8,
+      "n": 821,
+      "rate": 0.01
+    },
+    "real": {
+      "ref": 0,
+      "n": 0,
+      "rate": null
+    },
+    "pert-noise10db": {
+      "ref": 25,
+      "n": 843,
+      "rate": 0.03
+    },
+    "pert-reverb0.6": {
+      "ref": 41,
+      "n": 831,
+      "rate": 0.049
+    },
+    "pert-mp316k": {
+      "ref": 9,
+      "n": 846,
+      "rate": 0.011
+    },
+    "realrir-lo": {
+      "ref": 13,
+      "n": 846,
+      "rate": 0.015
+    },
+    "realrir-mid": {
+      "ref": 13,
+      "n": 825,
+      "rate": 0.016
+    },
+    "realrir-hi": {
+      "ref": 27,
+      "n": 823,
+      "rate": 0.033
+    }
+  },
+  "qwen3-asr-0.6b": {
+    "role": "suspect",
+    "vox": {
+      "ref": 12,
+      "n": 817,
+      "rate": 0.015
+    },
+    "epfresh": {
+      "ref": 11,
+      "n": 840,
+      "rate": 0.013
+    },
+    "generic": {
+      "ref": 9,
+      "n": 823,
+      "rate": 0.011
+    },
+    "real": {
+      "ref": 10,
+      "n": 846,
+      "rate": 0.012
+    },
+    "pert-noise10db": {
+      "ref": 13,
+      "n": 846,
+      "rate": 0.015
+    },
+    "pert-reverb0.6": {
+      "ref": 19,
+      "n": 846,
+      "rate": 0.022
+    },
+    "pert-mp316k": {
+      "ref": 8,
+      "n": 846,
+      "rate": 0.009
+    },
+    "realrir-lo": {
+      "ref": 6,
+      "n": 846,
+      "rate": 0.007
+    },
+    "realrir-mid": {
+      "ref": 6,
+      "n": 826,
+      "rate": 0.007
+    },
+    "realrir-hi": {
+      "ref": 12,
+      "n": 827,
+      "rate": 0.015
+    }
+  },
+  "cohere-transcribe": {
+    "role": "suspect",
+    "vox": {
+      "ref": 117,
+      "n": 808,
+      "rate": 0.145
+    },
+    "epfresh": {
+      "ref": 37,
+      "n": 840,
+      "rate": 0.044
+    },
+    "generic": {
+      "ref": 14,
+      "n": 821,
+      "rate": 0.017
+    },
+    "real": {
+      "ref": 243,
+      "n": 835,
+      "rate": 0.291
+    },
+    "pert-noise10db": {
+      "ref": 242,
+      "n": 846,
+      "rate": 0.286
+    },
+    "pert-reverb0.6": {
+      "ref": 143,
+      "n": 846,
+      "rate": 0.169
+    },
+    "pert-mp316k": {
+      "ref": 269,
+      "n": 846,
+      "rate": 0.318
+    },
+    "realrir-lo": {
+      "ref": 227,
+      "n": 846,
+      "rate": 0.268
+    },
+    "realrir-mid": {
+      "ref": 217,
+      "n": 826,
+      "rate": 0.263
+    },
+    "realrir-hi": {
+      "ref": 156,
+      "n": 827,
+      "rate": 0.189
+    }
+  },
+  "granite-speech-4.1-2b": {
+    "role": "suspect",
+    "vox": {
+      "ref": 122,
+      "n": 817,
+      "rate": 0.149
+    },
+    "epfresh": {
+      "ref": 35,
+      "n": 840,
+      "rate": 0.042
+    },
+    "generic": {
+      "ref": 12,
+      "n": 823,
+      "rate": 0.015
+    },
+    "real": {
+      "ref": 177,
+      "n": 846,
+      "rate": 0.209
+    },
+    "pert-noise10db": {
+      "ref": 182,
+      "n": 846,
+      "rate": 0.215
+    },
+    "pert-reverb0.6": {
+      "ref": 54,
+      "n": 846,
+      "rate": 0.064
+    },
+    "pert-mp316k": {
+      "ref": 134,
+      "n": 846,
+      "rate": 0.158
+    },
+    "realrir-lo": {
+      "ref": 144,
+      "n": 846,
+      "rate": 0.17
+    },
+    "realrir-mid": {
+      "ref": 135,
+      "n": 826,
+      "rate": 0.163
+    },
+    "realrir-hi": {
+      "ref": 76,
+      "n": 827,
+      "rate": 0.092
+    }
+  },
+  "canary-qwen-2.5b": {
+    "role": "suspect",
+    "vox": {
+      "ref": 80,
+      "n": 817,
+      "rate": 0.098
+    },
+    "epfresh": {
+      "ref": 13,
+      "n": 840,
+      "rate": 0.015
+    },
+    "generic": {
+      "ref": 10,
+      "n": 823,
+      "rate": 0.012
+    },
+    "real": {
+      "ref": 185,
+      "n": 846,
+      "rate": 0.219
+    },
+    "pert-noise10db": {
+      "ref": 22,
+      "n": 846,
+      "rate": 0.026
+    },
+    "pert-reverb0.6": {
+      "ref": 41,
+      "n": 846,
+      "rate": 0.048
+    },
+    "pert-mp316k": {
+      "ref": 189,
+      "n": 846,
+      "rate": 0.223
+    },
+    "realrir-lo": {
+      "ref": 144,
+      "n": 846,
+      "rate": 0.17
+    },
+    "realrir-mid": {
+      "ref": 123,
+      "n": 826,
+      "rate": 0.149
+    },
+    "realrir-hi": {
+      "ref": 52,
+      "n": 827,
+      "rate": 0.063
+    }
+  },
+  "phi4-multimodal": {
+    "role": "suspect",
+    "vox": {
+      "ref": 101,
+      "n": 814,
+      "rate": 0.124
+    },
+    "epfresh": {
+      "ref": 49,
+      "n": 837,
+      "rate": 0.059
+    },
+    "generic": {
+      "ref": 7,
+      "n": 823,
+      "rate": 0.009
+    },
+    "real": {
+      "ref": 152,
+      "n": 846,
+      "rate": 0.18
+    },
+    "pert-noise10db": {
+      "ref": 137,
+      "n": 845,
+      "rate": 0.162
+    },
+    "pert-reverb0.6": {
+      "ref": 150,
+      "n": 846,
+      "rate": 0.177
+    },
+    "pert-mp316k": {
+      "ref": 165,
+      "n": 846,
+      "rate": 0.195
+    },
+    "realrir-lo": {
+      "ref": 153,
+      "n": 846,
+      "rate": 0.181
+    },
+    "realrir-mid": {
+      "ref": 156,
+      "n": 828,
+      "rate": 0.188
+    },
+    "realrir-hi": {
+      "ref": 152,
+      "n": 827,
+      "rate": 0.184
+    }
+  },
+  "parakeet-tdt-0.6b-v2": {
+    "role": "suspect",
+    "vox": {
+      "ref": 56,
+      "n": 817,
+      "rate": 0.069
+    },
+    "epfresh": {
+      "ref": 17,
+      "n": 840,
+      "rate": 0.02
+    },
+    "generic": {
+      "ref": 10,
+      "n": 823,
+      "rate": 0.012
+    },
+    "real": {
+      "ref": 147,
+      "n": 846,
+      "rate": 0.174
+    },
+    "pert-noise10db": {
+      "ref": 35,
+      "n": 846,
+      "rate": 0.041
+    },
+    "pert-reverb0.6": {
+      "ref": 70,
+      "n": 846,
+      "rate": 0.083
+    },
+    "pert-mp316k": {
+      "ref": 133,
+      "n": 846,
+      "rate": 0.157
+    },
+    "realrir-lo": {
+      "ref": 125,
+      "n": 846,
+      "rate": 0.148
+    },
+    "realrir-mid": {
+      "ref": 107,
+      "n": 826,
+      "rate": 0.13
+    },
+    "realrir-hi": {
+      "ref": 64,
+      "n": 827,
+      "rate": 0.077
+    }
+  },
+  "omni-3b-llm": {
+    "role": "suspect",
+    "vox": {
+      "ref": 61,
+      "n": 817,
+      "rate": 0.075
+    },
+    "epfresh": {
+      "ref": 44,
+      "n": 834,
+      "rate": 0.053
+    },
+    "generic": {
+      "ref": 22,
+      "n": 823,
+      "rate": 0.027
+    },
+    "real": {
+      "ref": 91,
+      "n": 846,
+      "rate": 0.108
+    },
+    "pert-noise10db": {
+      "ref": 75,
+      "n": 846,
+      "rate": 0.089
+    },
+    "pert-reverb0.6": {
+      "ref": 62,
+      "n": 841,
+      "rate": 0.074
+    },
+    "pert-mp316k": {
+      "ref": 87,
+      "n": 846,
+      "rate": 0.103
+    },
+    "realrir-lo": {
+      "ref": 70,
+      "n": 846,
+      "rate": 0.083
+    },
+    "realrir-mid": {
+      "ref": 63,
+      "n": 826,
+      "rate": 0.076
+    },
+    "realrir-hi": {
+      "ref": 57,
+      "n": 826,
+      "rate": 0.069
+    }
+  },
+  "higgs-audio-v3-8b-stt-v2": {
+    "role": "suspect",
+    "vox": {
+      "ref": 117,
+      "n": 817,
+      "rate": 0.143
+    },
+    "epfresh": {
+      "ref": 37,
+      "n": 840,
+      "rate": 0.044
+    },
+    "generic": {
+      "ref": 11,
+      "n": 823,
+      "rate": 0.013
+    },
+    "real": {
+      "ref": 170,
+      "n": 846,
+      "rate": 0.201
+    },
+    "pert-noise10db": {
+      "ref": 63,
+      "n": 846,
+      "rate": 0.074
+    },
+    "pert-reverb0.6": null,
+    "pert-mp316k": null,
+    "realrir-lo": null,
+    "realrir-mid": {
+      "ref": 96,
+      "n": 826,
+      "rate": 0.116
+    },
+    "realrir-hi": null
+  }
+}

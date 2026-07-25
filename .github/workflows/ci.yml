@@ -1,0 +1,38 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: pip install -e ".[dev,parquet]"
+      - run: ruff check src tests
+      # Includes tests/test_paper_equivalence.py, which replays the paper's
+      # published reference-disagreement run and requires identical output.
+      - run: pytest -q
+
+  figures:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[figures]"
+      # Every figure the shipped derived data supports must still build.
+      - run: cd repro && make figures PY=python
+      - uses: actions/upload-artifact@v4
+        with:
+          name: figures
+          path: repro/out/*.png

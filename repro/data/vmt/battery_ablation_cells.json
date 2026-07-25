@@ -1,0 +1,176 @@
+{
+ "cohere-transcribe": {
+  "full": [
+   335,
+   1101
+  ],
+  "truncated": [
+   141,
+   1077
+  ],
+  "donor": [
+   47,
+   811
+  ],
+  "activation": [
+   47,
+   1108
+  ]
+ },
+ "canary-qwen-2.5b": {
+  "full": [
+   259,
+   1113
+  ],
+  "truncated": [
+   128,
+   1077
+  ],
+  "donor": [
+   41,
+   820
+  ],
+  "activation": [
+   22,
+   1108
+  ]
+ },
+ "granite-speech-4.1-2b": {
+  "full": [
+   231,
+   1113
+  ],
+  "truncated": [
+   132,
+   1077
+  ],
+  "donor": [
+   168,
+   823
+  ],
+  "activation": [
+   154,
+   1108
+  ]
+ },
+ "phi4-multimodal": {
+  "full": [
+   209,
+   1113
+  ],
+  "truncated": [
+   99,
+   1077
+  ],
+  "donor": [
+   37,
+   813
+  ],
+  "activation": [
+   223,
+   1108
+  ]
+ },
+ "parakeet-tdt-0.6b-v2": {
+  "full": [
+   201,
+   1113
+  ],
+  "truncated": [
+   81,
+   1077
+  ],
+  "donor": [
+   52,
+   820
+  ],
+  "activation": [
+   15,
+   1108
+  ]
+ },
+ "higgs-audio-v3-8b-stt-v2": {
+  "full": [
+   235,
+   1113
+  ],
+  "truncated": [
+   130,
+   1077
+  ],
+  "donor": [
+   22,
+   716
+  ]
+ },
+ "moonshine-streaming-medium": {
+  "full": [
+   11,
+   1113
+  ],
+  "truncated": [
+   56,
+   1077
+  ],
+  "donor": [
+   20,
+   823
+  ]
+ },
+ "whisper-large-v3": {
+  "full": [
+   27,
+   1089
+  ],
+  "truncated": [
+   56,
+   1077
+  ],
+  "donor": [
+   17,
+   818
+  ]
+ },
+ "kimi-audio-7b": {
+  "full": [
+   11,
+   1112
+  ],
+  "truncated": [
+   55,
+   1077
+  ],
+  "donor": [
+   18,
+   818
+  ]
+ },
+ "qwen3-asr-0.6b": {
+  "full": [
+   11,
+   1113
+  ],
+  "truncated": [
+   62,
+   1077
+  ],
+  "donor": [
+   16,
+   823
+  ]
+ },
+ "voxtral-mini-3b": {
+  "full": [
+   11,
+   1113
+  ],
+  "truncated": [
+   52,
+   1077
+  ],
+  "donor": [
+   15,
+   810
+  ]
+ }
+}

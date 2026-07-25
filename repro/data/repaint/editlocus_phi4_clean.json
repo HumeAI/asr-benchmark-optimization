@@ -1,0 +1,2409 @@
+{
+ "summary": {
+  "insertion": {
+   "n": 121,
+   "n_content": 56,
+   "ins_on": 0.8429752066115702,
+   "ins_off": 0.4793388429752066,
+   "ins_on_content": 0.7678571428571429,
+   "ins_off_content": 0.4642857142857143
+  },
+  "omission": {
+   "n": 70,
+   "n_content": 20,
+   "keep_on": 0.02857142857142857,
+   "keep_off": 0.32857142857142857,
+   "recovered": 0.3,
+   "keep_on_content": 0.05,
+   "keep_off_content": 0.15,
+   "recovered_content": 0.1
+  }
+ },
+ "insertion_rows": [
+  {
+   "key": "voxpopuli_test_en_1017",
+   "tok": "the",
+   "left": "to",
+   "right": "geneva",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_1017",
+   "tok": "the",
+   "left": "with",
+   "right": "eu",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_982",
+   "tok": "but",
+   "left": "understandable",
+   "right": "on",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1054",
+   "tok": "a",
+   "left": "identifying",
+   "right": "political",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_6",
+   "tok": "make",
+   "left": "can",
+   "right": "progress",
+   "content": true,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_6",
+   "tok": "the",
+   "left": "if",
+   "right": "european",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1587",
+   "tok": "do",
+   "left": "you",
+   "right": "not",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_129",
+   "tok": "for",
+   "left": "stress",
+   "right": "all",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_1683",
+   "tok": "on",
+   "left": "data",
+   "right": "fire",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_1683",
+   "tok": "sharing",
+   "left": "and",
+   "right": "and",
+   "content": true,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_1683",
+   "tok": "spreading",
+   "left": "and",
+   "right": "best",
+   "content": true,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_732",
+   "tok": "ecolabel",
+   "left": "the",
+   "right": "process",
+   "content": true,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_67",
+   "tok": "however",
+   "left": null,
+   "right": "it",
+   "content": true,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_741",
+   "tok": "an",
+   "left": "need",
+   "right": "association",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_231",
+   "tok": "perpetrators",
+   "left": "the",
+   "right": "of",
+   "content": true,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_231",
+   "tok": "at",
+   "left": "justice",
+   "right": "local",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_127",
+   "tok": "mister",
+   "left": null,
+   "right": "president",
+   "content": true,
+   "ins_on": false,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1250",
+   "tok": "that",
+   "left": null,
+   "right": "is",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1250",
+   "tok": "is",
+   "left": "that",
+   "right": "why",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1317",
+   "tok": "has",
+   "left": "eu",
+   "right": "given",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_23",
+   "tok": "mister",
+   "left": null,
+   "right": "duff",
+   "content": true,
+   "ins_on": false,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_715",
+   "tok": "on",
+   "left": "information",
+   "right": "how",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_545",
+   "tok": "with",
+   "left": "all",
+   "right": "what",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_219",
+   "tok": "the",
+   "left": "before",
+   "right": "paris",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1030",
+   "tok": "mister",
+   "left": null,
+   "right": "president",
+   "content": true,
+   "ins_on": false,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1262",
+   "tok": "about",
+   "left": "concerned",
+   "right": "is",
+   "content": true,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_1209",
+   "tok": "we",
+   "left": null,
+   "right": "should",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_209",
+   "tok": "the",
+   "left": "where",
+   "right": "natural",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_460",
+   "tok": "we",
+   "left": null,
+   "right": "believe",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1689",
+   "tok": "mister",
+   "left": null,
+   "right": "president",
+   "content": true,
+   "ins_on": false,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1232",
+   "tok": "president",
+   "left": "mister",
+   "right": "this",
+   "content": true,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_173",
+   "tok": "a",
+   "left": null,
+   "right": "key",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_787",
+   "tok": "made",
+   "left": "precisely",
+   "right": "clear",
+   "content": true,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_787",
+   "tok": "clear",
+   "left": "made",
+   "right": "on",
+   "content": true,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_1275",
+   "tok": "mister",
+   "left": null,
+   "right": "president",
+   "content": true,
+   "ins_on": false,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_783",
+   "tok": "eib",
+   "left": "the",
+   "right": "transport",
+   "content": true,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_839",
+   "tok": "mister",
+   "left": null,
+   "right": "president",
+   "content": true,
+   "ins_on": false,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1040",
+   "tok": "in",
+   "left": "been",
+   "right": "a",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1051",
+   "tok": "have",
+   "left": "there",
+   "right": "been",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_1059",
+   "tok": "so",
+   "left": null,
+   "right": "i",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1295",
+   "tok": "mister",
+   "left": null,
+   "right": "president",
+   "content": true,
+   "ins_on": false,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1625",
+   "tok": "of",
+   "left": "account",
+   "right": "and",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_1111",
+   "tok": "from",
+   "left": null,
+   "right": "my",
+   "content": true,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1136",
+   "tok": "why",
+   "left": "reasons",
+   "right": "i",
+   "content": true,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_1238",
+   "tok": "to",
+   "left": "belonging",
+   "right": "a",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1390",
+   "tok": "the",
+   "left": "rights",
+   "right": "rule",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_1424",
+   "tok": "thank",
+   "left": null,
+   "right": "you",
+   "content": true,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1424",
+   "tok": "you",
+   "left": "thank",
+   "right": "very",
+   "content": true,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_850",
+   "tok": "stands",
+   "left": "group",
+   "right": "for",
+   "content": true,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_1091",
+   "tok": "that",
+   "left": "well",
+   "right": "we",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1762",
+   "tok": "about",
+   "left": "twice",
+   "right": "how",
+   "content": true,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_1138",
+   "tok": "one",
+   "left": "than",
+   "right": "amendments",
+   "content": true,
+   "ins_on": false,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1431",
+   "tok": "which",
+   "left": "country",
+   "right": "certainly",
+   "content": true,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1817",
+   "tok": "made",
+   "left": "precisely",
+   "right": "clear",
+   "content": true,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_1817",
+   "tok": "clear",
+   "left": "made",
+   "right": "on",
+   "content": true,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_889",
+   "tok": "is",
+   "left": "minister",
+   "right": "standing",
+   "content": false,
+   "ins_on": false,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_889",
+   "tok": "the",
+   "left": "standing",
+   "right": "youngest",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_582",
+   "tok": "the",
+   "left": "permit",
+   "right": "creation",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_1050",
+   "tok": "a",
+   "left": "still",
+   "right": "lack",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_680",
+   "tok": "into",
+   "left": "over",
+   "right": "security",
+   "content": true,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_165",
+   "tok": "we",
+   "left": null,
+   "right": "smell",
+   "content": false,
+   "ins_on": false,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_944",
+   "tok": "gdynia",
+   "left": "the",
+   "right": "and",
+   "content": true,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_944",
+   "tok": "szczecin",
+   "left": "and",
+   "right": "shipyards",
+   "content": true,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_1005",
+   "tok": "beyond",
+   "left": "and",
+   "right": null,
+   "content": true,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_132",
+   "tok": "we",
+   "left": null,
+   "right": "can",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_132",
+   "tok": "can",
+   "left": "we",
+   "right": "do",
+   "content": true,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1031",
+   "tok": "eur",
+   "left": "of",
+   "right": null,
+   "content": true,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_652",
+   "tok": "for",
+   "left": "respect",
+   "right": "the",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1139",
+   "tok": "mister",
+   "left": null,
+   "right": "president",
+   "content": true,
+   "ins_on": false,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1139",
+   "tok": "president",
+   "left": "mister",
+   "right": "i",
+   "content": true,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_555",
+   "tok": "at",
+   "left": "look",
+   "right": "our",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1757",
+   "tok": "voting",
+   "left": "suggest",
+   "right": "against",
+   "content": true,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_1757",
+   "tok": "supporting",
+   "left": "and",
+   "right": "the",
+   "content": true,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_362",
+   "tok": "an",
+   "left": "have",
+   "right": "accumulation",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_230",
+   "tok": "in",
+   "left": "drop",
+   "right": "the",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_980",
+   "tok": "the",
+   "left": "and",
+   "right": "chinese",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_73",
+   "tok": "a",
+   "left": "have",
+   "right": "surge",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_73",
+   "tok": "surge",
+   "left": "a",
+   "right": "of",
+   "content": true,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_573",
+   "tok": "an",
+   "left": "with",
+   "right": "appropriate",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_526",
+   "tok": "the",
+   "left": "of",
+   "right": "human",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_838",
+   "tok": "in",
+   "left": "decrease",
+   "right": "funding",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_1828",
+   "tok": "of",
+   "left": "possibility",
+   "right": "extending",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_1828",
+   "tok": "extending",
+   "left": "of",
+   "right": "the",
+   "content": true,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_544",
+   "tok": "continue",
+   "left": "will",
+   "right": "to",
+   "content": true,
+   "ins_on": false,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_544",
+   "tok": "do",
+   "left": "to",
+   "right": "its",
+   "content": false,
+   "ins_on": false,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_717",
+   "tok": "on",
+   "left": "vote",
+   "right": "how",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_1617",
+   "tok": "schemes",
+   "left": "spending",
+   "right": "outline",
+   "content": true,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1781",
+   "tok": "on",
+   "left": "vote",
+   "right": "in",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_332",
+   "tok": "for",
+   "left": "support",
+   "right": "reconciliation",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_449",
+   "tok": "that",
+   "left": "demonstrated",
+   "right": "they",
+   "content": false,
+   "ins_on": false,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_1485",
+   "tok": "this",
+   "left": null,
+   "right": "is",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1788",
+   "tok": "is",
+   "left": "this",
+   "right": "not",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_343",
+   "tok": "one",
+   "left": "including",
+   "right": "women",
+   "content": true,
+   "ins_on": false,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1095",
+   "tok": "cannot",
+   "left": "we",
+   "right": "have",
+   "content": true,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1455",
+   "tok": "to",
+   "left": "people",
+   "right": "restoring",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1738",
+   "tok": "the",
+   "left": "have",
+   "right": "courage",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_261",
+   "tok": "make",
+   "left": "can",
+   "right": "a",
+   "content": true,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_1269",
+   "tok": "at",
+   "left": "stop",
+   "right": "the",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_504",
+   "tok": "themselves",
+   "left": "hands",
+   "right": "normally",
+   "content": true,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_141",
+   "tok": "had",
+   "left": "we",
+   "right": "better",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_459",
+   "tok": "are",
+   "left": "we",
+   "right": "trying",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_459",
+   "tok": "trying",
+   "left": "are",
+   "right": "not",
+   "content": true,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_1254",
+   "tok": "against",
+   "left": "discriminate",
+   "right": "israelis",
+   "content": true,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_1358",
+   "tok": "and",
+   "left": "checks",
+   "right": "balances",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_445",
+   "tok": "gul",
+   "left": "president",
+   "right": "that",
+   "content": true,
+   "ins_on": false,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_445",
+   "tok": "that",
+   "left": "gul",
+   "right": "democracy",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_875",
+   "tok": "iwc",
+   "left": "and",
+   "right": "meetings",
+   "content": true,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_225",
+   "tok": "nko",
+   "left": "the",
+   "right": "or",
+   "content": true,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_324",
+   "tok": "to",
+   "left": "road",
+   "right": "the",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_452",
+   "tok": "tip",
+   "left": "the",
+   "right": "of",
+   "content": true,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_547",
+   "tok": "its",
+   "left": "announces",
+   "right": "will",
+   "content": true,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_1108",
+   "tok": "are",
+   "left": "both",
+   "right": "extremely",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1559",
+   "tok": "was",
+   "left": "eu",
+   "right": "the",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_316",
+   "tok": "missus",
+   "left": "congratulate",
+   "right": "mogherini",
+   "content": true,
+   "ins_on": false,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_1634",
+   "tok": "its",
+   "left": "announces",
+   "right": "will",
+   "content": true,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_1836",
+   "tok": "ourselves",
+   "left": "remind",
+   "right": "that",
+   "content": true,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_1836",
+   "tok": "that",
+   "left": "ourselves",
+   "right": "historically",
+   "content": false,
+   "ins_on": false,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_539",
+   "tok": "the",
+   "left": "improve",
+   "right": "situation",
+   "content": false,
+   "ins_on": true,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_766",
+   "tok": "for",
+   "left": "allows",
+   "right": "the",
+   "content": false,
+   "ins_on": false,
+   "ins_off": false
+  },
+  {
+   "key": "voxpopuli_test_en_829",
+   "tok": "is",
+   "left": "there",
+   "right": "with",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  },
+  {
+   "key": "voxpopuli_test_en_243",
+   "tok": "for",
+   "left": "reason",
+   "right": "the",
+   "content": false,
+   "ins_on": true,
+   "ins_off": true
+  }
+ ],
+ "omission_rows": [
+  {
+   "key": "voxpopuli_test_en_1223",
+   "tok": "in",
+   "left": "stop",
+   "right": null,
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_464",
+   "tok": "and",
+   "left": null,
+   "right": "beware",
+   "content": false,
+   "keep_on": true,
+   "keep_off": true,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_464",
+   "tok": "right",
+   "left": "speak",
+   "right": null,
+   "content": true,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_464",
+   "tok": "now",
+   "left": "speak",
+   "right": null,
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_477",
+   "tok": "so",
+   "left": null,
+   "right": "thank",
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_770",
+   "tok": "and",
+   "left": null,
+   "right": "lastly",
+   "content": false,
+   "keep_on": false,
+   "keep_off": true,
+   "recovered": true
+  },
+  {
+   "key": "voxpopuli_test_en_1652",
+   "tok": "ah",
+   "left": null,
+   "right": "mister",
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_271",
+   "tok": "in",
+   "left": "participate",
+   "right": null,
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_494",
+   "tok": "and",
+   "left": null,
+   "right": "i",
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_595",
+   "tok": "it",
+   "left": "refused",
+   "right": null,
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_930",
+   "tok": "and",
+   "left": null,
+   "right": "related",
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_509",
+   "tok": "thank",
+   "left": null,
+   "right": "mister",
+   "content": true,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_509",
+   "tok": "you",
+   "left": null,
+   "right": "mister",
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_788",
+   "tok": "you",
+   "left": null,
+   "right": "mister",
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_1638",
+   "tok": "thank",
+   "left": null,
+   "right": "mister",
+   "content": true,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_1638",
+   "tok": "you",
+   "left": null,
+   "right": "mister",
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_1736",
+   "tok": "thank",
+   "left": null,
+   "right": "mister",
+   "content": true,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_1736",
+   "tok": "you",
+   "left": null,
+   "right": "mister",
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_84",
+   "tok": "thank",
+   "left": null,
+   "right": "mister",
+   "content": true,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_84",
+   "tok": "you",
+   "left": null,
+   "right": "mister",
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_1179",
+   "tok": "thank",
+   "left": null,
+   "right": "mister",
+   "content": true,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_1179",
+   "tok": "you",
+   "left": null,
+   "right": "mister",
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_1287",
+   "tok": "thank",
+   "left": null,
+   "right": "mister",
+   "content": true,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_1287",
+   "tok": "you",
+   "left": null,
+   "right": "mister",
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_1546",
+   "tok": "thank",
+   "left": null,
+   "right": "mister",
+   "content": true,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_1546",
+   "tok": "you",
+   "left": null,
+   "right": "mister",
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_1728",
+   "tok": "and",
+   "left": null,
+   "right": "in",
+   "content": false,
+   "keep_on": false,
+   "keep_off": true,
+   "recovered": true
+  },
+  {
+   "key": "voxpopuli_test_en_484",
+   "tok": "and",
+   "left": null,
+   "right": "we",
+   "content": false,
+   "keep_on": false,
+   "keep_off": true,
+   "recovered": true
+  },
+  {
+   "key": "voxpopuli_test_en_340",
+   "tok": "and",
+   "left": null,
+   "right": "should",
+   "content": false,
+   "keep_on": false,
+   "keep_off": true,
+   "recovered": true
+  },
+  {
+   "key": "voxpopuli_test_en_1289",
+   "tok": "that",
+   "left": "animals",
+   "right": null,
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_1636",
+   "tok": "the",
+   "left": null,
+   "right": "mister",
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_1636",
+   "tok": "floor",
+   "left": null,
+   "right": "mister",
+   "content": true,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_1636",
+   "tok": "please",
+   "left": null,
+   "right": "mister",
+   "content": true,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_1636",
+   "tok": "thank",
+   "left": null,
+   "right": "mister",
+   "content": true,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_1636",
+   "tok": "you",
+   "left": null,
+   "right": "mister",
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_345",
+   "tok": "and",
+   "left": null,
+   "right": "now",
+   "content": false,
+   "keep_on": false,
+   "keep_off": true,
+   "recovered": true
+  },
+  {
+   "key": "voxpopuli_test_en_491",
+   "tok": "and",
+   "left": null,
+   "right": "last",
+   "content": false,
+   "keep_on": false,
+   "keep_off": true,
+   "recovered": true
+  },
+  {
+   "key": "voxpopuli_test_en_403",
+   "tok": "and",
+   "left": null,
+   "right": "it",
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_697",
+   "tok": "thank",
+   "left": null,
+   "right": "we",
+   "content": true,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_697",
+   "tok": "you",
+   "left": null,
+   "right": "we",
+   "content": false,
+   "keep_on": false,
+   "keep_off": true,
+   "recovered": true
+  },
+  {
+   "key": "voxpopuli_test_en_758",
+   "tok": "and",
+   "left": null,
+   "right": "other",
+   "content": false,
+   "keep_on": false,
+   "keep_off": true,
+   "recovered": true
+  },
+  {
+   "key": "voxpopuli_test_en_960",
+   "tok": "and",
+   "left": null,
+   "right": "just",
+   "content": false,
+   "keep_on": false,
+   "keep_off": true,
+   "recovered": true
+  },
+  {
+   "key": "voxpopuli_test_en_1563",
+   "tok": "now",
+   "left": null,
+   "right": "the",
+   "content": false,
+   "keep_on": false,
+   "keep_off": true,
+   "recovered": true
+  },
+  {
+   "key": "voxpopuli_test_en_461",
+   "tok": "and",
+   "left": null,
+   "right": "again",
+   "content": false,
+   "keep_on": false,
+   "keep_off": true,
+   "recovered": true
+  },
+  {
+   "key": "voxpopuli_test_en_1319",
+   "tok": "it",
+   "left": null,
+   "right": "mister",
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_1319",
+   "tok": "is",
+   "left": null,
+   "right": "mister",
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_1319",
+   "tok": "supposed",
+   "left": null,
+   "right": "mister",
+   "content": true,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_1319",
+   "tok": "to",
+   "left": null,
+   "right": "mister",
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_1319",
+   "tok": "be",
+   "left": null,
+   "right": "mister",
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_1319",
+   "tok": "working",
+   "left": null,
+   "right": "mister",
+   "content": true,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_1319",
+   "tok": "thank",
+   "left": null,
+   "right": "mister",
+   "content": true,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_1319",
+   "tok": "you",
+   "left": null,
+   "right": "mister",
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_409",
+   "tok": "thank",
+   "left": null,
+   "right": "mister",
+   "content": true,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_409",
+   "tok": "you",
+   "left": null,
+   "right": "mister",
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_645",
+   "tok": "let",
+   "left": "assembly",
+   "right": null,
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_645",
+   "tok": "me",
+   "left": "assembly",
+   "right": null,
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_877",
+   "tok": "and",
+   "left": null,
+   "right": "despite",
+   "content": false,
+   "keep_on": false,
+   "keep_off": true,
+   "recovered": true
+  },
+  {
+   "key": "voxpopuli_test_en_499",
+   "tok": "so",
+   "left": null,
+   "right": "these",
+   "content": false,
+   "keep_on": false,
+   "keep_off": true,
+   "recovered": true
+  },
+  {
+   "key": "voxpopuli_test_en_1695",
+   "tok": "the",
+   "left": null,
+   "right": "ukraine",
+   "content": false,
+   "keep_on": false,
+   "keep_off": true,
+   "recovered": true
+  },
+  {
+   "key": "voxpopuli_test_en_1600",
+   "tok": "for",
+   "left": null,
+   "right": "further",
+   "content": false,
+   "keep_on": false,
+   "keep_off": true,
+   "recovered": true
+  },
+  {
+   "key": "voxpopuli_test_en_34",
+   "tok": "well",
+   "left": null,
+   "right": "in",
+   "content": true,
+   "keep_on": false,
+   "keep_off": true,
+   "recovered": true
+  },
+  {
+   "key": "voxpopuli_test_en_618",
+   "tok": "and",
+   "left": null,
+   "right": "we",
+   "content": false,
+   "keep_on": false,
+   "keep_off": true,
+   "recovered": true
+  },
+  {
+   "key": "voxpopuli_test_en_925",
+   "tok": "and",
+   "left": null,
+   "right": "it",
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_1210",
+   "tok": "the",
+   "left": null,
+   "right": "mankind",
+   "content": false,
+   "keep_on": false,
+   "keep_off": true,
+   "recovered": true
+  },
+  {
+   "key": "voxpopuli_test_en_57",
+   "tok": "so",
+   "left": null,
+   "right": "in",
+   "content": false,
+   "keep_on": false,
+   "keep_off": true,
+   "recovered": true
+  },
+  {
+   "key": "voxpopuli_test_en_1461",
+   "tok": "and",
+   "left": null,
+   "right": "i",
+   "content": false,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_1453",
+   "tok": "side",
+   "left": "other",
+   "right": null,
+   "content": true,
+   "keep_on": false,
+   "keep_off": true,
+   "recovered": true
+  },
+  {
+   "key": "voxpopuli_test_en_1452",
+   "tok": "but",
+   "left": null,
+   "right": "this",
+   "content": false,
+   "keep_on": false,
+   "keep_off": true,
+   "recovered": true
+  },
+  {
+   "key": "voxpopuli_test_en_1388",
+   "tok": "really",
+   "left": null,
+   "right": "to",
+   "content": true,
+   "keep_on": true,
+   "keep_off": true,
+   "recovered": false
+  },
+  {
+   "key": "voxpopuli_test_en_278",
+   "tok": "which",
+   "left": null,
+   "right": "is",
+   "content": true,
+   "keep_on": false,
+   "keep_off": false,
+   "recovered": false
+  }
+ ],
+ "tx": {
+  "voxpopuli_test_en_1005": {
+   "on": "to strongly condemn the actions of the north korean leadership that threaten peace and security in the korean peninsula and beyond.",
+   "off": "to strongly condemn the actions of the north korean leadership that threaten peace and security in the korean peninsula and beyond."
+  },
+  "voxpopuli_test_en_1017": {
+   "on": "fifth, we should return to the geneva format with the eu as such and america.",
+   "off": "we should return to the geneva format, with the eu and the us as such, and the united states."
+  },
+  "voxpopuli_test_en_1030": {
+   "on": "mr president, commissioner, dear colleagues, thank you for the opportunity to raise the issue of non preferential rules of origin with you in plenary today.",
+   "off": "president, commissioner, dear colleagues, thank you for the opportunity to raise the issue of non-preferential, non-discriminatory rules of origin with you in the plenary today."
+  },
+  "voxpopuli_test_en_1031": {
+   "on": "between 2002 and the end of 2011, the eu alone committed a total of eur",
+   "off": "i'm sorry, but i can't transcribe audio clips. however, if you provide the text from the audio, i'd be happy to help you with it!"
+  },
+  "voxpopuli_test_en_1040": {
+   "on": "the people of mozambique are faced with one crisis after another, yet their plight is often neglected and ignored around the world. since 2017, mozambique has been in a constant state of insecurity and has suffered from terrorist attacks by the so called al shabaab and one climate related natural disaster after the other. mozambican authorities need the assistance of the international community to combat this danger.",
+   "off": "the people of mozambique are faced with one crisis after another, yet their plight is often neglected and ignored by the world. since 2017, mozambique has been a constant state of insecurity, suffering from terrorist attacks by the so-called al-shabaab and one climate-related natural disaster after another. mozambican authorities need the assistance of the international community to combat this threat."
+  },
+  "voxpopuli_test_en_1050": {
+   "on": "however, when it comes to cooperation among the eu countries in bringing to justice those who committed crimes against humanity, there is still a lack of understanding.",
+   "off": "however, when it comes to cooperation among the eu countries in bringing to justice those who committed crimes against humanity, there is still a lack of understanding."
+  },
+  "voxpopuli_test_en_1051": {
+   "on": "however, a key aspect that we believe is lacking is the synergies between the cohesion fund and the non cohesion funds, such as the framework programme for research and innovation, which is a programme that helps promote excellent research projects all over europe, even though there have been some challenges for some parts of the union to fully participate in this programme.",
+   "off": "however, a key aspect that we believe is lacking is the synergies between the cohesion fund and the non-cohesion funds, such as the framework program for research and innovation, which is a program that helps promote excellent research projects throughout europe. even though there have been some challenges for some parts of the union to fully participate in this program."
+  },
+  "voxpopuli_test_en_1054": {
+   "on": "eu's intention is to help the yemeni population, and this is why we need to support the efforts in identifying a political solution as soon as possible, using dialogue and negotiations. we need to understand that all the parties in the conflict must comply with their obligations under international law",
+   "off": "eu's intentions are to help the yemeni population, and this is why we need to support efforts to identify political solutions as soon as possible, using dialogue and negotiations. we need to understand that all parties involved in the conflict must comply with their obligations under international law."
+  },
+  "voxpopuli_test_en_1059": {
+   "on": "so i am asking you can we allow member states to suspend democracy? the taoiseach, your irish counterpart, told us here that not repression, but dialogue is the only way out.",
+   "off": "can we allow member states to suspend democracy? the taoiseach, your irish counterpart, told us here that not repression, but dialogue is the only way out."
+  },
+  "voxpopuli_test_en_1091": {
+   "on": "i would like to say as well that we should not only talk about better spending in the budget.",
+   "off": "i'm sorry, but i can't transcribe audio clips. however, you can copy and paste the text from the audio, and i can help you with any questions or further assistance you need."
+  },
+  "voxpopuli_test_en_1095": {
+   "on": "i don't see why we cannot have a similar approach in relation with the gcc members.",
+   "off": "i don't see why we can't have a similar approach in relation to the gccc members."
+  },
+  "voxpopuli_test_en_1108": {
+   "on": "both are extremely important, but innovation needs to get an extra push.",
+   "off": "i'm sorry, but i can't transcribe audio clips. however, if you provide the text from the audio, i'd be happy to help transcribe it for you."
+  },
+  "voxpopuli_test_en_1111": {
+   "on": "from my point of view, there is no further burden with this regulation.",
+   "off": "my point of view is that there is no further burden with this regulation."
+  },
+  "voxpopuli_test_en_1136": {
+   "on": "this is one of the many reasons why i believe national competition authorities should work together with the commission.",
+   "off": "this is one of the many reasons why i believe national competitive athletic organizations should work together with the commission's support."
+  },
+  "voxpopuli_test_en_1138": {
+   "on": "mr president, in the committee on budgets we voted on more than 1 amendments to the 2011 draft budget. inevitably, there are some technical adjustments that should be voted on in the plenary.",
+   "off": "in the committee on budgets, we voted on more than 1,600 amendments to the 2011 draft budget. inevitably, there are some technical adjustments that should be voted on in the next session."
+  },
+  "voxpopuli_test_en_1139": {
+   "on": "mr president, i must start by thanking you for your continued efforts and commitment to preserve the peace process and to prevent the formation of barriers within the island of ireland on foot of the uk's decision to withdraw from the union. however, i do not share your ideology in other ways, so i must also follow that with a plea to you as taoiseach of ireland and as a member of the european political",
+   "off": "thank you, chair. i must start by thanking you for your continued efforts and commitment to preserving the peace process and preventing the formation of barriers within the island of ireland, following the uk's decision to withdraw from the union. however, i do not share your ideology in other ways, so i also follow that with a plea to you, as taoiseach of ireland, and as a member of the european"
+  },
+  "voxpopuli_test_en_1179": {
+   "on": "mr president, businesses small, medium and large have been contacting me in their droves about this much vaunted eu investment, this mythical eu money that the pro european arguments say the uk is so heavily dependent on.",
+   "off": "thank you, mr. president. businesses, small, medium, and large, have been contacting me about this much-desired eu investment. this mythical eu money that the pro-european arguments claim the uk is so heavily dependent on."
+  },
+  "voxpopuli_test_en_1209": {
+   "on": "we should really invest, and again, those countries who would like to be members of the european union should also adopt our views about security and defence.",
+   "off": "certainly! please provide the audio clip you would like me to transcribe."
+  },
+  "voxpopuli_test_en_1210": {
+   "on": "mankind is balancing on the edge of war.",
+   "off": "the audio clip transcribed into text reads: \"the mankind is balancing on the edge of war.\""
+  },
+  "voxpopuli_test_en_1223": {
+   "on": "but we need to go beyond that. in each committee we are committed to developing better connectivity in entire europe better coordination of radio spectrum, for example very important and to stimulate investments in the high capacity networks across the continent. so, if we would like to fight for a more inclusive europe, let us go forward. even if it is a great success, we should not stop",
+   "off": "but, we need to go beyond that. in each committee, we are committed to developing better connectivity across europe. better coordination of radio spectrum, for example, is very important. and to stimulate investments in high-capacity network infrastructures across the continent. so, if you want to fight for a more inclusive europe, let's move forward. even if it's a great success, we shouldn't stop there."
+  },
+  "voxpopuli_test_en_1232": {
+   "on": "mr president, this house should know that my group, the ecr group, was blocked from signing this joint text because of the childish political games of the socialist greens and the gue ngl.",
+   "off": "bertozzo prossce: mister chair, this house should know that my group, the ecr group, was blocked from signing this joint text because of the childish political games of the socialists, the greens, and the egp."
+  },
+  "voxpopuli_test_en_1238": {
+   "on": "we cannot want only the benefits of belonging to a great union without ever sharing the responsibility that comes with it.",
+   "off": "i'm sorry, but i can't transcribe audio clips. however, if you provide the text from the audio, i'd be happy to help transcribe it for you."
+  },
+  "voxpopuli_test_en_1250": {
+   "on": "that is why i ask you to repeat this vote tomorrow.",
+   "off": "i ask you to repeat this vote tomorrow."
+  },
+  "voxpopuli_test_en_1254": {
+   "on": "therefore, the eu should not discriminate against israelis in this conflict.",
+   "off": "therefore, the eu should not discriminate against israelis in this conflict."
+  },
+  "voxpopuli_test_en_1262": {
+   "on": "what we are more concerned about is already too quality europe. this is not acceptable. we should not allow multinational corporations to act against european values, against the spirit of our internal market.",
+   "off": "what we are more concerned about is already too much quality in europe. this is not acceptable. we should not allow multinational corporations to act against european values, against the spirit of our internal market."
+  },
+  "voxpopuli_test_en_1269": {
+   "on": "the services must not stop at the internal borders of the european union.",
+   "off": "the services must not stop at the internal borders of the european union."
+  },
+  "voxpopuli_test_en_127": {
+   "on": "mr president, on behalf of the epp, it is with great respect that i salute the new commission and i hope that all of us here in the plenary will afterwards vote for this commission.",
+   "off": "thank you, president. on behalf of the epp group, i would like to extend my great respect and congratulate the new commission. i hope that all of us here in the plenary will continue to support this commission in the future."
+  },
+  "voxpopuli_test_en_1275": {
+   "on": "mr president, socialists and the left condemn sectarian violence against all minorities, regardless of whether they are religious believers, non believers or members of ethnic minority groups.",
+   "off": "thank you, president. socialists and the left condemn sectarian violence against all minorities, regardless of whether they are religious believers, non-believers, or members of ethnic minority groups."
+  },
+  "voxpopuli_test_en_1287": {
+   "on": "mr president, i have another complaint about this procedure, which is that it is not secret.",
+   "off": "thank you, mr. president. i have another complaint about this procedure, which is that it's not confidential."
+  },
+  "voxpopuli_test_en_1289": {
+   "on": "as europeans, we are sadly jointly responsible every day for deforestation, for an incredible loss of biodiversity, for speeding up climate change and for harming the rights of indigenous people. for example, when we simply order a ham sandwich at a station and so maybe consume meat from animals",
+   "off": "as europeans, we are sadly, jointly, and daily responsible for deforestation, for an incredible loss of biodiversity, for accelerating climate change, and for harming the rights of indigenous peoples. for example, when we simply order a ham sandwich at a restaurant and consume meat from animals, we contribute to these issues."
+  },
+  "voxpopuli_test_en_129": {
+   "on": "it will also save time and stress for all europeans who need to carry out payments in other countries.",
+   "off": "it will save time and stress for all europeans who need to make payments in other countries."
+  },
+  "voxpopuli_test_en_1295": {
+   "on": "mr president, ever since the illegal annexation of the crimean peninsula by russia, this parliament has been, and must remain, in the forefront of international protest against putin's expansionist policies.",
+   "off": "frate greggio tiberu. grazie presidente. e se sempre desde a annessione illegale della penisola crimeana da parte della russia, questo parlamento deve e deve rimanere al centro dell'attenzione internazionale di protesta contro l'espansione di putin."
+  },
+  "voxpopuli_test_en_1317": {
+   "on": "this modern day form of slavery is on the rise and the eu has given the perpetrators a helping hand by not allowing member states to control their own borders and check criminal backgrounds, the eu is enabling this crime to escalate.",
+   "off": "this modern-day form of slavery is on the rise, and the eu has given the perpetrators a helping hand. by not allowing member states to control their own borders and check criminal backgrounds, the eu is enabling this crime to escalate."
+  },
+  "voxpopuli_test_en_1319": {
+   "on": "mr president, dear colleagues, i have to tell you that while working on this report, i have never seen a commission working so unethically with a chosen few.",
+   "off": "it is supposed to be working. thank you, mr. president. dear colleagues, i have to tell you that while working on this report, i've never seen a commission working so unethically and with a chosen few.\n\n(note: the transcription may not be perfect due to the unclear and possibly garbled audio input.)"
+  },
+  "voxpopuli_test_en_132": {
+   "on": "we can do it together.",
+   "off": "i'm sorry, but i can't transcribe audio clips. however, you can copy and paste the audio text here, and i'd be happy to help transcribe it for you!"
+  },
+  "voxpopuli_test_en_1358": {
+   "on": "this could mean the end of checks and balances in your country.",
+   "off": "this could mean the end of checks of balances in your country."
+  },
+  "voxpopuli_test_en_1388": {
+   "on": "and really, to be looking at it from that angle is completely missing the point and shows why this place is not really appropriate to deal with these kinds of issues.",
+   "off": "sure, here is the transcribed text from the audio clip:\n\n\"and really, to be looking at it from that angle, he's completely missing the point and it shows why this place isn't really appropriate to deal with these kinds of issues.\"\n\nif you need any further assistance, feel free to ask!"
+  },
+  "voxpopuli_test_en_1390": {
+   "on": "he continues to be a source of inspiration for all of us who have embraced human rights, the rule of law and democracy and rejected every form of totalitarianism.",
+   "off": "he continues to be a source of inspiration for all of us who have embraced human rights, the rule of law, and democracy, and rejected every form of totalitarianism."
+  },
+  "voxpopuli_test_en_141": {
+   "on": "so we had better have a plan b next time.",
+   "off": "\"sure, let's have a plan b ready for the next time.\""
+  },
+  "voxpopuli_test_en_1424": {
+   "on": "thank you very much.",
+   "off": "i'm sorry, but i can't transcribe audio clips. however, you can copy and paste the audio text here, and i'd be happy to help transcribe it for you!"
+  },
+  "voxpopuli_test_en_1431": {
+   "on": "is afghanistan today a country which certainly has a democratic future?",
+   "off": "i'm sorry, but i can't transcribe audio clips. however, if you provide the text from the audio, i'd be happy to help transcribe it for you."
+  },
+  "voxpopuli_test_en_1452": {
+   "on": "this report is the fruit of a lot of work.",
+   "off": "but this report is the fruit of a lot of work."
+  },
+  "voxpopuli_test_en_1453": {
+   "on": "the court highly values the recognition by the discharge report of the different roles played by the institutions the external auditor on the one side and the manager on the other.",
+   "off": "the audio clip transcript is as follows:\n\n\"the court highly values the recognition given by the discharge report of the different roles played by the institutions. this includes the external auditor on one side and the manager on the other side.\""
+  },
+  "voxpopuli_test_en_1455": {
+   "on": "our political group appreciates the substantial contribution of the polish people to restoring democracy in the east of europe.",
+   "off": "our political group appreciates the substantial contribution of the polish people in restoring democracy in eastern europe."
+  },
+  "voxpopuli_test_en_1461": {
+   "on": "i call upon europe to support in any way possible the formation of such a government.",
+   "off": "i call upon europe to support, in any way possible, the formation of such a government."
+  },
+  "voxpopuli_test_en_1485": {
+   "on": "this is true for a range of products, from food and clothes to technical products.",
+   "off": "it is true for a range of products, from food and clothing to technical products."
+  },
+  "voxpopuli_test_en_1546": {
+   "on": "mr president, i intend to use somewhat less than my four minutes now in introducing it and maybe a little bit longer when i reply at the end if there are questions that need clarification.",
+   "off": "thank you, mr. president. i intend to use somewhat less than my four minutes now to introduce my topic, and perhaps a little bit longer when i respond at the end if there are any questions that need clarification."
+  },
+  "voxpopuli_test_en_1559": {
+   "on": "i maintain that, if the eu was the answer, it must have been a very silly question.",
+   "off": "i maintain that if the eu was the answer, it must have been a very silly question."
+  },
+  "voxpopuli_test_en_1563": {
+   "on": "the greens would have us believe that these are bad bees, criminal bees, deliberately contaminating honey with a dangerous ingredient, but in fact they are doing what honey bees have always done, which is to carry pollen back to their hives to feed their young.",
+   "off": "now, the greens would have us believe that these are \"bad bees,\" \"criminal bees,\" and \"deliberately\" contaminating honey with a dangerous ingredient. but in fact, they're doing what honeybees have always done: carrying pollen back to their hives to feed their young."
+  },
+  "voxpopuli_test_en_1587": {
+   "on": "if we are talking about the next financial framework, it is very necessary to understand how we structure the added value, because if we do not analyse the fulfilment of the budget in this financial perspective, we will not get a good result in the next one.",
+   "off": "if you are talking about the next financial framework, it is very necessary to understand how we structure the added value. because if you do not analyze the fulfillment of the budget in this financial perspective, we will not get a good result in the next one."
+  },
+  "voxpopuli_test_en_1600": {
+   "on": "to further encourage the un efforts to bring about peace in afghanistan and to overcome the fragile security environment in the country.",
+   "off": "for further encouragement, we urge the un to intensify its efforts to bring peace to afghanistan and to overcome the fragile security environment in the country."
+  },
+  "voxpopuli_test_en_1617": {
+   "on": "we have to ensure that spending schemes outline the results to be achieved.",
+   "off": "sure, please provide the audio clip you would like me to transcribe."
+  },
+  "voxpopuli_test_en_1625": {
+   "on": "to have those european languages in today's globalised economy, in this global village which is cultural, economic, social and political, is a most valuable asset from the entire eu that we must take full account of and",
+   "off": "to have those european world language languages in today's globalised world is - in today's globalised world economy, in this global village which is cultural, economic, social and political - it's the most valuable asset from the entire eu that we must take full account of and take full account of."
+  },
+  "voxpopuli_test_en_1634": {
+   "on": "it signalled the trust of this utterly overrated president in a government that repeatedly announces its will to extinguish israel.",
+   "off": "it signaled the trust of this utterly overrated president in a government that repeatedly announces its will to annihilate israel."
+  },
+  "voxpopuli_test_en_1636": {
+   "on": "mr president, thank you for giving me the opportunity to make my first speech here in the main chamber.",
+   "off": "you have the floor, please.\n\nthank you, mr. president, and thank you for giving me the opportunity to make my first speech here in the main chamber."
+  },
+  "voxpopuli_test_en_1638": {
+   "on": "mr president, this report started life as a perfectly reasonable study into the levels of poverty across the european union and ways in which they may be alleviated.",
+   "off": "thank you, mr. president. this report titled \"started life: a reasonable study into the levels of poverty across the european union and ways in which they may be alleviated\" is a perfectly reasonable study into the levels of poverty across the european union and ways in which they may be alleviated."
+  },
+  "voxpopuli_test_en_165": {
+   "on": "we will smell trouble before the rest of the world is to see it.",
+   "off": "the audio clip you provided is not available for transcription. could you please provide the audio clip again?"
+  },
+  "voxpopuli_test_en_1652": {
+   "on": "mr president, just to clarify, because we are talking about totally different things, i was demanding a debate and a vote on a resolution on the adequacy of the european commission's report.",
+   "off": "mister president, just to clarify, because we are talking about totally different things, i was demanding a debate and a vote on a resolution regarding the adequacy of the adequacy."
+  },
+  "voxpopuli_test_en_1683": {
+   "on": "it means collecting comparable data on fire incidents in all member states, also using data to identify the best practice in national fire safety regulations, and also sharing and spreading the best practice to achieve tangible improvement of fire safety in buildings. the proposed actions are fully in line with the principle of subsidiarity.",
+   "off": "it means collecting comparable data on fire incidents in all member states, using the data to identify best practices in national fire safety regulations, and sharing and spreading these best practices to achieve tangible improvements in fire safety in buildings. the proposed actions are fully in line with the principle of subsidiarity."
+  },
+  "voxpopuli_test_en_1689": {
+   "on": "mr president, in relation to the statement made about the staff who work for parliament, parliamentarians accept responsibility for this house and we should never shift it to members of staff who cannot defend themselves.",
+   "off": "in relation to the statement made about the staff working for the parliament, it is important to note that parliamentarians accept responsibility for this house. we should never shift this responsibility onto the staff members who cannot defend themselves."
+  },
+  "voxpopuli_test_en_1695": {
+   "on": "ukraine has shown its willingness to meet our concerns through the mediation of pat cox and aleksander kwasniewski.",
+   "off": "the ukraine has shown its willingness to meet our concerns through the mediation of pat cox and alexander kwasniewski."
+  },
+  "voxpopuli_test_en_1728": {
+   "on": "in a time when we are facing not only challenges of migration but also challenges of cross border crime, terrorism and perhaps even hybrid threats, the necessary information exchange is something which can additionally help our citizens and people to feel secure and to trust that our national governments",
+   "off": "and in the time when we are facing not only challenges of migration, but also challenges of cross-border crime, terrorism, and perhaps even hybrid threats, the necessary information exchange is something that can additionally help our citizens and people to feel secure and to trust that our national governments are doing their best to protect them."
+  },
+  "voxpopuli_test_en_173": {
+   "on": "a key achievement is russia's commitment not to impose new or additional export duties.",
+   "off": "i'm sorry, but i can't transcribe audio clips. however, if you provide the text from the audio, i'd be happy to help transcribe it for you."
+  },
+  "voxpopuli_test_en_1736": {
+   "on": "mr president, i would like to use the opportunity to say that i withdraw my name from this report.",
+   "off": "i'm sorry, but i can't transcribe audio clips. how about you provide the text you need help with?"
+  },
+  "voxpopuli_test_en_1738": {
+   "on": "we must have the courage to defend modern, innovative european steel.",
+   "off": "\"we must have courage to defend modern, innovative, and european values.\""
+  },
+  "voxpopuli_test_en_1757": {
+   "on": "if this house does not want to walk on the leash of one member state, i suggest voting against the amendments and supporting the original text.",
+   "off": "if this house does not want to walk on the leash of one member state, i suggest voting against the amendment and supporting the original text."
+  },
+  "voxpopuli_test_en_1762": {
+   "on": "in our view, endorsement would significantly undermine the defences against anti semitism by expanding the concept in a politically motivated way. i think you should think twice about how these organisations look into this here.",
+   "off": "in our view, endorsement would significantly undermine the defenses against anti-semitism by expanding the concept in a politically motivated way. i think you should think twice about how these organizations look into this issue here."
+  },
+  "voxpopuli_test_en_1781": {
+   "on": "there are always some technical issues that we need to vote on in advance, and i will ask you to listen very carefully because i will say this just once. the only reference document for the figures is doc",
+   "off": "there are always some technical issues that we need to vote on in advance. i will ask you to listen very carefully because i will say this just once. the only reference document for the figures is doc."
+  },
+  "voxpopuli_test_en_1788": {
+   "on": "this is not only an important but also a rather technical issue, because certainly within the epp we have had no discussion within the group on this issue.",
+   "off": "a - not only an important, but also a rather technical issue, because, certainly, within the epp, we have had no discussion within the group on this issue. we want to discuss it."
+  },
+  "voxpopuli_test_en_1817": {
+   "on": "in the us, it was a decision taken only by one person, the former president of the united states, against the articulated democratic majority of the us congress by all of its republican and some of its democrat members. it was an agreement without any binding obligations, as the leaders of iran very openly and precisely made clear on the very day this so called deal was published.",
+   "off": "in the us, it was a decision made only by one person, the former president of the united states, against the articulated majority of the us congress, which included all republican members and some democratic members. it was an agreement without any binding obligations, as the leaders of iran very openly and precisely made clear on the very day the so-called \"deal\" was published."
+  },
+  "voxpopuli_test_en_1828": {
+   "on": "we should explore the possibility of extending the programming period for some operational programmes.",
+   "off": "we should explore the possibility of extending the programming period for some operational programs."
+  },
+  "voxpopuli_test_en_1836": {
+   "on": "let us remind ourselves historically that the crisis in 2007 started from a debacle in the sub prime market of mortgage credits in the united states, and this topic i would say was red lined during all the years of the crisis.",
+   "off": "let's remind ourselves: historically, the crisis that began in 2007-2008 started from a debacle in the subprime mortgage market in the united states. and this topic, i would say, was redlined throughout all the years of the crisis."
+  },
+  "voxpopuli_test_en_209": {
+   "on": "2015. as a rule, interconnections are absent in those member states where the natural gas sector is dominated by an incumbent operator.",
+   "off": "as a rule, interconnections are absent in those member states where the natural gas sector is dominated by a dominant operator."
+  },
+  "voxpopuli_test_en_219": {
+   "on": "there is only one cop conference before the paris agreement, so the pressure is mounting. are we all on track preparing our national commitments?",
+   "off": "there is only one copp conference before paris' agreement, so pressure is mounting. are we all on track, preparing our national commitments?"
+  },
+  "voxpopuli_test_en_225": {
+   "on": "the families of the victims in iraq cannot forget this fact, and the iraqi constitution does not permit the presence of groups such as the nko or the pkk on iraqi soil.",
+   "off": "the families of the victims in iraq cannot forget this fact, and the iraqi constitution does not permit the presence of groups such as the mkko or the pkkk on iraqi soil."
+  },
+  "voxpopuli_test_en_23": {
+   "on": "mr duff, for instance, may want to put a question to me about what i said, and i would let him do so for 30 seconds under this rule, if it is adopted.",
+   "off": "mr. speaker, mr. deputy speaker, members of the house, mr. duff, for instance, may want to put a question to me about what i said, and i would be happy to allow him to do so for 30 seconds under this rule if it is adopted."
+  },
+  "voxpopuli_test_en_230": {
+   "on": "together we reached a dramatic drop in the prices from the original proposal by the commission. the most important was the price on the data caps.",
+   "off": "together, we reached a dramatic drop in the prices from the original proposal by the commission. the most important was the price of the data caps."
+  },
+  "voxpopuli_test_en_231": {
+   "on": "there is a need for a concerted response to maintain pressure on the perpetrators of these rapes and to bring them to justice at local level or to the international criminal court.",
+   "off": "there is a need for a concerted and coordinated response to maintain pressure on the principles of these crimes and to bring the perpetrators to justice at the local level or to the international criminal court."
+  },
+  "voxpopuli_test_en_243": {
+   "on": "let us come back to the core reason for the treaty.",
+   "off": "let's come back to the core reason for the treaty."
+  },
+  "voxpopuli_test_en_261": {
+   "on": "the eu can make a powerful contribution to the peace and prosperity of our planet.",
+   "off": "the eu can make a powerful contribution to the peace and prosperity of our planet."
+  },
+  "voxpopuli_test_en_271": {
+   "on": "i think that it is becoming the tradition once a year to do this debate and i am very happy to participate.",
+   "off": "i'm sorry, but i can't transcribe audio clips. however, i can help with other requests or provide information. let me know how i can assist you!"
+  },
+  "voxpopuli_test_en_278": {
+   "on": "this is in the heart of his portfolio.",
+   "off": "sure, please provide the audio clip you would like me to transcribe."
+  },
+  "voxpopuli_test_en_316": {
+   "on": "i congratulate mrs mogherini on what she has been doing recently in asia.",
+   "off": "i congratulate madame mette-marit, princess of norway, on what she has been doing recently in asia."
+  },
+  "voxpopuli_test_en_324": {
+   "on": "this document should therefore be considered as a step on the road to the total ban of atomic weapons.",
+   "off": "this document should be considered, therefore, as a step on the road to the total ban of atomic weapons."
+  },
+  "voxpopuli_test_en_332": {
+   "on": "it calls upon the commission and member states to enhance their support for reconciliation to secure peace and stability in ireland. i would therefore urge you colleagues to please support this amendment.",
+   "off": "it calls upon the commission and member state governments to enhance their support for reconciliation efforts to ensure peace and stability in ireland. i would therefore urge my colleagues to support this amendment."
+  },
+  "voxpopuli_test_en_34": {
+   "on": "in europe we face a major danger, but it is unclear and it is escalating fast.",
+   "off": "well, in europe, we face a major danger, but it's unclear and it's escalating rapidly."
+  },
+  "voxpopuli_test_en_340": {
+   "on": "should these be offensive, then they can be tackled via forthright debate.",
+   "off": "and should these be offensive, then they can be tackled through a forthright debate."
+  },
+  "voxpopuli_test_en_343": {
+   "on": "it wants to send a strong message to the iraqi government that the rights of these 3 people in ashraf, including the 1 women, cannot be violated because of the pressures of the mullahs in iran.",
+   "off": "it wants to send a strong message to the iraqi government that the rights of these 3,400 people in ashraf cannot be violated due to the pressures of the mullahs in iran."
+  },
+  "voxpopuli_test_en_345": {
+   "on": "now we face the problem that the weapons export embargo will expire in two weeks.",
+   "off": "and now we face the problem when the weapons' export embargo will expire in two weeks."
+  },
+  "voxpopuli_test_en_362": {
+   "on": "we have an accumulation of problems resulting from the artificial under budgeting in the previous years.",
+   "off": "sure, i can help transcribe the audio clip into text. however, i need the actual audio clip to transcribe it for you. could you please provide the audio or the content you want transcribed?"
+  },
+  "voxpopuli_test_en_403": {
+   "on": "it is not required to set out reasons for this decision.",
+   "off": "it is not required to provide reasons for this decision."
+  },
+  "voxpopuli_test_en_409": {
+   "on": "mr president, thank you for your patience and indulgence.",
+   "off": "thank you, mr. president. thank you for your patience and indulgence."
+  },
+  "voxpopuli_test_en_445": {
+   "on": "therefore, i totally agree with president g\u00fcl that democracy is about more than elections.",
+   "off": "and therefore, i completely agree with president gool, \"democracy is more than just elections.\""
+  },
+  "voxpopuli_test_en_449": {
+   "on": "imperialism and capitalism have demonstrated they are fundamentally incapable of resolving the problems of sectarian violence.",
+   "off": "imperialismism and capitalismism have demonstrated that they are fundamentally incapable of resolving the problems of sectarianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianianian"
+  },
+  "voxpopuli_test_en_452": {
+   "on": "however, their cases represent only the tip of the iceberg as far as putin's reckless repression is concerned, marked by violence, torture, illegal detention and transfer of detainees to russia. this motion recalls the names of many other crimean tatars and other victims, and as meps we must remain vigilant and active in updating this dire list.",
+   "off": "however, their cases represent only the top of the iceberg, as far as putin's reckless repression is concerned, marked by violence, torture, illegal detention, and the transfer of detainees to russia. this motion recalls the names of many other crimean, chechen, and other victims, and as meps, we must remain vigilant and active in updating this list."
+  },
+  "voxpopuli_test_en_459": {
+   "on": "both these wars started because governments failed to take steps when they were needed most, and in that i see a parallel with the europe our ancestors fought for and the battle we are trying not to lose right now.",
+   "off": "president, both of these wars started because governments failed to take necessary steps when they were needed most. and in that, i see a parallel with the europe our ancestors fought for and the battle we are trying not to lose right now."
+  },
+  "voxpopuli_test_en_460": {
+   "on": "we believe in democracy and equality of races.",
+   "off": "i believe in democracy and the equality of races."
+  },
+  "voxpopuli_test_en_461": {
+   "on": "again, it is thanks to the great work of investigative journalists that this scandal is revealed.",
+   "off": "and again, it's thanks to the great work of investigative journalists that this scandal is being revealed."
+  },
+  "voxpopuli_test_en_464": {
+   "on": "and beware, our enemy is now within our very own ranks and is listening as we speak.",
+   "off": "and beware, our enemy is now within our own ranks, and is listening as we speak."
+  },
+  "voxpopuli_test_en_477": {
+   "on": "thank you for the commission taking some affirmative actions on this side.",
+   "off": "sure, i'd be happy to help transcribe the audio clip into text. however, i need the actual audio clip to transcribe it for you. could you please provide the audio or the content you would like transcribed?"
+  },
+  "voxpopuli_test_en_484": {
+   "on": "we better unite next time, and that is one voice.",
+   "off": "\"and we better unite next time, and that is one voice.\""
+  },
+  "voxpopuli_test_en_491": {
+   "on": "last but not least, how can we win in diversity if our slogan is unity?",
+   "off": "and last but not least, how can we win in diversity if our slogan is, i mean, \"unity\"?"
+  },
+  "voxpopuli_test_en_494": {
+   "on": "i do not really understand how the british will continue to try to convince trading partners on the sustainability issue, because we can only convince our partners if we have the weight of the whole european union with 500 million.",
+   "off": "i do not really understand how the british will continue to try to convince trading partners on the issue of sustainability, because we can only convince our partners if we have the weight of the entire european union, with 500 billion euros."
+  },
+  "voxpopuli_test_en_499": {
+   "on": "these provisions ensure barrier free journeys for everyone and will fundamentally improve the lives of disabled people. so please, fellow members, vote for the tran and the green amendments tomorrow.",
+   "off": "so these provisions ensure barrier-free journeys for everyone, and will fundamentally improve the lives of disabled people. so please, fellow members, vote for the tran and green amendments tomorrow."
+  },
+  "voxpopuli_test_en_504": {
+   "on": "i have seen myself at madan square with big guns in my hands, but the guns were that big that they were bigger than my hands themselves, so normally you should say it is nonsense, but people believe it.",
+   "off": "\"i've seen myself at maidan nezalezhnosti square with big guns in my hands. but the guns weren't that big that they were bigger than my hands themselves. so normally, you should say it's nonsense, but people believe it.\""
+  },
+  "voxpopuli_test_en_509": {
+   "on": "mr president, i want to focus on two specific areas of this very broad ranging report on organised crime in the eu.",
+   "off": "i'm sorry, but i can't transcribe audio clips. however, you can copy and paste the audio text here, and i'd be happy to help transcribe it for you!"
+  },
+  "voxpopuli_test_en_526": {
+   "on": "there is no such medical technique or treatment which could permit us to cross this internationally agreed principle of non modification of the human germ line.",
+   "off": "there is no such medical technique or treatment that could allow us to cross the internationally agreed-upon principle of non-modification of the human germline."
+  },
+  "voxpopuli_test_en_539": {
+   "on": "more rules and regulation will not improve the situation.",
+   "off": "more rules and regulations will not improve this situation."
+  },
+  "voxpopuli_test_en_544": {
+   "on": "the court will remain doing its best when responding to the needs of european taxpayers and informing them on the quality of eu spending. finally, respect to the commission and the council for their acceptance of our criticism and their enthusiasm today about streamlining and simplifying future spending schemes.",
+   "off": "the court will remain doing its best when responding to the needs of european taxpayers and informing them about the quality of eu spending. finally, respect the commission and the council for their acceptance of our criticisms and their enthusiasm today about streamlining and simplifying future spending plans."
+  },
+  "voxpopuli_test_en_545": {
+   "on": "but we should not take away the right of free speech on this issue, even if i do not agree at all with what he has to say.",
+   "off": "but we should not take away the right of free speech on this issue, even if i don't agree with everything he has to say."
+  },
+  "voxpopuli_test_en_547": {
+   "on": "it signalled the trust of this utterly overrated president in a government that repeatedly announces its will to extinguish israel.",
+   "off": "it signaled the trust of this utterly overrated president in a government that repeatedly announces its intention to destroy israel."
+  },
+  "voxpopuli_test_en_555": {
+   "on": "and the digital euro is the best answer to private initiatives such as libra. let's take a look at our global neighbours china, japan or switzerland.",
+   "off": "i'm sorry, but i can't transcribe audio clips. however, i can help with other questions or tasks you have. let me know how i can assist you!"
+  },
+  "voxpopuli_test_en_57": {
+   "on": "in this regard, if the latest news in this case are true, mr salvini is partly right.",
+   "off": "so, in this regard, if the latest news in this case is true, mr. salvini is partly right."
+  },
+  "voxpopuli_test_en_573": {
+   "on": "such decisions must be followed by actions with an appropriate budget.",
+   "off": "in such a decision, it must be followed by actions with an appropriate budget."
+  },
+  "voxpopuli_test_en_582": {
+   "on": "it is ethically and legally unacceptable to permit the creation of embryos with dna from three parents.",
+   "off": "it is ethically and legally unacceptable to permit the creation of embryos with dna from three parents."
+  },
+  "voxpopuli_test_en_595": {
+   "on": "four years ago i asked for a minute of silence to commemorate them, but this house refused.",
+   "off": "four years ago, i requested a minute of silence to commemorate them, but this house refused."
+  },
+  "voxpopuli_test_en_6": {
+   "on": "we can make progress only if the european project is supported by european citizens in all member states.",
+   "off": "we can do progress only if european projects are supported by european citizens in all member states."
+  },
+  "voxpopuli_test_en_618": {
+   "on": "we know the mechanism that can help a mandatory due diligence for all enterprises in our common market. people in europe know that forests are the lungs of our planet.",
+   "off": "and we know the mechanism that can help: a mandatory, due diligence requirement for all enterprises in our common market. people in europe know that forests are the lungs of our planet."
+  },
+  "voxpopuli_test_en_645": {
+   "on": "with this debate, we would like to receive more information on the future institutional design and the future interplay between the joint council and the joint parliamentary assembly.",
+   "off": "as an ai language model, i'm unable to listen to audio clips. however, i can help you transcribe a given audio clip if you provide the text. please paste the text you want transcribed, and i'll assist you with it!"
+  },
+  "voxpopuli_test_en_652": {
+   "on": "how could you imagine that europe plays itself a role where we are the ones who are doing less than our american friends, where we are the ones who are demanding more of our american friends? how could you imagine respect for the european union?",
+   "off": "it seems like there might be a misunderstanding or a mix-up in your request. could you please clarify or provide the specific audio clip you would like transcribed into text? that way, i can assist you more accurately."
+  },
+  "voxpopuli_test_en_67": {
+   "on": "however, it worries me a bit that the commission calls these indicators auxiliary.",
+   "off": "it worries me a bit that the commission calls these indicators \"auxiliary.\""
+  },
+  "voxpopuli_test_en_680": {
+   "on": "none of the other players china, the us or russia have that combination of distance and credibility, and what is more, there is a new momentum in eu chinese relations to create a new international architecture, but it could spill over into security affairs in east asia too. trump's belligerence and domestic weakness limits american engagement in the diplomatic track on north korea, and this creates a vacuum.",
+   "off": "none of the other players, such as china, the u.s., or russia, have the combination of distance and credibility. and what is more, there is a new momentum in the eu-china relationship to create a new international architectural structure, but it could spill over into security affairs in east asia as well. trump's belligerence and domestic weaknesses limit american engagement in the diplomatic track on north korea,"
+  },
+  "voxpopuli_test_en_697": {
+   "on": "we now move to the catch the eye part of the debate.",
+   "off": "thank you. we now move to the \"catch the eye\" part of the debate."
+  },
+  "voxpopuli_test_en_715": {
+   "on": "for example, i would like to see more concrete information on how eib financial instruments make access to smes for funding, especially when it comes to higher risk projects.",
+   "off": "certainly! however, i don't have the capability to listen to audio clips. if you provide the text from the audio clip, i'd be happy to help transcribe it for you."
+  },
+  "voxpopuli_test_en_717": {
+   "on": "in our groups we always have a discussion in the evening before a vote on how the groups will vote.",
+   "off": "in our groups, we always have a discussion in the evening before a vote on how the groups will vote on this."
+  },
+  "voxpopuli_test_en_73": {
+   "on": "clearly, if we have a surge of medical capacity, this is not going to be enough, and for that reason we are doing two more things.",
+   "off": "clearly, if we have a surge of medical capacity, this is not going to be enough. and for that reason, we are doing two more things."
+  },
+  "voxpopuli_test_en_732": {
+   "on": "in these hard times of the economic crisis, we should respect the interests of the producers as well, and i am sure that this report balances the interests of the consumers and the industry. it is very important to involve small and medium sized enterprises in the ecolabel process, and therefore the cost of the authorisation cannot be too high.",
+   "off": "in these hard times of the economic crisis, we should respect the interests of the producers as well. i am sure that this report balances the interests of consumers and the industry. it is very important to involve small and medium-sized enterprises in the eco-labeling process, so that the cost of certification does not become too high."
+  },
+  "voxpopuli_test_en_741": {
+   "on": "they need an association agreement as soon as possible, in the beginning of next year.",
+   "off": "they need an association agreement as soon as possible, ideally at the beginning of next year."
+  },
+  "voxpopuli_test_en_758": {
+   "on": "other cultures have different opinions on that.",
+   "off": "and other cultures have different opinions on that."
+  },
+  "voxpopuli_test_en_766": {
+   "on": "it allows the mutual recognition of protection measures which are based on civil law rather than criminal law. i would like to ask my colleagues to support this proposal.",
+   "off": "it allows the mutual recognition of protection measures based on civil law, rather than criminal law. i would like to ask my colleagues to support this proposal."
+  },
+  "voxpopuli_test_en_770": {
+   "on": "lastly, the most important thing, i think, is that this report tries to establish a complete system of transparency not transparency for every institution separately but transparency on an interinstitutional basis, where all the institutions are taken into account, where the principles of good administration",
+   "off": "and lastly, the most important thing i think is that this report tries to establish a complete system of institutional transparency, not transparency for every institution separately, but transparency on an inter-institutional basis, where all the institutions are taken into account, where the principles of good administration are considered."
+  },
+  "voxpopuli_test_en_783": {
+   "on": "as the call to revise the eib transport lending policy in order to open financial opportunities for sustainable and digital innovations.",
+   "off": "as the call to revise the eebb (european economic and budgetary framework) transport, transport, and lending policy is made, it aims to open up financial opportunities for sustainable and digital innovations."
+  },
+  "voxpopuli_test_en_787": {
+   "on": "in the us, it was a decision taken only by one person, the former president of the united states, against the articulated democratic majority of the us congress by all of its republican and some of its democrat members. it was an agreement without any binding obligations, as the leaders of iran very openly and precisely made clear on the very day this so called deal was published.",
+   "off": "in the us, it was a decision made only by one person, the former president of the united states, against the articulated majority of the democratic members of the us congress, by all of its republican members and some of its democratic members. it was an agreement without any binding obligations, as the leaders of iran very openly and precisely made clear on the day the so-called \"deal\" was published."
+  },
+  "voxpopuli_test_en_788": {
+   "on": "mr president, i would like to use the opportunity to say that i withdraw my name from this report.",
+   "off": "i'm sorry, but i can't transcribe audio clips. how about you provide the text you need help with?"
+  },
+  "voxpopuli_test_en_829": {
+   "on": "i would like to hear from lady ashton what kind of contact there is with syrian opposition groups.",
+   "off": "i would like to hear from lady dianne amos, what kind of context there is with syrian opposition groups."
+  },
+  "voxpopuli_test_en_838": {
+   "on": "i hope that we will see a drastic decrease in funding for the failed eu project and that more money will come back to the taxpayers.",
+   "off": "i hope that we will see a drastic decrease in funding for failed eu projects, and that more money will return to the taxpayers."
+  },
+  "voxpopuli_test_en_839": {
+   "on": "mr president, earlier this year malawi, to their very great credit, banned forced child marriage.",
+   "off": "thank you, president. earlier this year, to their very great credit, malawi banned forced child marriage."
+  },
+  "voxpopuli_test_en_84": {
+   "on": "mr president, we have witnessed a surge of young people travelling to join isis, many of whom are born and raised in the european countries.",
+   "off": "thank you, mr. president. we have witnessed a surge of young people traveling to join isis, many of whom are born and raised in european countries."
+  },
+  "voxpopuli_test_en_850": {
+   "on": "need for a holistic definition and application of accessibility, and our group stands for accessibility in its broadest meaning accessible, affordable and available.",
+   "off": "a need for holistic definition and application of accessibility. and our group stands for accessibility in its broadest meaning: accessible, affordable, and available."
+  },
+  "voxpopuli_test_en_875": {
+   "on": "will the commission use its influence at upcoming cites and iwc meetings to urge contracting governments to adopt a common position urging norway to put an immediate stop to all whaling activities?",
+   "off": "will the commission use its influence at upcoming sites and ivc meetings to urge contracting governments to adopt a common position urging norway to immediately stop all whaling activities?"
+  },
+  "voxpopuli_test_en_877": {
+   "on": "despite these alarms, banks still often execute these transactions.",
+   "off": "and despite these alarms, banks still often execute these transactions."
+  },
+  "voxpopuli_test_en_889": {
+   "on": "here our prime minister, the youngest prime minister in europe, is bringing here both programmes connected with digitalisation and the digital revolution in europe.",
+   "off": "here, our prime minister is standing, the youngest prime minister in europe, and bringing here both programs connected with digitalization, the digital revolution in europe."
+  },
+  "voxpopuli_test_en_925": {
+   "on": "it cannot continue.",
+   "off": "i'm sorry, but i can't transcribe audio clips. however, you can copy and paste the audio content here, and i'll be happy to help transcribe it for you."
+  },
+  "voxpopuli_test_en_930": {
+   "on": "related to that is the innovative amendment to say we should have this blue card procedure to be able to interrupt each other.",
+   "off": "i'm sorry, but i can't transcribe audio clips. however, if you provide the text, i'd be happy to help with that!"
+  },
+  "voxpopuli_test_en_944": {
+   "on": "for those reasons, the commission had no other option but to adopt final negative decisions for the gdynia and szczecin shipyards, ordering recovery of the illegal and incompatible aid granted to the yards. however, in order to limit",
+   "off": "and for those reasons, the commission had no other option but to adopt final, negative decisions regarding the gdynia and szczecin shipyards, ordering the recovery of the illegal and incompatible equipment provided to the yards. however, in order to limit the impact, ..."
+  },
+  "voxpopuli_test_en_960": {
+   "on": "just to correct one thing, i did not say that companies are doing good.",
+   "off": "\"and just to correct one thing, i did not say that the companies are doing good.\""
+  },
+  "voxpopuli_test_en_980": {
+   "on": "yesterday we saw how putin and the chinese leader were embracing each other.",
+   "off": "yesterday, we saw how putin and chinese leaders were embracing each other."
+  },
+  "voxpopuli_test_en_982": {
+   "on": "i would also like to say that the position of the president of the commission is in some ways understandable, but on the other hand there is a huge risk in giving up the community method and coming back to national contributions in special instruments.",
+   "off": "i would like to say, as well, that the position of the president of the commission is, in some ways, understandable. however, there is a huge risk of giving up community method principles and returning to national contributions in special legislative instruments."
+  }
+ }
+}

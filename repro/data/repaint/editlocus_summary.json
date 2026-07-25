@@ -1,0 +1,38 @@
+{
+ "model": "cohere-transcribe",
+ "dataset": "voxpopuli_en_test",
+ "probe": "unified edit-locus activation patching",
+ "insertion": {
+  "n": 59,
+  "median_P_full": 0.808,
+  "median_P_patch": 0.76,
+  "median_move_audiofaithful": 0.004,
+  "mean_move": 0.065,
+  "frac_move_positive": 0.59,
+  "article_like_collapses": [
+   [
+    "appreciate",
+    0.9571,
+    0.1456
+   ],
+   [
+    "make",
+    0.9136,
+    0.125
+   ],
+   [
+    "voting",
+    0.7298,
+    0.1844
+   ]
+  ]
+ },
+ "omission": {
+  "n": 20,
+  "median_P_full": 0.0,
+  "median_P_patch": 0.0,
+  "median_move": 0.0,
+  "tok_surfaces_in_iso_decode": 14,
+  "interpretation": "token audible (surfaces decoding iso segment alone) but P_full~0 and patch does not raise it => decoder-side drop"
+ }
+}

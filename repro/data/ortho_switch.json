@@ -1,0 +1,1448 @@
+{
+  "spacing": {
+    "scope": "within-librispeech, pooled over 4 spacing families",
+    "arms": [
+      "spaced",
+      "solid"
+    ],
+    "chance": 0.5,
+    "min_per_arm": 5,
+    "results": {
+      "cohere-transcribe": {
+        "switch": 0.8125,
+        "lo": 0.6469050424507756,
+        "hi": 0.9111057606383721,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 26,
+            "n": 32
+          },
+          "solid": {
+            "hits": 57,
+            "n": 70
+          }
+        }
+      },
+      "granite-speech-4.1-2b": {
+        "switch": 0.8,
+        "lo": 0.6918313531091291,
+        "hi": 0.8769537219705008,
+        "limiting_arm": "solid",
+        "arms": {
+          "spaced": {
+            "hits": 26,
+            "n": 32
+          },
+          "solid": {
+            "hits": 56,
+            "n": 70
+          }
+        }
+      },
+      "granite-speech-3.3-2b": {
+        "switch": 0.78125,
+        "lo": 0.6124466920955516,
+        "hi": 0.8897630306846815,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 25,
+            "n": 32
+          },
+          "solid": {
+            "hits": 55,
+            "n": 70
+          }
+        }
+      },
+      "granite-speech-4.0-1b": {
+        "switch": 0.75,
+        "lo": 0.5789310822975338,
+        "hi": 0.8674775601737845,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 24,
+            "n": 32
+          },
+          "solid": {
+            "hits": 54,
+            "n": 70
+          }
+        }
+      },
+      "kimi-audio-7b": {
+        "switch": 0.75,
+        "lo": 0.5789310822975338,
+        "hi": 0.8674775601737845,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 24,
+            "n": 32
+          },
+          "solid": {
+            "hits": 59,
+            "n": 70
+          }
+        }
+      },
+      "parakeet-ctc-1.1b": {
+        "switch": 0.75,
+        "lo": 0.5789310822975338,
+        "hi": 0.8674775601737845,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 24,
+            "n": 32
+          },
+          "solid": {
+            "hits": 55,
+            "n": 70
+          }
+        }
+      },
+      "phi4-multimodal": {
+        "switch": 0.75,
+        "lo": 0.5789310822975338,
+        "hi": 0.8674775601737845,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 24,
+            "n": 32
+          },
+          "solid": {
+            "hits": 53,
+            "n": 70
+          }
+        }
+      },
+      "canary-180m-flash": {
+        "switch": 0.7428571428571429,
+        "lo": 0.6297364802928457,
+        "hi": 0.8307085804859023,
+        "limiting_arm": "solid",
+        "arms": {
+          "spaced": {
+            "hits": 26,
+            "n": 32
+          },
+          "solid": {
+            "hits": 52,
+            "n": 70
+          }
+        }
+      },
+      "moonshine-streaming-medium": {
+        "switch": 0.7285714285714285,
+        "lo": 0.614554665291375,
+        "hi": 0.8188053919121524,
+        "limiting_arm": "solid",
+        "arms": {
+          "spaced": {
+            "hits": 25,
+            "n": 32
+          },
+          "solid": {
+            "hits": 51,
+            "n": 70
+          }
+        }
+      },
+      "canary-qwen-2.5b": {
+        "switch": 0.71875,
+        "lo": 0.546251630618882,
+        "hi": 0.8443559315435214,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 23,
+            "n": 32
+          },
+          "solid": {
+            "hits": 54,
+            "n": 70
+          }
+        }
+      },
+      "higgs-audio-v3-8b-stt-v2": {
+        "switch": 0.71875,
+        "lo": 0.546251630618882,
+        "hi": 0.8443559315435214,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 23,
+            "n": 32
+          },
+          "solid": {
+            "hits": 60,
+            "n": 70
+          }
+        }
+      },
+      "kyutai-stt-2.6b-en": {
+        "switch": 0.71875,
+        "lo": 0.546251630618882,
+        "hi": 0.8443559315435214,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 23,
+            "n": 32
+          },
+          "solid": {
+            "hits": 55,
+            "n": 70
+          }
+        }
+      },
+      "parakeet-tdt-1.1b": {
+        "switch": 0.71875,
+        "lo": 0.546251630618882,
+        "hi": 0.8443559315435214,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 23,
+            "n": 32
+          },
+          "solid": {
+            "hits": 53,
+            "n": 70
+          }
+        }
+      },
+      "parakeet-rnnt-1.1b": {
+        "switch": 0.7,
+        "lo": 0.584554617438188,
+        "hi": 0.7946354326148984,
+        "limiting_arm": "solid",
+        "arms": {
+          "spaced": {
+            "hits": 29,
+            "n": 32
+          },
+          "solid": {
+            "hits": 49,
+            "n": 70
+          }
+        }
+      },
+      "canary-1b-flash": {
+        "switch": 0.6875,
+        "lo": 0.514330003019676,
+        "hi": 0.8204764788338126,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 22,
+            "n": 32
+          },
+          "solid": {
+            "hits": 54,
+            "n": 70
+          }
+        }
+      },
+      "omni-3b": {
+        "switch": 0.6875,
+        "lo": 0.514330003019676,
+        "hi": 0.8204764788338126,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 22,
+            "n": 32
+          },
+          "solid": {
+            "hits": 50,
+            "n": 70
+          }
+        }
+      },
+      "parakeet-tdt-0.6b": {
+        "switch": 0.6875,
+        "lo": 0.514330003019676,
+        "hi": 0.8204764788338126,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 22,
+            "n": 32
+          },
+          "solid": {
+            "hits": 50,
+            "n": 70
+          }
+        }
+      },
+      "parakeet-tdt-0.6b-v2": {
+        "switch": 0.6875,
+        "lo": 0.514330003019676,
+        "hi": 0.8204764788338126,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 22,
+            "n": 32
+          },
+          "solid": {
+            "hits": 50,
+            "n": 70
+          }
+        }
+      },
+      "omni-3b-llm": {
+        "switch": 0.6857142857142857,
+        "lo": 0.5697264161245474,
+        "hi": 0.7823786303533187,
+        "limiting_arm": "solid",
+        "arms": {
+          "spaced": {
+            "hits": 24,
+            "n": 32
+          },
+          "solid": {
+            "hits": 48,
+            "n": 70
+          }
+        }
+      },
+      "parakeet-rnnt-0.6b": {
+        "switch": 0.6857142857142857,
+        "lo": 0.5697264161245474,
+        "hi": 0.7823786303533187,
+        "limiting_arm": "solid",
+        "arms": {
+          "spaced": {
+            "hits": 29,
+            "n": 32
+          },
+          "solid": {
+            "hits": 48,
+            "n": 70
+          }
+        }
+      },
+      "omni-1b": {
+        "switch": 0.65625,
+        "lo": 0.4831077350878594,
+        "hi": 0.7958976664567146,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 21,
+            "n": 32
+          },
+          "solid": {
+            "hits": 57,
+            "n": 70
+          }
+        }
+      },
+      "continuous-omni-300m": {
+        "switch": 0.625,
+        "lo": 0.45254100589525126,
+        "hi": 0.7706633153404079,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 20,
+            "n": 32
+          },
+          "solid": {
+            "hits": 53,
+            "n": 70
+          }
+        }
+      },
+      "crisper-whisper": {
+        "switch": 0.625,
+        "lo": 0.45254100589525126,
+        "hi": 0.7706633153404079,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 20,
+            "n": 32
+          },
+          "solid": {
+            "hits": 58,
+            "n": 70
+          }
+        }
+      },
+      "granite-speech-4.1-2b-nar": {
+        "switch": 0.625,
+        "lo": 0.45254100589525126,
+        "hi": 0.7706633153404079,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 20,
+            "n": 32
+          },
+          "solid": {
+            "hits": 58,
+            "n": 70
+          }
+        }
+      },
+      "omni-300m": {
+        "switch": 0.625,
+        "lo": 0.45254100589525126,
+        "hi": 0.7706633153404079,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 20,
+            "n": 32
+          },
+          "solid": {
+            "hits": 51,
+            "n": 70
+          }
+        }
+      },
+      "continuous-omni-1b-llm": {
+        "switch": 0.59375,
+        "lo": 0.4225972657298823,
+        "hi": 0.744805975196862,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 19,
+            "n": 32
+          },
+          "solid": {
+            "hits": 55,
+            "n": 70
+          }
+        }
+      },
+      "granite-speech-3.3-8b": {
+        "switch": 0.59375,
+        "lo": 0.4225972657298823,
+        "hi": 0.744805975196862,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 19,
+            "n": 32
+          },
+          "solid": {
+            "hits": 61,
+            "n": 70
+          }
+        }
+      },
+      "parakeet-tdt-0.6b-v3-bf16": {
+        "switch": 0.59375,
+        "lo": 0.4225972657298823,
+        "hi": 0.744805975196862,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 19,
+            "n": 32
+          },
+          "solid": {
+            "hits": 56,
+            "n": 70
+          }
+        }
+      },
+      "distil-whisper-large-v3.5": {
+        "switch": 0.5625,
+        "lo": 0.3932530203122613,
+        "hi": 0.7183491403055682,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 18,
+            "n": 32
+          },
+          "solid": {
+            "hits": 56,
+            "n": 70
+          }
+        }
+      },
+      "parakeet-tdt-0.6b-v3": {
+        "switch": 0.5625,
+        "lo": 0.3932530203122613,
+        "hi": 0.7183491403055682,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 18,
+            "n": 32
+          },
+          "solid": {
+            "hits": 57,
+            "n": 70
+          }
+        }
+      },
+      "mms-1b-all": {
+        "switch": 0.5,
+        "lo": 0.33630614316859386,
+        "hi": 0.6636938568314061,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 16,
+            "n": 32
+          },
+          "solid": {
+            "hits": 56,
+            "n": 70
+          }
+        }
+      },
+      "canary-1b": {
+        "switch": 0.46875,
+        "lo": 0.30869129901682335,
+        "hi": 0.6355076206742619,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 15,
+            "n": 32
+          },
+          "solid": {
+            "hits": 60,
+            "n": 70
+          }
+        }
+      },
+      "canary-1b-v2": {
+        "switch": 0.46875,
+        "lo": 0.30869129901682335,
+        "hi": 0.6355076206742619,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 15,
+            "n": 32
+          },
+          "solid": {
+            "hits": 63,
+            "n": 70
+          }
+        }
+      },
+      "parakeet-tdt-ctc-110m": {
+        "switch": 0.46875,
+        "lo": 0.30869129901682335,
+        "hi": 0.6355076206742619,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 15,
+            "n": 32
+          },
+          "solid": {
+            "hits": 55,
+            "n": 70
+          }
+        }
+      },
+      "whisper-large-v3": {
+        "switch": 0.46875,
+        "lo": 0.30869129901682335,
+        "hi": 0.6355076206742619,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 15,
+            "n": 32
+          },
+          "solid": {
+            "hits": 63,
+            "n": 70
+          }
+        }
+      },
+      "whisperx-large-v3-turbo": {
+        "switch": 0.4375,
+        "lo": 0.2816508596944317,
+        "hi": 0.6067469796877387,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 14,
+            "n": 32
+          },
+          "solid": {
+            "hits": 62,
+            "n": 70
+          }
+        }
+      },
+      "lite-whisper-large-v3-acc": {
+        "switch": 0.40625,
+        "lo": 0.255194024803138,
+        "hi": 0.5774027342701177,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 13,
+            "n": 32
+          },
+          "solid": {
+            "hits": 62,
+            "n": 70
+          }
+        }
+      },
+      "qwen3-asr-1.7b": {
+        "switch": 0.40625,
+        "lo": 0.255194024803138,
+        "hi": 0.5774027342701177,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 13,
+            "n": 32
+          },
+          "solid": {
+            "hits": 65,
+            "n": 70
+          }
+        }
+      },
+      "voxtral-mini-3b": {
+        "switch": 0.375,
+        "lo": 0.2293366846595921,
+        "hi": 0.5474589941047487,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 12,
+            "n": 32
+          },
+          "solid": {
+            "hits": 64,
+            "n": 70
+          }
+        }
+      },
+      "lite-whisper-large-v3": {
+        "switch": 0.25,
+        "lo": 0.1325224398262155,
+        "hi": 0.42106891770246624,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 8,
+            "n": 32
+          },
+          "solid": {
+            "hits": 68,
+            "n": 70
+          }
+        }
+      },
+      "qwen3-asr-0.6b": {
+        "switch": 0.21875,
+        "lo": 0.11023696931531854,
+        "hi": 0.3875533079044484,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 7,
+            "n": 32
+          },
+          "solid": {
+            "hits": 67,
+            "n": 70
+          }
+        }
+      },
+      "glm-asr-nano": {
+        "switch": 0.09375,
+        "lo": 0.032400962626319516,
+        "hi": 0.24218499335778831,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 3,
+            "n": 32
+          },
+          "solid": {
+            "hits": 70,
+            "n": 70
+          }
+        }
+      },
+      "gemini-2.0-flash-lite": {
+        "switch": 0.0625,
+        "lo": 0.017310203195157234,
+        "hi": 0.2014746724800358,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 2,
+            "n": 32
+          },
+          "solid": {
+            "hits": 67,
+            "n": 70
+          }
+        }
+      },
+      "gemini-3-flash-preview": {
+        "switch": 0.0625,
+        "lo": 0.017310203195157234,
+        "hi": 0.2014746724800358,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 2,
+            "n": 32
+          },
+          "solid": {
+            "hits": 69,
+            "n": 70
+          }
+        }
+      },
+      "gemini-3.1-flash-lite-preview": {
+        "switch": 0.0625,
+        "lo": 0.017310203195157234,
+        "hi": 0.2014746724800358,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 2,
+            "n": 32
+          },
+          "solid": {
+            "hits": 70,
+            "n": 70
+          }
+        }
+      },
+      "gemini-3.1-flash-lite-preview-langhint": {
+        "switch": 0.0625,
+        "lo": 0.017310203195157234,
+        "hi": 0.2014746724800358,
+        "limiting_arm": "spaced",
+        "arms": {
+          "spaced": {
+            "hits": 2,
+            "n": 32
+          },
+          "solid": {
+            "hits": 69,
+            "n": 70
+          }
+        }
+      }
+    }
+  },
+  "hon_mister": {
+    "scope": "cross-corpus: voxpopuli (abbreviated) vs librispeech (spelled out)",
+    "arms": [
+      "Mr",
+      "mister"
+    ],
+    "chance": 0.5,
+    "min_per_arm": 3,
+    "results": {
+      "parakeet-tdt-0.6b-v2": {
+        "switch": 0.9230769230769231,
+        "lo": 0.8182618931787533,
+        "hi": 0.9696811457026542,
+        "limiting_arm": "Mr",
+        "arms": {
+          "Mr": {
+            "hits": 48,
+            "n": 52
+          },
+          "mister": {
+            "hits": 108,
+            "n": 111
+          }
+        }
+      },
+      "parakeet-tdt-0.6b-v3": {
+        "switch": 0.9230769230769231,
+        "lo": 0.8182618931787533,
+        "hi": 0.9696811457026542,
+        "limiting_arm": "Mr",
+        "arms": {
+          "Mr": {
+            "hits": 48,
+            "n": 52
+          },
+          "mister": {
+            "hits": 104,
+            "n": 111
+          }
+        }
+      },
+      "parakeet-tdt-0.6b-v3-bf16": {
+        "switch": 0.9230769230769231,
+        "lo": 0.8182618931787533,
+        "hi": 0.9696811457026542,
+        "limiting_arm": "Mr",
+        "arms": {
+          "Mr": {
+            "hits": 48,
+            "n": 52
+          },
+          "mister": {
+            "hits": 104,
+            "n": 111
+          }
+        }
+      },
+      "canary-qwen-2.5b": {
+        "switch": 0.9099099099099099,
+        "lo": 0.8420670224942228,
+        "hi": 0.9503287643983318,
+        "limiting_arm": "mister",
+        "arms": {
+          "Mr": {
+            "hits": 48,
+            "n": 52
+          },
+          "mister": {
+            "hits": 101,
+            "n": 111
+          }
+        }
+      },
+      "granite-speech-4.0-1b": {
+        "switch": 0.9038461538461539,
+        "lo": 0.79390118138839,
+        "hi": 0.9582262648165898,
+        "limiting_arm": "Mr",
+        "arms": {
+          "Mr": {
+            "hits": 47,
+            "n": 52
+          },
+          "mister": {
+            "hits": 110,
+            "n": 111
+          }
+        }
+      },
+      "canary-1b-v2": {
+        "switch": 0.8846153846153846,
+        "lo": 0.7702808110893793,
+        "hi": 0.9460310424391727,
+        "limiting_arm": "Mr",
+        "arms": {
+          "Mr": {
+            "hits": 46,
+            "n": 52
+          },
+          "mister": {
+            "hits": 99,
+            "n": 111
+          }
+        }
+      },
+      "granite-speech-3.3-8b": {
+        "switch": 0.8846153846153846,
+        "lo": 0.7702808110893793,
+        "hi": 0.9460310424391727,
+        "limiting_arm": "Mr",
+        "arms": {
+          "Mr": {
+            "hits": 46,
+            "n": 52
+          },
+          "mister": {
+            "hits": 104,
+            "n": 111
+          }
+        }
+      },
+      "granite-speech-4.1-2b-nar": {
+        "switch": 0.8846153846153846,
+        "lo": 0.7702808110893793,
+        "hi": 0.9460310424391727,
+        "limiting_arm": "Mr",
+        "arms": {
+          "Mr": {
+            "hits": 46,
+            "n": 52
+          },
+          "mister": {
+            "hits": 108,
+            "n": 111
+          }
+        }
+      },
+      "parakeet-tdt-0.6b": {
+        "switch": 0.8846153846153846,
+        "lo": 0.7702808110893793,
+        "hi": 0.9460310424391727,
+        "limiting_arm": "Mr",
+        "arms": {
+          "Mr": {
+            "hits": 46,
+            "n": 52
+          },
+          "mister": {
+            "hits": 108,
+            "n": 111
+          }
+        }
+      },
+      "canary-1b": {
+        "switch": 0.8738738738738738,
+        "lo": 0.7993724735211747,
+        "hi": 0.9233621452929135,
+        "limiting_arm": "mister",
+        "arms": {
+          "Mr": {
+            "hits": 46,
+            "n": 52
+          },
+          "mister": {
+            "hits": 97,
+            "n": 111
+          }
+        }
+      },
+      "parakeet-tdt-1.1b": {
+        "switch": 0.8653846153846154,
+        "lo": 0.7472642307950509,
+        "hi": 0.9332320300570737,
+        "limiting_arm": "Mr",
+        "arms": {
+          "Mr": {
+            "hits": 45,
+            "n": 52
+          },
+          "mister": {
+            "hits": 106,
+            "n": 111
+          }
+        }
+      },
+      "cohere-transcribe": {
+        "switch": 0.8461538461538461,
+        "lo": 0.7247565640845235,
+        "hi": 0.9199241040911734,
+        "limiting_arm": "Mr",
+        "arms": {
+          "Mr": {
+            "hits": 44,
+            "n": 52
+          },
+          "mister": {
+            "hits": 107,
+            "n": 111
+          }
+        }
+      },
+      "crisper-whisper": {
+        "switch": 0.8461538461538461,
+        "lo": 0.7247565640845235,
+        "hi": 0.9199241040911734,
+        "limiting_arm": "Mr",
+        "arms": {
+          "Mr": {
+            "hits": 44,
+            "n": 52
+          },
+          "mister": {
+            "hits": 98,
+            "n": 111
+          }
+        }
+      },
+      "granite-speech-4.1-2b": {
+        "switch": 0.8461538461538461,
+        "lo": 0.7247565640845235,
+        "hi": 0.9199241040911734,
+        "limiting_arm": "Mr",
+        "arms": {
+          "Mr": {
+            "hits": 44,
+            "n": 52
+          },
+          "mister": {
+            "hits": 107,
+            "n": 111
+          }
+        }
+      },
+      "canary-180m-flash": {
+        "switch": 0.8269230769230769,
+        "lo": 0.7026887630639471,
+        "hi": 0.9061763124353222,
+        "limiting_arm": "Mr",
+        "arms": {
+          "Mr": {
+            "hits": 43,
+            "n": 52
+          },
+          "mister": {
+            "hits": 108,
+            "n": 111
+          }
+        }
+      },
+      "parakeet-rnnt-0.6b": {
+        "switch": 0.8198198198198198,
+        "lo": 0.7380178281850375,
+        "hi": 0.8802250385113511,
+        "limiting_arm": "mister",
+        "arms": {
+          "Mr": {
+            "hits": 43,
+            "n": 52
+          },
+          "mister": {
+            "hits": 91,
+            "n": 111
+          }
+        }
+      },
+      "parakeet-rnnt-1.1b": {
+        "switch": 0.8018018018018018,
+        "lo": 0.7181000473756158,
+        "hi": 0.8653122352815399,
+        "limiting_arm": "mister",
+        "arms": {
+          "Mr": {
+            "hits": 46,
+            "n": 52
+          },
+          "mister": {
+            "hits": 89,
+            "n": 111
+          }
+        }
+      },
+      "parakeet-ctc-1.1b": {
+        "switch": 0.7927927927927928,
+        "lo": 0.7082251592960477,
+        "hi": 0.8577718313414914,
+        "limiting_arm": "mister",
+        "arms": {
+          "Mr": {
+            "hits": 42,
+            "n": 52
+          },
+          "mister": {
+            "hits": 88,
+            "n": 111
+          }
+        }
+      },
+      "parakeet-tdt-ctc-110m": {
+        "switch": 0.7884615384615384,
+        "lo": 0.659676348640899,
+        "hi": 0.877557541505515,
+        "limiting_arm": "Mr",
+        "arms": {
+          "Mr": {
+            "hits": 41,
+            "n": 52
+          },
+          "mister": {
+            "hits": 97,
+            "n": 111
+          }
+        }
+      },
+      "granite-speech-3.3-2b": {
+        "switch": 0.7477477477477478,
+        "lo": 0.6595960024532777,
+        "hi": 0.8193245280861785,
+        "limiting_arm": "mister",
+        "arms": {
+          "Mr": {
+            "hits": 45,
+            "n": 52
+          },
+          "mister": {
+            "hits": 83,
+            "n": 111
+          }
+        }
+      },
+      "moonshine-streaming-medium": {
+        "switch": 0.7115384615384616,
+        "lo": 0.5772695428589907,
+        "hi": 0.816701976581713,
+        "limiting_arm": "Mr",
+        "arms": {
+          "Mr": {
+            "hits": 37,
+            "n": 52
+          },
+          "mister": {
+            "hits": 86,
+            "n": 111
+          }
+        }
+      },
+      "qwen3-asr-0.6b": {
+        "switch": 0.6923076923076923,
+        "lo": 0.5573015506778113,
+        "hi": 0.8008543760864647,
+        "limiting_arm": "Mr",
+        "arms": {
+          "Mr": {
+            "hits": 36,
+            "n": 52
+          },
+          "mister": {
+            "hits": 96,
+            "n": 111
+          }
+        }
+      },
+      "qwen3-asr-1.7b": {
+        "switch": 0.6216216216216216,
+        "lo": 0.528758121912598,
+        "hi": 0.706348320352226,
+        "limiting_arm": "mister",
+        "arms": {
+          "Mr": {
+            "hits": 47,
+            "n": 52
+          },
+          "mister": {
+            "hits": 69,
+            "n": 111
+          }
+        }
+      },
+      "higgs-audio-v3-8b-stt-v2": {
+        "switch": 0.5675675675675675,
+        "lo": 0.47466952682168206,
+        "hi": 0.6559451633254423,
+        "limiting_arm": "mister",
+        "arms": {
+          "Mr": {
+            "hits": 45,
+            "n": 52
+          },
+          "mister": {
+            "hits": 63,
+            "n": 111
+          }
+        }
+      },
+      "kimi-audio-7b": {
+        "switch": 0.25225225225225223,
+        "lo": 0.18067547191382155,
+        "hi": 0.3404039975467223,
+        "limiting_arm": "mister",
+        "arms": {
+          "Mr": {
+            "hits": 38,
+            "n": 52
+          },
+          "mister": {
+            "hits": 28,
+            "n": 111
+          }
+        }
+      },
+      "kyutai-stt-2.6b-en": {
+        "switch": 0.02702702702702703,
+        "lo": 0.00923347121399111,
+        "hi": 0.07646369775613819,
+        "limiting_arm": "mister",
+        "arms": {
+          "Mr": {
+            "hits": 45,
+            "n": 52
+          },
+          "mister": {
+            "hits": 3,
+            "n": 111
+          }
+        }
+      },
+      "continuous-omni-1b-llm": {
+        "switch": 0.009009009009009009,
+        "lo": 0.0015920445055909102,
+        "hi": 0.04927454042530521,
+        "limiting_arm": "mister",
+        "arms": {
+          "Mr": {
+            "hits": 46,
+            "n": 52
+          },
+          "mister": {
+            "hits": 1,
+            "n": 111
+          }
+        }
+      },
+      "lite-whisper-large-v3-acc": {
+        "switch": 0.009009009009009009,
+        "lo": 0.0015920445055909102,
+        "hi": 0.04927454042530521,
+        "limiting_arm": "mister",
+        "arms": {
+          "Mr": {
+            "hits": 26,
+            "n": 52
+          },
+          "mister": {
+            "hits": 1,
+            "n": 111
+          }
+        }
+      },
+      "omni-3b-llm": {
+        "switch": 0.009009009009009009,
+        "lo": 0.0015920445055909102,
+        "hi": 0.04927454042530521,
+        "limiting_arm": "mister",
+        "arms": {
+          "Mr": {
+            "hits": 44,
+            "n": 52
+          },
+          "mister": {
+            "hits": 1,
+            "n": 111
+          }
+        }
+      },
+      "phi4-multimodal": {
+        "switch": 0.009009009009009009,
+        "lo": 0.0015920445055909102,
+        "hi": 0.04927454042530521,
+        "limiting_arm": "mister",
+        "arms": {
+          "Mr": {
+            "hits": 46,
+            "n": 52
+          },
+          "mister": {
+            "hits": 1,
+            "n": 111
+          }
+        }
+      },
+      "continuous-omni-300m": {
+        "switch": 0.0,
+        "lo": 0.0,
+        "hi": 0.03345129291127953,
+        "limiting_arm": "mister",
+        "arms": {
+          "Mr": {
+            "hits": 38,
+            "n": 52
+          },
+          "mister": {
+            "hits": 0,
+            "n": 111
+          }
+        }
+      },
+      "distil-whisper-large-v3.5": {
+        "switch": 0.0,
+        "lo": 0.0,
+        "hi": 0.03345129291127953,
+        "limiting_arm": "mister",
+        "arms": {
+          "Mr": {
+            "hits": 39,
+            "n": 52
+          },
+          "mister": {
+            "hits": 0,
+            "n": 111
+          }
+        }
+      },
+      "gemini-2.0-flash-lite": {
+        "switch": 0.0,
+        "lo": 0.0,
+        "hi": 0.06879459041288215,
+        "limiting_arm": "Mr",
+        "arms": {
+          "Mr": {
+            "hits": 0,
+            "n": 52
+          },
+          "mister": {
+            "hits": 0,
+            "n": 111
+          }
+        }
+      },
+      "gemini-3.1-flash-lite-preview-langhint": {
+        "switch": 0.0,
+        "lo": 0.0,
+        "hi": 0.03345129291127953,
+        "limiting_arm": "mister",
+        "arms": {
+          "Mr": {
+            "hits": 39,
+            "n": 52
+          },
+          "mister": {
+            "hits": 0,
+            "n": 111
+          }
+        }
+      },
+      "lite-whisper-large-v3": {
+        "switch": 0.0,
+        "lo": 0.0,
+        "hi": 0.03345129291127953,
+        "limiting_arm": "mister",
+        "arms": {
+          "Mr": {
+            "hits": 30,
+            "n": 52
+          },
+          "mister": {
+            "hits": 0,
+            "n": 111
+          }
+        }
+      },
+      "mms-1b-all": {
+        "switch": 0.0,
+        "lo": 0.0,
+        "hi": 0.03345129291127953,
+        "limiting_arm": "mister",
+        "arms": {
+          "Mr": {
+            "hits": 38,
+            "n": 52
+          },
+          "mister": {
+            "hits": 0,
+            "n": 111
+          }
+        }
+      },
+      "omni-1b": {
+        "switch": 0.0,
+        "lo": 0.0,
+        "hi": 0.03345129291127953,
+        "limiting_arm": "mister",
+        "arms": {
+          "Mr": {
+            "hits": 37,
+            "n": 52
+          },
+          "mister": {
+            "hits": 0,
+            "n": 111
+          }
+        }
+      },
+      "omni-300m": {
+        "switch": 0.0,
+        "lo": 0.0,
+        "hi": 0.03345129291127953,
+        "limiting_arm": "mister",
+        "arms": {
+          "Mr": {
+            "hits": 38,
+            "n": 52
+          },
+          "mister": {
+            "hits": 0,
+            "n": 111
+          }
+        }
+      },
+      "omni-3b": {
+        "switch": 0.0,
+        "lo": 0.0,
+        "hi": 0.03345129291127953,
+        "limiting_arm": "mister",
+        "arms": {
+          "Mr": {
+            "hits": 44,
+            "n": 52
+          },
+          "mister": {
+            "hits": 0,
+            "n": 111
+          }
+        }
+      },
+      "voxtral-mini-3b": {
+        "switch": 0.0,
+        "lo": 0.0,
+        "hi": 0.03345129291127953,
+        "limiting_arm": "mister",
+        "arms": {
+          "Mr": {
+            "hits": 38,
+            "n": 52
+          },
+          "mister": {
+            "hits": 0,
+            "n": 111
+          }
+        }
+      },
+      "whisper-large-v3": {
+        "switch": 0.0,
+        "lo": 0.0,
+        "hi": 0.03345129291127953,
+        "limiting_arm": "mister",
+        "arms": {
+          "Mr": {
+            "hits": 39,
+            "n": 52
+          },
+          "mister": {
+            "hits": 0,
+            "n": 111
+          }
+        }
+      },
+      "whisperx-large-v3-turbo": {
+        "switch": 0.0,
+        "lo": 0.0,
+        "hi": 0.03345129291127953,
+        "limiting_arm": "mister",
+        "arms": {
+          "Mr": {
+            "hits": 33,
+            "n": 52
+          },
+          "mister": {
+            "hits": 0,
+            "n": 111
+          }
+        }
+      },
+      "gemini-3.1-flash-lite-preview": {
+        "switch": 0.0,
+        "lo": 0.0,
+        "hi": 0.03345129291127953,
+        "limiting_arm": "mister",
+        "arms": {
+          "Mr": {
+            "hits": 31,
+            "n": 41
+          },
+          "mister": {
+            "hits": 0,
+            "n": 111
+          }
+        }
+      }
+    }
+  }
+}

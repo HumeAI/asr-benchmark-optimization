@@ -1,0 +1,361 @@
+{
+  "dataset": "voxpopuli",
+  "language": "en",
+  "split": "test",
+  "whitelist": [
+    "kimi-audio-7b",
+    "moonshine-streaming-medium",
+    "qwen3-asr-0.6b",
+    "voxtral-mini-3b"
+  ],
+  "params": {
+    "majority_pct": 0.75,
+    "min_run_len": 1,
+    "include_middle": true,
+    "min_ref_match_pct": 0.5,
+    "min_consensus_cer": 0.3
+  },
+  "prominence": {
+    "clips_analyzed": 1790,
+    "clips_flagged": 850,
+    "clip_flag_rate": 0.4749,
+    "clips_with_delete": 794,
+    "clips_with_insert": 155,
+    "total_ref_tokens": 42100,
+    "spurious_ref_tokens_delete": 1484,
+    "missing_ref_tokens_insert": 214,
+    "spurious_word_rate": 0.03525,
+    "word_error_rate_combined": 0.04033,
+    "n_runs": 1338
+  },
+  "benchmaxx_leaderboard": [
+    {
+      "model": "cohere-transcribe",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.3986,
+      "accepted_ref": 527,
+      "followed_consensus": 795,
+      "eligible_runs": 1322
+    },
+    {
+      "model": "granite-speech-4.0-1b",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.3251,
+      "accepted_ref": 435,
+      "followed_consensus": 903,
+      "eligible_runs": 1338
+    },
+    {
+      "model": "granite-speech-3.3-8b",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.3191,
+      "accepted_ref": 427,
+      "followed_consensus": 911,
+      "eligible_runs": 1338
+    },
+    {
+      "model": "granite-speech-4.1-2b-nar",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.2967,
+      "accepted_ref": 397,
+      "followed_consensus": 941,
+      "eligible_runs": 1338
+    },
+    {
+      "model": "granite-speech-3.3-2b",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.296,
+      "accepted_ref": 396,
+      "followed_consensus": 942,
+      "eligible_runs": 1338
+    },
+    {
+      "model": "parakeet-tdt-1.1b",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.2915,
+      "accepted_ref": 390,
+      "followed_consensus": 948,
+      "eligible_runs": 1338
+    },
+    {
+      "model": "parakeet-rnnt-1.1b",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.2855,
+      "accepted_ref": 382,
+      "followed_consensus": 956,
+      "eligible_runs": 1338
+    },
+    {
+      "model": "canary-1b",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.284,
+      "accepted_ref": 380,
+      "followed_consensus": 958,
+      "eligible_runs": 1338
+    },
+    {
+      "model": "phi4-multimodal",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.2825,
+      "accepted_ref": 378,
+      "followed_consensus": 960,
+      "eligible_runs": 1338
+    },
+    {
+      "model": "canary-1b-v2",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.2803,
+      "accepted_ref": 375,
+      "followed_consensus": 963,
+      "eligible_runs": 1338
+    },
+    {
+      "model": "parakeet-tdt-0.6b-v2",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.272,
+      "accepted_ref": 364,
+      "followed_consensus": 974,
+      "eligible_runs": 1338
+    },
+    {
+      "model": "crisper-whisper",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.2496,
+      "accepted_ref": 334,
+      "followed_consensus": 1004,
+      "eligible_runs": 1338
+    },
+    {
+      "model": "parakeet-rnnt-0.6b",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.2093,
+      "accepted_ref": 280,
+      "followed_consensus": 1058,
+      "eligible_runs": 1338
+    },
+    {
+      "model": "parakeet-tdt-0.6b",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.1999,
+      "accepted_ref": 267,
+      "followed_consensus": 1069,
+      "eligible_runs": 1336
+    },
+    {
+      "model": "parakeet-tdt-0.6b-v3",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.1993,
+      "accepted_ref": 266,
+      "followed_consensus": 1069,
+      "eligible_runs": 1335
+    },
+    {
+      "model": "parakeet-tdt-0.6b-v3-bf16",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.1993,
+      "accepted_ref": 266,
+      "followed_consensus": 1069,
+      "eligible_runs": 1335
+    },
+    {
+      "model": "canary-180m-flash",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.1988,
+      "accepted_ref": 264,
+      "followed_consensus": 1064,
+      "eligible_runs": 1328
+    },
+    {
+      "model": "qwen3-asr-1.7b",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.1734,
+      "accepted_ref": 232,
+      "followed_consensus": 1106,
+      "eligible_runs": 1338
+    },
+    {
+      "model": "parakeet-tdt-ctc-110m",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.1712,
+      "accepted_ref": 229,
+      "followed_consensus": 1109,
+      "eligible_runs": 1338
+    },
+    {
+      "model": "omni-3b-llm",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.1674,
+      "accepted_ref": 224,
+      "followed_consensus": 1114,
+      "eligible_runs": 1338
+    },
+    {
+      "model": "kyutai-stt-2.6b-en",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.1614,
+      "accepted_ref": 216,
+      "followed_consensus": 1122,
+      "eligible_runs": 1338
+    },
+    {
+      "model": "parakeet-ctc-1.1b",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.1532,
+      "accepted_ref": 205,
+      "followed_consensus": 1133,
+      "eligible_runs": 1338
+    },
+    {
+      "model": "continuous-omni-1b-llm",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.151,
+      "accepted_ref": 202,
+      "followed_consensus": 1136,
+      "eligible_runs": 1338
+    },
+    {
+      "model": "mms-1b-all",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.1386,
+      "accepted_ref": 185,
+      "followed_consensus": 1150,
+      "eligible_runs": 1335
+    },
+    {
+      "model": "omni-3b",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.1228,
+      "accepted_ref": 164,
+      "followed_consensus": 1171,
+      "eligible_runs": 1335
+    },
+    {
+      "model": "omni-1b",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.108,
+      "accepted_ref": 144,
+      "followed_consensus": 1189,
+      "eligible_runs": 1333
+    },
+    {
+      "model": "omni-300m",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.1052,
+      "accepted_ref": 140,
+      "followed_consensus": 1191,
+      "eligible_runs": 1331
+    },
+    {
+      "model": "gemini-3-flash-preview",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.087,
+      "accepted_ref": 116,
+      "followed_consensus": 1218,
+      "eligible_runs": 1334
+    },
+    {
+      "model": "continuous-omni-300m",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.0837,
+      "accepted_ref": 111,
+      "followed_consensus": 1215,
+      "eligible_runs": 1326
+    },
+    {
+      "model": "qwen3-asr-0.6b",
+      "in_whitelist": true,
+      "benchmaxx_score": 0.0755,
+      "accepted_ref": 101,
+      "followed_consensus": 1237,
+      "eligible_runs": 1338
+    },
+    {
+      "model": "gemini-3.1-flash-lite-preview",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.0574,
+      "accepted_ref": 51,
+      "followed_consensus": 838,
+      "eligible_runs": 889
+    },
+    {
+      "model": "gemini-3.1-flash-lite-preview-langhint",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.0555,
+      "accepted_ref": 74,
+      "followed_consensus": 1260,
+      "eligible_runs": 1334
+    },
+    {
+      "model": "lite-whisper-large-v3-acc",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.0535,
+      "accepted_ref": 61,
+      "followed_consensus": 1080,
+      "eligible_runs": 1141
+    },
+    {
+      "model": "whisper-large-v3",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.0498,
+      "accepted_ref": 65,
+      "followed_consensus": 1241,
+      "eligible_runs": 1306
+    },
+    {
+      "model": "whisperx-large-v3-turbo",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.0448,
+      "accepted_ref": 55,
+      "followed_consensus": 1173,
+      "eligible_runs": 1228
+    },
+    {
+      "model": "moonshine-streaming-medium",
+      "in_whitelist": true,
+      "benchmaxx_score": 0.0396,
+      "accepted_ref": 53,
+      "followed_consensus": 1285,
+      "eligible_runs": 1338
+    },
+    {
+      "model": "lite-whisper-large-v3",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.0384,
+      "accepted_ref": 44,
+      "followed_consensus": 1102,
+      "eligible_runs": 1146
+    },
+    {
+      "model": "distil-whisper-large-v3.5",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.0269,
+      "accepted_ref": 36,
+      "followed_consensus": 1302,
+      "eligible_runs": 1338
+    },
+    {
+      "model": "voxtral-mini-3b",
+      "in_whitelist": true,
+      "benchmaxx_score": 0.0239,
+      "accepted_ref": 32,
+      "followed_consensus": 1306,
+      "eligible_runs": 1338
+    },
+    {
+      "model": "kimi-audio-7b",
+      "in_whitelist": true,
+      "benchmaxx_score": 0.0165,
+      "accepted_ref": 22,
+      "followed_consensus": 1315,
+      "eligible_runs": 1337
+    },
+    {
+      "model": "gemini-2.0-flash-lite",
+      "in_whitelist": false,
+      "benchmaxx_score": 0.0,
+      "accepted_ref": 0,
+      "followed_consensus": 1,
+      "eligible_runs": 1
+    }
+  ]
+}

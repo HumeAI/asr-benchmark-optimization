@@ -1,0 +1,63 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "benchmaxx"
+version = "0.1.0"
+description = "Quantify benchmark optimization in ASR models from prediction files"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+keywords = ["asr", "speech-recognition", "benchmark", "evaluation", "contamination"]
+classifiers = [
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+# The core probes need only the standard library. transformers supplies the
+# Whisper normalizers, which is what makes scores comparable to the Open ASR
+# Leaderboard, so it is a hard rather than optional dependency.
+dependencies = ["transformers>=4.40"]
+
+[project.optional-dependencies]
+# Parquet prediction files.
+parquet = ["pyarrow>=14"]
+# Spelled-number canonicalization, so word-vs-digit formatting is not counted as
+# a reference error. Matters most outside English.
+numbers = ["text2num>=3.0"]
+# Rebuilding the paper's figures from the shipped data under repro/data.
+figures = ["matplotlib>=3.7", "numpy>=1.24", "polars>=0.20", "pyarrow>=14"]
+# Running the audio-side probes (masked-entity recovery, white-box readouts).
+# Torch is deliberately unpinned: match it to your accelerator.
+probes = ["torch", "torchaudio", "soundfile", "numpy", "polars"]
+dev = ["pytest>=7", "ruff>=0.5", "text2num>=3.0"]
+
+[project.scripts]
+benchmaxx = "benchmaxx.cli:main"
+
+[project.urls]
+Repository = "https://github.com/tlebryk/asr-benchmark-optimization"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/benchmaxx"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+# E501: the convention tables in conventions.py are more readable as one
+# regex pair per line than wrapped.
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff.lint.per-file-ignores]
+# B905: zip(strict=) — these zips are over sequences built to the same length
+# in the line above; strict= would add noise without catching anything.
+"src/benchmaxx/cli.py" = ["B905"]
+"tests/*" = ["B905"]

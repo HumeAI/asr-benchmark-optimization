@@ -1,0 +1,18 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv*/
+.pytest_cache/
+.ruff_cache/
+
+# Rendered figures — rebuild with `cd repro && make figures`.
+repro/out/
+
+# Raw results roots must never be committed; only the derived cells under
+# repro/data belong in git. Anchored to the repository root so they do not
+# also swallow repro/data.
+/data/
+/results/
+/models/

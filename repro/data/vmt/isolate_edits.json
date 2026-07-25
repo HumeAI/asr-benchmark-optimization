@@ -1,0 +1,470 @@
+{
+ "cohere-transcribe": {
+  "role": "suspect",
+  "all_delete": {
+   "k": 899,
+   "n": 1002,
+   "rate": 0.8972,
+   "ci": [
+    0.8769,
+    0.9145
+   ]
+  },
+  "all_insert": {
+   "k": 37,
+   "n": 75,
+   "rate": 0.4933,
+   "ci": [
+    0.3833,
+    0.604
+   ]
+  },
+  "reproduced_delete": {
+   "k": 233,
+   "n": 288,
+   "rate": 0.809,
+   "ci": [
+    0.7597,
+    0.8502
+   ]
+  },
+  "reproduced_insert": {
+   "k": 12,
+   "n": 36,
+   "rate": 0.3333,
+   "ci": [
+    0.2021,
+    0.4967
+   ]
+  }
+ },
+ "canary-qwen-2.5b": {
+  "role": "suspect",
+  "all_delete": {
+   "k": 899,
+   "n": 1002,
+   "rate": 0.8972,
+   "ci": [
+    0.8769,
+    0.9145
+   ]
+  },
+  "all_insert": {
+   "k": 50,
+   "n": 75,
+   "rate": 0.6667,
+   "ci": [
+    0.5542,
+    0.7629
+   ]
+  },
+  "reproduced_delete": {
+   "k": 150,
+   "n": 216,
+   "rate": 0.6944,
+   "ci": [
+    0.6301,
+    0.752
+   ]
+  },
+  "reproduced_insert": {
+   "k": 17,
+   "n": 31,
+   "rate": 0.5484,
+   "ci": [
+    0.3777,
+    0.7084
+   ]
+  }
+ },
+ "granite-speech-4.1-2b": {
+  "role": "suspect",
+  "all_delete": {
+   "k": 911,
+   "n": 1002,
+   "rate": 0.9092,
+   "ci": [
+    0.8898,
+    0.9254
+   ]
+  },
+  "all_insert": {
+   "k": 34,
+   "n": 75,
+   "rate": 0.4533,
+   "ci": [
+    0.3457,
+    0.5655
+   ]
+  },
+  "reproduced_delete": {
+   "k": 137,
+   "n": 187,
+   "rate": 0.7326,
+   "ci": [
+    0.665,
+    0.7909
+   ]
+  },
+  "reproduced_insert": {
+   "k": 11,
+   "n": 33,
+   "rate": 0.3333,
+   "ci": [
+    0.1975,
+    0.5039
+   ]
+  }
+ },
+ "phi4-multimodal": {
+  "role": "suspect",
+  "all_delete": {
+   "k": 937,
+   "n": 1002,
+   "rate": 0.9351,
+   "ci": [
+    0.9182,
+    0.9488
+   ]
+  },
+  "all_insert": {
+   "k": 41,
+   "n": 75,
+   "rate": 0.5467,
+   "ci": [
+    0.4345,
+    0.6543
+   ]
+  },
+  "reproduced_delete": {
+   "k": 144,
+   "n": 171,
+   "rate": 0.8421,
+   "ci": [
+    0.78,
+    0.8892
+   ]
+  },
+  "reproduced_insert": {
+   "k": 13,
+   "n": 27,
+   "rate": 0.4815,
+   "ci": [
+    0.3074,
+    0.6601
+   ]
+  }
+ },
+ "parakeet-tdt-0.6b-v2": {
+  "role": "suspect",
+  "all_delete": {
+   "k": 940,
+   "n": 1002,
+   "rate": 0.9381,
+   "ci": [
+    0.9215,
+    0.9514
+   ]
+  },
+  "all_insert": {
+   "k": 56,
+   "n": 75,
+   "rate": 0.7467,
+   "ci": [
+    0.6379,
+    0.8314
+   ]
+  },
+  "reproduced_delete": {
+   "k": 136,
+   "n": 164,
+   "rate": 0.8293,
+   "ci": [
+    0.7643,
+    0.8792
+   ]
+  },
+  "reproduced_insert": {
+   "k": 15,
+   "n": 24,
+   "rate": 0.625,
+   "ci": [
+    0.4271,
+    0.7884
+   ]
+  }
+ },
+ "omni-3b-llm": {
+  "role": "suspect",
+  "all_delete": {
+   "k": 913,
+   "n": 1002,
+   "rate": 0.9112,
+   "ci": [
+    0.892,
+    0.9273
+   ]
+  },
+  "all_insert": {
+   "k": 39,
+   "n": 75,
+   "rate": 0.52,
+   "ci": [
+    0.4087,
+    0.6293
+   ]
+  },
+  "reproduced_delete": {
+   "k": 43,
+   "n": 70,
+   "rate": 0.6143,
+   "ci": [
+    0.4972,
+    0.7195
+   ]
+  },
+  "reproduced_insert": {
+   "k": 10,
+   "n": 31,
+   "rate": 0.3226,
+   "ci": [
+    0.1857,
+    0.4986
+   ]
+  }
+ },
+ "moonshine-streaming-medium": {
+  "role": "honest",
+  "all_delete": {
+   "k": 966,
+   "n": 1002,
+   "rate": 0.9641,
+   "ci": [
+    0.9507,
+    0.9739
+   ]
+  },
+  "all_insert": {
+   "k": 55,
+   "n": 75,
+   "rate": 0.7333,
+   "ci": [
+    0.6237,
+    0.8202
+   ]
+  },
+  "reproduced_delete": {
+   "k": 0,
+   "n": 0,
+   "rate": null,
+   "ci": [
+    0.0,
+    0.0
+   ]
+  },
+  "reproduced_insert": {
+   "k": 0,
+   "n": 0,
+   "rate": null,
+   "ci": [
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "whisper-large-v3": {
+  "role": "honest",
+  "all_delete": {
+   "k": 965,
+   "n": 1002,
+   "rate": 0.9631,
+   "ci": [
+    0.9495,
+    0.9731
+   ]
+  },
+  "all_insert": {
+   "k": 56,
+   "n": 75,
+   "rate": 0.7467,
+   "ci": [
+    0.6379,
+    0.8314
+   ]
+  },
+  "reproduced_delete": {
+   "k": 15,
+   "n": 15,
+   "rate": 1.0,
+   "ci": [
+    0.7961,
+    1.0
+   ]
+  },
+  "reproduced_insert": {
+   "k": 1,
+   "n": 1,
+   "rate": 1.0,
+   "ci": [
+    0.2065,
+    1.0
+   ]
+  }
+ },
+ "kimi-audio-7b": {
+  "role": "honest",
+  "all_delete": {
+   "k": 965,
+   "n": 1002,
+   "rate": 0.9631,
+   "ci": [
+    0.9495,
+    0.9731
+   ]
+  },
+  "all_insert": {
+   "k": 57,
+   "n": 75,
+   "rate": 0.76,
+   "ci": [
+    0.6522,
+    0.8425
+   ]
+  },
+  "reproduced_delete": {
+   "k": 0,
+   "n": 0,
+   "rate": null,
+   "ci": [
+    0.0,
+    0.0
+   ]
+  },
+  "reproduced_insert": {
+   "k": 0,
+   "n": 1,
+   "rate": 0.0,
+   "ci": [
+    0.0,
+    0.7935
+   ]
+  }
+ },
+ "qwen3-asr-0.6b": {
+  "role": "honest",
+  "all_delete": {
+   "k": 957,
+   "n": 1002,
+   "rate": 0.9551,
+   "ci": [
+    0.9404,
+    0.9663
+   ]
+  },
+  "all_insert": {
+   "k": 58,
+   "n": 75,
+   "rate": 0.7733,
+   "ci": [
+    0.6666,
+    0.8534
+   ]
+  },
+  "reproduced_delete": {
+   "k": 0,
+   "n": 0,
+   "rate": null,
+   "ci": [
+    0.0,
+    0.0
+   ]
+  },
+  "reproduced_insert": {
+   "k": 0,
+   "n": 0,
+   "rate": null,
+   "ci": [
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "voxtral-mini-3b": {
+  "role": "honest",
+  "all_delete": {
+   "k": 966,
+   "n": 1002,
+   "rate": 0.9641,
+   "ci": [
+    0.9507,
+    0.9739
+   ]
+  },
+  "all_insert": {
+   "k": 59,
+   "n": 75,
+   "rate": 0.7867,
+   "ci": [
+    0.6812,
+    0.8642
+   ]
+  },
+  "reproduced_delete": {
+   "k": 0,
+   "n": 0,
+   "rate": null,
+   "ci": [
+    0.0,
+    0.0
+   ]
+  },
+  "reproduced_insert": {
+   "k": 0,
+   "n": 0,
+   "rate": null,
+   "ci": [
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "higgs-audio-v3-8b-stt-v2": {
+  "role": "suspect",
+  "all_delete": {
+   "k": 902,
+   "n": 1002,
+   "rate": 0.9002,
+   "ci": [
+    0.8801,
+    0.9173
+   ]
+  },
+  "all_insert": {
+   "k": 45,
+   "n": 75,
+   "rate": 0.6,
+   "ci": [
+    0.4869,
+    0.7034
+   ]
+  },
+  "reproduced_delete": {
+   "k": 148,
+   "n": 198,
+   "rate": 0.7475,
+   "ci": [
+    0.6826,
+    0.8029
+   ]
+  },
+  "reproduced_insert": {
+   "k": 9,
+   "n": 26,
+   "rate": 0.3462,
+   "ci": [
+    0.1941,
+    0.5378
+   ]
+  }
+ }
+}

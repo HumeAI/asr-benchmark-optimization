@@ -1,30 +1,130 @@
 # asr-benchmark-optimization
 
-Code for *Quantifying Benchmark Optimization in ASR Models*.
+Methods for measuring whether an ASR model reproduces a benchmark's reference
+text rather than transcribing the audio. From *Quantifying Benchmark Optimization
+in ASR Models*.
 
-Two metrics computed from per-clip ASR predictions. No audio, no model weights.
+Four methods, usable on your own corpora and models. The first two need only
+per-clip predictions; the last two need audio and model weights.
 
-- **Reference disagreement** (`refdis`) — where a panel of models agrees against
-  the reference transcript, the share of those disagreements where a model
-  reproduces the reference instead of the panel.
-- **Orthographic switch rate** (`ortho`) — for written distinctions that sound
-  identical (`Mr.`/`mister`, `$5`/`five dollars`), the rate at which a model's
-  spelling matches whichever form the reference used.
-
-The paper's third probe, masked-entity recovery, needs audio and weights; see
-[`repro/probes/`](repro/probes/).
-
-## Install
+| method | what it measures | needs |
+|---|---|---|
+| [reference-error detection](#reference-error-detection) | reference spans a panel of models agrees were never spoken, and which models reproduce them anyway | predictions |
+| [orthographic switch rate](#orthographic-switch-rate) | whether a model's spelling of acoustically-invisible distinctions tracks the corpus | predictions |
+| [masked-entity recovery](#masked-entity-recovery) | whether a model still emits a word after that word is silenced | audio |
+| [teacher-forced NLL](#teacher-forced-nll) | which of two candidate transcripts a model assigns higher likelihood, given the audio | audio + weights |
 
 ```bash
-pip install -e .
+pip install -e .          # methods 1-2
+pip install -e ".[probes]"  # 3-4: torch, torchaudio, soundfile
 ```
 
-Python ≥3.10. Depends on `transformers` for the Whisper normalizers, so scores
-are comparable to the [Open ASR
+Python ≥3.10. `transformers` supplies the Whisper normalizers, so scores are
+comparable to the [Open ASR
 Leaderboard](https://github.com/huggingface/open_asr_leaderboard).
 
-## Input
+## Reference-error detection
+
+Finds reference spans that were probably never spoken, without a hand-corrected
+transcript, then scores each model on whether it reproduced them.
+
+Per clip, given a reference and hypotheses from several models:
+
+1. Align each hypothesis to the reference (`difflib` opcodes, `align.py`).
+2. Where ≥ a supermajority of a **panel** of models deletes the same contiguous
+   reference span, or inserts the same tokens at the same reference boundary,
+   that is a candidate reference error.
+3. Drop candidates where the panel's substitute is character-wise close to the
+   reference — those are normalization artifacts (`min_consensus_cer`), not
+   evidence about the audio.
+4. Verdict per model per surviving edit: `consensus` if it made the panel's
+   edit, `ref` if it reproduced the reference, `None` if it reproduced under
+   `min_ref_match` of the reference and so is not competent on that clip.
+
+`accept-ref` is the share of eligible edits where a model sided with the
+reference. Applies to any corpus whose references were derived from something
+other than the audio — parliamentary records, subtitles, scripts.
+
+```bash
+benchmark-optimization ref-disagreement --preds predictions/ --panel a,b,c,d
+```
+
+```python
+from benchmark_optimization import refdis
+
+edits = refdis.find_ref_edits(reference_tokens, panel_hyps, all_hyps)
+refdis.accept_ref_rate(edits)          # {model: {rate, n_ref, n_eligible, lo, hi}}
+```
+
+Choose the panel independently of the models under test; a panel of
+benchmark-optimized models will not flag the edits of interest. Insertions are
+only detected at the two reference boundaries — interior insertions cannot be
+anchored, since which side of a matched token an inserted word belongs to is an
+alignment choice.
+
+## Orthographic switch rate
+
+For distinctions that sound identical but are written differently, partition
+clips by which form the reference used:
+
+    switch = min over arms a of  P(model emits arm a | reference uses a)
+
+A model with a fixed habit is right on one arm and wrong on the other, so its
+minimum is near 0. Only a model that changes with the reference raises it.
+Chance is 0.5.
+
+```bash
+benchmark-optimization switch-rate --preds predictions/ --spacing
+```
+
+Define your own conventions — the only requirement is that the arms are
+acoustically identical:
+
+```python
+from benchmark_optimization import make_family, ortho
+
+fahrenheit = make_family("fahrenheit", "en", [
+    ("°F", r"\d\s*°\s*F"),
+    ("degrees fahrenheit", r"(?i)\bdegrees fahrenheit\b"),
+])
+ortho.switch_rate(fahrenheit, clips)
+```
+
+`conventions.py` ships 31 English families plus Spanish, French, German, Italian,
+Dutch, Polish and Portuguese, and records the families rejected for failing
+acoustic identity. Individually rare families should be pooled
+(`ortho.pooled_switch_rate`) or the interval will not clear chance. Matching runs
+on raw text, since normalization is what erases these distinctions.
+
+## Masked-entity recovery
+
+Silence a chosen word in the audio, keep it in the hidden reference, and check
+whether the model emits it anyway.
+
+```bash
+python probes/align_words_en.py --dataset <name> --split test        # word timings
+python probes/build_entity_masked_dataset.py --source <name> --help  # silence + record
+```
+
+`build_entity_masked_dataset.py` selects target words (names, numbers), replaces
+their audio span with silence, and writes a corpus plus `truncation_meta.parquet`
+holding the removed text. Scoring is then a regex match of the hidden word
+against the hypothesis.
+
+## Teacher-forced NLL
+
+Score candidate transcripts against the audio to see which the model prefers.
+
+```bash
+python probes/probe_decoder_memorization.py --help
+```
+
+Handles encoder-decoder and decoder-only models, returns per-token
+log-probabilities over a forced target, and can mask the audio to separate the
+language-model prior from the audio's contribution. Used for the reference-versus-
+corrected comparison and the masked-word readouts.
+
+## Input format
 
 One JSONL per model, named after the model, in the leaderboard's manifest format:
 
@@ -32,94 +132,40 @@ One JSONL per model, named after the model, in the leaderboard's manifest format
 {"audio_filepath": "...", "text": "<reference>", "pred_text": "<prediction>"}
 ```
 
-Text must be **raw**, not normalized — the switch rate measures distinctions that
-normalization removes. `text`/`pred_text`, `reference`/`hypothesis` and `ref`/`hyp`
+Text must be **raw**. `text`/`pred_text`, `reference`/`hypothesis` and `ref`/`hyp`
 column names are all accepted, as are CSV and Parquet.
 
-## Use
-
-```bash
-benchmark-optimization ref-disagreement --preds predictions/ --panel a,b,c,d
-benchmark-optimization switch-rate      --preds predictions/ --spacing
-```
-
 ```python
-from benchmark_optimization import load_dir, conventions, ortho, refdis
-
+from benchmark_optimization import load_dir
 preds = load_dir("predictions/")
-
-# switch rate takes raw text
-ortho.pooled_switch_rate(list(conventions.SPACING_PAIRS), list(preds.clips()),
-                         arm_names=conventions.SPACING_ARMS)
-
-# reference disagreement takes normalized text
-norm = preds.normalized()
-edits = []
-for key, ref in norm.refs.items():
-    hyps = norm.hyps[key]
-    panel = {m: hyps[m] for m in PANEL if m in hyps}
-    edits += refdis.find_ref_edits(ref.split(), panel, hyps)
-refdis.accept_ref_rate(edits)
+preds.coverage()      # clips per model, catches partial runs
+preds.normalized()    # for reference-error detection; NOT for switch rate
 ```
 
-## Interpreting the output
+## Reading the output
 
-- Both are rates over cases where the audio does not determine the reference.
-  Neither measures transcription quality, and neither establishes that a model was
-  trained on evaluation data.
-- Denominators differ per model, since a model is only scored on the clips and
-  edits it was eligible for. Report `n_eligible` with any rate.
-- Models reproducing under half the reference are marked ineligible rather than
-  scored; an empty or off-language hypothesis otherwise agrees with a span by
-  accident.
-- Chance for a two-arm switch rate is 0.5, not 0. Pool families (`--spacing`):
-  individually they are too rare for the interval to clear chance.
+- Both prediction-only metrics are rates over cases where the audio does not
+  determine the reference. Neither measures transcription quality, and neither
+  establishes that a model was trained on evaluation data.
+- Denominators differ per model. Report `n_eligible` with any rate.
+- Chance for a two-arm switch rate is 0.5, not 0.
 - The switch-rate interval covers the limiting arm only, so it is
   anti-conservative when arms are close.
-- Choose the reference-disagreement panel independently of the models under test.
-  A panel member is scored like any other model.
 
 ## Provenance
 
-The reference-disagreement implementation is a rewrite of the script used for the
-paper. `tests/test_paper_equivalence.py` replays that run's inputs and asserts
-identical output: 1,338 edits, every verdict across 39 models, every published
-rate. Switch rates match the original generator exactly on the paper's data (46
-and 43 models, max difference 0).
+The reference-error implementation is a rewrite of the script used for the paper.
+`tests/test_paper_equivalence.py` replays that run's inputs and requires identical
+output: 1,338 edits, every verdict across 39 models, every published rate. Switch
+rates match the original generator exactly on the paper's data.
 
 Running the CLI over raw manifests re-normalizes from raw text where the paper
 used stored normalized hypotheses, giving 1,340 edits rather than 1,338 (0.15%).
 
-## Reproducing the paper
+## Reproducing the paper's figures
 
-[`repro/REPRODUCE.md`](repro/REPRODUCE.md). 19 of 24 figures rebuild from data in
-the repository.
-
-## Layout
-
-```
-src/benchmark_optimization/
-  align.py         word-level alignment
-  refdis.py        reference disagreement
-  ortho.py         switch rate
-  conventions.py   convention families
-  normalize.py     Whisper normalizers
-  predictions.py   loading prediction files
-repro/             paper reproduction
-tests/
-```
-
-## Citation
-
-```bibtex
-@misc{benchmarkoptimization2026,
-  title  = {Quantifying Benchmark Optimization in ASR Models},
-  author = {Lebryk, Theo and Baird, Alice},
-  year   = {2026}
-}
-```
+[`repro/REPRODUCE.md`](repro/REPRODUCE.md).
 
 ## License
 
-Apache-2.0. `src/benchmark_optimization/data/english_spelling.json` is from
-[openai/whisper](https://github.com/openai/whisper) (MIT).
+Apache-2.0.

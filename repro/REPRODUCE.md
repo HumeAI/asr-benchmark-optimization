@@ -94,21 +94,5 @@ slightly from the published PDF).
 
 ## Audio-side probes
 
-`repro/probes/` needs audio and model weights.
-
-| script | purpose |
-|---|---|
-| `build_entity_masked_dataset.py` | silence a chosen word per clip, record the hidden reference |
-| `align_words_en.py` | forced word alignment, to locate the span to silence |
-| `probe_decoder_memorization.py` | teacher-force candidate transcripts, read per-token log-probabilities |
-
-```bash
-pip install -e ".[probes]"
-export BENCHMARK_OPT_DATA=/path/to/results BENCHMARK_OPT_MODELS=/path/to/weights
-python repro/probes/probe_decoder_memorization.py --help
-```
-
-Model loading covers the public checkpoints in the paper's roster. The `omni`
-backend needed an internal loader that is not part of this release and is gated
-off; its teacher-forcing code is kept for reference. These scripts are research
-code with paths parameterized and internal imports replaced.
+Moved to [`probes/`](../probes/) — they are methods rather than figure
+reproduction. See the README.

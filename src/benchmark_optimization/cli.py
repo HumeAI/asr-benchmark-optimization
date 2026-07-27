@@ -6,7 +6,7 @@ Two subcommands, one per probe that runs on prediction files alone:
     benchmark-optimization switch-rate      --preds DIR
 
 The third probe family in the paper, masked-entity recovery, needs the audio
-and model weights and so lives in ``repro/probes/`` rather than here.
+and model weights and so lives in ``probes/`` rather than here.
 """
 
 from __future__ import annotations

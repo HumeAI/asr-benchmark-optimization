@@ -33,7 +33,16 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 
-__all__ = ["Family", "FAMILIES", "SPACING_PAIRS", "families_for", "family", "pooled_arms"]
+__all__ = [
+    "Family",
+    "FAMILIES",
+    "SPACING_PAIRS",
+    "SPACING_ARMS",
+    "families_for",
+    "family",
+    "make_family",
+    "pooled_arms",
+]
 
 
 @dataclass(frozen=True)
@@ -65,10 +74,26 @@ class Family:
         return tuple(label for label, _ in self.arms)
 
 
-def _f(name: str, language: str, arms) -> Family:
-    """Build a family, accepting a bare string or a list of patterns per arm."""
+def make_family(name: str, language: str, arms) -> Family:
+    r"""Build a family from ``[(label, pattern_or_patterns), ...]``.
+
+    Use this to test conventions of your own. The requirement is that the arms
+    are acoustically identical — a fluent speaker renders them the same way —
+    since the metric assumes the audio cannot disambiguate them::
+
+        fahrenheit = make_family("fahrenheit", "en", [
+            ("°F", r"\d\s*°\s*F"),
+            ("degrees fahrenheit", r"(?i)\bdegrees fahrenheit\b"),
+        ])
+
+    Patterns are matched against raw text. Order arms most-specific-first;
+    :meth:`Family.arm_of` returns the first that matches.
+    """
     norm = tuple((label, (pats,) if isinstance(pats, str) else tuple(pats)) for label, pats in arms)
     return Family(name, language, norm)
+
+
+_f = make_family  # internal shorthand for the table below
 
 
 # Honorifics: abbreviated vs spelled out. The paper's headline family. Frequent

@@ -22,7 +22,7 @@ Quick start::
 from __future__ import annotations
 
 from . import align, conventions, normalize, ortho, predictions, refdis
-from .conventions import Family, families_for, family
+from .conventions import Family, families_for, family, make_family
 from .normalize import tokenize
 from .ortho import switch_rate, switch_rates
 from .predictions import PredictionSet, load_dir, load_manifest, load_manifests
@@ -40,6 +40,7 @@ __all__ = [
     "Family",
     "families_for",
     "family",
+    "make_family",
     "tokenize",
     "switch_rate",
     "switch_rates",

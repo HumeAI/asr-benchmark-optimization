@@ -32,7 +32,7 @@ def _probe_module():
     the probe engine pulls in torch and soundfile. Importing it at module scope
     would make rebuilding a figure require the full probe environment.
     """
-    sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "probes"))
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "probes"))
     import probe_decoder_memorization as _probe
 
     return _probe

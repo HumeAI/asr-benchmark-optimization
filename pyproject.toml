@@ -34,6 +34,8 @@ figures = ["matplotlib>=3.7", "numpy>=1.24", "polars>=0.20", "pyarrow>=14"]
 # Running the audio-side probes (masked-entity recovery, white-box readouts).
 # Torch is deliberately unpinned: match it to your accelerator.
 probes = ["torch", "torchaudio", "soundfile", "numpy", "polars"]
+# Building the held-out control corpora from their live sources.
+corpora = ["yt-dlp", "rapidfuzz", "soundfile", "numpy", "pyarrow", "torch"]
 dev = ["pytest>=7", "ruff>=0.5", "text2num>=3.0"]
 
 [project.scripts]
@@ -48,6 +50,11 @@ packages = ["src/benchmark_optimization"]
 [tool.ruff]
 line-length = 120
 target-version = "py310"
+# Only src/ and tests/ are held to the lint rules. probes/, repro/ and corpora/
+# are research scripts lifted with paths parameterized and internal imports
+# replaced; reformatting them would obscure the diff against what was run for
+# the paper. They are syntax-checked in CI, not linted.
+extend-exclude = ["probes", "repro", "corpora"]
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "UP", "B"]

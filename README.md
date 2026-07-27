@@ -131,6 +131,39 @@ log-probabilities over a forced target, and can mask the audio to separate the
 language-model prior from the audio's contribution. Used for the reference-versus-
 corrected comparison and the masked-word readouts.
 
+## Building the held-out corpora
+
+The paper's two held-out controls are freshly collected, post-cutoff speech.
+`corpora/` holds the retrieval code rather than the audio.
+
+| | source | scripts |
+|---|---|---|
+| **ep-fresh** | European Parliament plenary video | `corpora/ep_fresh/` |
+| **libri-fresh** | LibriVox readers whose catalogue starts in 2026 | `corpora/librivox_fresh/` |
+
+```bash
+pip install -e ".[corpora]"
+export BENCHMARK_OPT_DATA=data BENCHMARK_OPT_SCRATCH=scratch
+
+# ep-fresh: fetch media, fetch and align the verbatim report, segment, onboard
+python corpora/ep_fresh/download_ep.py --help
+python corpora/ep_fresh/fetch_cre.py --help        # CRE = verbatim plenary report
+python corpora/ep_fresh/assign_cre.py --help       # align report text to segments
+python corpora/ep_fresh/segment_ep.py --help       # diarize + VAD + language-ID
+python corpora/ep_fresh/onboard_ep_fresh.py --help # -> wav + manifest
+
+# libri-fresh
+python corpora/librivox_fresh/scrape_readers.py --help
+python corpora/librivox_fresh/download_chapters.py --help
+python corpora/librivox_fresh/download_clips.py --help
+python corpora/librivox_fresh/build_librivoxfresh.py --help
+```
+
+`segment_ep.py` needs `pyannote/speaker-diarization-3.1` (gated — accept the
+licence on the Hub) and silero VAD. Both corpora are collected from live sources,
+so re-running yields a different clip set than ours; predictions for our exact
+build are in the dataset above.
+
 ## Input format
 
 Predictions for the paper's models are published at

@@ -95,15 +95,10 @@ def normalize(text: str, language: str | None = "en") -> str:
 def canonicalize_numbers(text: str, language: str | None = "en") -> str:
     """Rewrite spelled-out numbers as digits, so ``veinte`` matches ``20``.
 
-    Without this, a model writing a number as a word where the reference used a
-    digit registers as a reference error, which it is not — the audio is the same
-    either way. The Whisper English normalizer already digitizes, so this mainly
-    matters outside English, where ``BasicTextNormalizer`` leaves number words
-    alone.
+    Stops word-vs-digit formatting counting as a reference error. Mainly matters
+    outside English; the Whisper English normalizer already digitizes.
 
-    Requires ``text2num`` (``pip install "asr-benchmark-optimization[numbers]"``); a no-op without
-    it, and a no-op for languages it does not cover. Applied to references and
-    hypotheses alike, so the comparison stays fair.
+    Requires ``text2num``; a no-op without it, or for unsupported languages.
     """
     if not text:
         return text

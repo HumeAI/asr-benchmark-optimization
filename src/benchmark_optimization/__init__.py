@@ -1,27 +1,22 @@
 """Quantifying benchmark optimization in ASR models.
 
-Two probes run on prediction files alone, with no audio and no model weights:
-
 :mod:`benchmark_optimization.refdis`
-    Reference-error reproduction. Where a panel of models agrees against the
-    reference transcript, does the model under test follow the panel or the
-    reference?
+    Reference disagreement — where a panel of models agrees against the
+    reference, does a model follow the panel or the reference?
 
 :mod:`benchmark_optimization.ortho`
-    Orthographic switch rate. For written distinctions that sound identical,
-    does the model's spelling track the corpus it is being evaluated on?
+    Orthographic switch rate — for written distinctions that sound identical,
+    does a model's spelling track the corpus?
 
-Both report a rate over *underdetermined* cases, where the audio does not fix
-the answer, so neither is a measure of transcription quality. A model can be
-accurate and score near zero, or accurate and score high; the two numbers
-answer different questions.
+Both are rates over cases where the audio does not determine the reference, so
+neither measures transcription quality.
 
 Quick start::
 
     from benchmark_optimization import load_dir, ortho, conventions
 
-    preds = load_dir("predictions/")           # one JSONL per model
-    results = ortho.switch_rates(conventions.families_for("en"), list(preds.clips()))
+    preds = load_dir("predictions/")
+    ortho.switch_rates(conventions.families_for("en"), list(preds.clips()))
 """
 
 from __future__ import annotations

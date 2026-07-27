@@ -1,40 +1,31 @@
-"""Orthographic convention families whose arms sound identical.
+"""Convention families whose arms sound identical.
 
-Each family is a set of *arms*: written forms that a fluent speaker renders the
-same way out loud. "Mr Smith" and "mister Smith" are the same acoustic event;
-which one appears in a transcript is a decision by whoever wrote the transcript,
-not information in the audio. So is ``$5`` versus ``five dollars``, ``e-mail``
-versus ``email``, and ``2020`` versus ``twenty twenty``.
+Each family is a set of *arms*: written forms rendered the same way out loud.
+"Mr Smith" and "mister Smith" are the same acoustic event, as are ``$5`` /
+``five dollars`` and ``2020`` / ``twenty twenty``. The audio cannot tell a model
+which arm to emit, so it falls back on a prior; corpora differ in which arm they
+use, so a prior that tracks the corpus tracks the corpus's conventions.
 
-Two consequences make these useful probes. The audio cannot tell a model which
-arm to emit, so a model must fall back on a prior. And corpora differ in which
-arm they use, so a model whose prior tracks the corpus is tracking the
-benchmark's text conventions.
+An arm may hold several patterns. Honorifics use this: ``Mr.`` and ``Mr`` are
+both *abbreviated*, since the contrast is abbreviate-versus-spell-out and the
+trailing period is a separate convention.
 
-An arm may hold several patterns, all treated as the same arm. Honorifics use
-this: ``Mr.`` and ``Mr`` both count as *abbreviated*, because the contrast being
-measured is abbreviate-versus-spell-out and the trailing period is a separate
-convention that would otherwise split one arm into two and depress the score.
+Families rejected for failing acoustic identity, recorded because the failure is
+silent — a model preferring one arm would be doing acoustics, and would score as
+convention-matching:
 
-Every family here has been checked for acoustic identity. Families that failed
-that check are listed below with the reason, because the temptation to re-add
-them is strong and the failure mode is silent — a model preferring one arm would
-be doing acoustics, and would be scored as convention-matching:
-
-- ``U.S.`` / ``United States``, ``U.K.``, ``E.U.`` — different syllable counts.
-- ``two thousand twenty`` / ``twenty twenty`` — different word counts.
+- ``U.S.``/``United States``, ``U.K.``, ``E.U.`` — different syllable counts.
+- ``two thousand twenty``/``twenty twenty`` — different word counts.
 - ``yes``/``yeah``, ``cannot``/``can't``, ``do not``/``don't``,
   ``going to``/``gonna``, ``want to``/``wanna``, ``got to``/``gotta``,
   ``because``/``'cause``, ``until``/``till`` — phonetically distinct.
-- Spanish ``Nº`` — the natural pattern ``\\bn[ºo]\\b`` also matches the bare
-  negation "no", and VoxPopuli-ES has no real instances, so the test is not
-  testable.
+- Spanish ``Nº`` — ``\bn[ºo]\b`` also matches the negation "no", and VoxPopuli-ES
+  has no real instances.
 
-Regex notes. Patterns run against **raw, un-normalized** text, because
-normalization is what erases the distinction being measured — the Whisper
-English normalizer maps ``Mr.`` and ``mister`` to the same string. Honorific
-arms require a following word, so a sentence-final ``St.`` (an abbreviation for
-"Street", pronounced differently) does not match.
+Patterns run against **raw** text; normalization maps ``Mr.`` and ``mister`` to
+the same string. All are case-insensitive, since models vary arbitrarily in
+capitalization. Honorific arms require a following word, so a sentence-final
+``St.`` (Street, pronounced differently) does not match.
 """
 
 from __future__ import annotations

@@ -1,16 +1,10 @@
-"""Word-level alignment primitives shared by the probes.
+"""Word-level alignment between reference and hypothesis tokens.
 
-Every probe reduces to one question: *at this span of the reference, did the
-model side with the reference or with the audio?* Answering it needs an
-alignment between reference tokens and hypothesis tokens, and a way to name
-the span that a model deleted, substituted, or inserted.
-
-We align with :class:`difflib.SequenceMatcher` rather than a WER-style
-Levenshtein alignment. It is deterministic, dependency-free, and its opcode
-view (``equal`` / ``replace`` / ``delete`` / ``insert``) maps directly onto the
-distinctions the probes need. ``autojunk`` is disabled throughout: the
-heuristic drops frequent tokens, which on real transcripts means dropping
-exactly the function words that carry the reference-error signal.
+Uses :class:`difflib.SequenceMatcher` rather than a WER-style Levenshtein
+alignment: deterministic, dependency-free, and its opcodes (``equal`` /
+``replace`` / ``delete`` / ``insert``) map onto the distinctions the metrics
+need. ``autojunk`` is off throughout — it drops frequent tokens, which here
+means the function words that carry the reference-error signal.
 """
 
 from __future__ import annotations
@@ -49,10 +43,8 @@ def missed_indices(ref_tokens: list[str], hyp: str) -> set[int]:
 def matched_count(ref_tokens: list[str], hyp: str) -> int:
     """Number of reference positions the hypothesis reproduced exactly.
 
-    Used as a competence gate. A model that returned nothing, hallucinated, or
-    answered in the wrong language "agrees" with any given span by accident;
-    requiring it to have matched a decent fraction of the rest of the
-    reference keeps those accidents out of the numerator.
+    A competence gate: an empty, hallucinated or off-language hypothesis agrees
+    with any span by accident.
     """
     return sum(i2 - i1 for tag, i1, i2, _j1, _j2 in _opcodes(ref_tokens, hyp) if tag == "equal")
 
@@ -89,16 +81,12 @@ def insertions_by_anchor(ref_tokens: list[str], hyp: str) -> dict[int, list[str]
 
 
 def consensus_insertion(insert_lists: list[list[str]], at_start: bool, threshold: int) -> list[str]:
-    """The insertion that a threshold of panel models agree on, token by token.
+    """The insertion a threshold of panel models agree on, token by token.
 
-    Insertions are aligned *to the boundary*, not to each other, and the chunk
-    grows outward only while a single token holds ``threshold`` votes at the
-    same distance from the boundary. At the start boundary that means aligning
-    right-to-left (the token immediately before the first reference word is
-    position 0); at the end boundary, left-to-right.
-
-    Taking the longest or most common whole insertion instead would let one
-    verbose outlier define the consensus.
+    Aligned to the boundary rather than to each other: right-to-left at the
+    start, left-to-right at the end. The chunk grows outward only while one
+    token holds ``threshold`` votes at the same distance from the boundary, so a
+    verbose outlier cannot define the consensus.
     """
     votes: list[str] = []
     k = 0
@@ -131,15 +119,11 @@ def emitted_insertion(model_insert: list[str], consensus: list[str], at_start: b
 def cer(ref: str, hyp: str) -> float:
     """Character error rate, whitespace-insensitive.
 
-    Whitespace is stripped so that spacing- and accent-only differences
-    register as near-zero rather than as real disagreement. This is what
-    separates a genuine reference error from a normalization artifact: the
-    panel writing "l actuelle" where the reference has "lactuelle" is not
-    evidence about the audio.
+    Stripping whitespace keeps spacing- and accent-only differences near zero,
+    which is what separates a reference error from a normalization artifact.
 
-    Approximated from ``SequenceMatcher`` matched-character coverage rather
-    than a true edit distance; the probes only threshold it, so the
-    approximation is not load-bearing.
+    Approximated from ``SequenceMatcher`` coverage, not a true edit distance;
+    callers only threshold it.
     """
     r = "".join(ref.split())
     h = "".join(hyp.split())

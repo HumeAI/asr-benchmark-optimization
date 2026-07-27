@@ -1,36 +1,26 @@
-"""Reference-error reproduction: does a model follow the reference or the audio?
+"""Reference-error reproduction.
 
-Some reference transcripts are wrong. VoxPopuli, whose references are derived
-from official parliamentary records rather than from the audio, is the clearest
-case: references routinely contain words that were not spoken and omit words
-that were.
+Some reference transcripts are wrong. VoxPopuli's derive from parliamentary
+records rather than from the audio, so they contain words that were not spoken
+and omit words that were. Where the audio and the reference disagree, a model
+transcribing the audio produces the audio's version; only a model that has
+learned the benchmark's text produces the reference's.
 
-Those clips are natural probes. Where the audio and the reference disagree, a
-model transcribing the audio must produce the audio's version; only a model
-that has learned the benchmark's text can produce the reference's. We do not
-need a hand-corrected reference to find these clips, because independent
-models that agree with each other against the reference are evidence about
-what was said.
+Per clip:
 
-The procedure, per clip:
+1. Where a supermajority of a **panel** of models makes the same edit to the
+   reference, that edit is a candidate reference error.
+2. Candidates that are normalization artifacts are dropped
+   (``min_consensus_cer``).
+3. Each model under test gets a verdict per surviving edit: ``"consensus"`` if
+   it made the panel's edit, ``"ref"`` if it reproduced the reference, ``None``
+   if it was not competent on the clip.
 
-1. A **panel** of models transcribes the clip. Where a supermajority of the
-   panel makes the *same* edit to the reference, that edit is a candidate
-   reference error.
-2. Candidates that are normalization artifacts are dropped (see
-   ``min_consensus_cer``).
-3. Every model under test gets a verdict at each surviving edit:
-   ``"consensus"`` if it made the panel's edit, ``"ref"`` if it reproduced the
-   reference instead, ``None`` if it was not competent on the clip.
+``accept-ref`` is the share of eligible edits where a model sided with the
+reference. It is a rate over disagreements, not a WER.
 
-The headline number, ``accept-ref rate``, is the share of eligible edits where
-a model sided with the erroneous reference. It is a *rate over disagreements*,
-not a WER: a model can have excellent WER and an accept-ref rate near zero,
-and the two carry different information.
-
-The panel must be chosen independently of the models under test. In the paper
-we used a panel of four models with no VoxPopuli-specific behaviour on the
-other probes, and validated the flagged edits against human judgement.
+Choose the panel independently of the models under test; a panel of
+benchmark-optimized models will not flag the edits of interest.
 """
 
 from __future__ import annotations

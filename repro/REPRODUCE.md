@@ -5,80 +5,69 @@ pip install -e ".[figures]"
 cd repro && make figures
 ```
 
-That rebuilds **19 of the paper's 24 figures** into `repro/out`, with no inputs
-beyond what is in this repository. The other five re-score raw per-model output
-and need `BENCHMARK_OPT_DATA` (below).
+Rebuilds 19 of the paper's 24 figures into `repro/out`. The other five re-score
+raw per-model output and need `BENCHMARK_OPT_DATA` (below).
 
-## What is shipped, and what is not
+## Data in the repository
 
-`repro/data` holds ~21 MB of **derived** data: the numbers behind each figure,
-not the inputs that produced them. This is the usual arrangement for a paper
-repository — the plotting code and the values it draws are version-controlled;
-the hundreds of GB of audio and per-clip model output are not, and some corpora
-are not ours to redistribute.
+`repro/data` holds ~21 MB of derived data — the values behind each figure, not
+the inputs that produced them.
 
-| directory | contents |
+| path | contents |
 |---|---|
-| `data/vmt/*.json` | per-figure result tables (steering ladders, splice/isolate cells, voice contrasts) |
-| `data/vmt/wb/*.parquet` | per-utterance teacher-forced NLL from the white-box probe |
+| `data/vmt/*.json` | per-figure result tables |
+| `data/vmt/wb/*.parquet` | per-utterance teacher-forced NLL |
 | `data/steer/newwl4/*.json` | low-rank steering ablate/induce results |
 | `data/repaint/editlocus_*.json` | encoder/decoder patching results |
-| `data/consensus/*_aggregate.json` | accept-ref leaderboards per corpus |
-| `data/consensus/vox_en_*_samples.json` | every flagged reference error with per-model verdicts |
-| `data/ortho_ppl*/…parquet` | per-clip NLL for the orthographic white-box arms |
-| `data/ortho_switch.json` | orthographic switch rates, computed by `benchmark_optimization.ortho` |
+| `data/consensus/*_aggregate.json` | accept-ref rates per corpus |
+| `data/consensus/vox_en_*_samples.json` | flagged reference errors with per-model verdicts |
+| `data/ortho_ppl*/*.parquet` | per-clip NLL for the orthographic arms |
+| `data/ortho_switch.json` | switch rates, from `benchmark_optimization.ortho` |
 
-Not shipped: source audio, per-clip transcription dumps, TTS renders, model
-weights. `daikon` is a private held-out control — only its aggregate numbers
-appear here, never its audio.
+Not included: source audio, per-clip transcription dumps, TTS renders, model
+weights. `daikon` is a private held-out control; only its aggregate numbers
+appear here.
 
-## Figure map
-
-Every figure the paper includes, its generator, and what it needs.
+## Figures
 
 | figure | generator | inputs |
 |---|---|---|
-| `wer_vs_badref.png` | `wer_vs_badref_fig.py` | shipped |
-| `battery_consensus{,_full}.png` | `battery_panels.py` | shipped |
-| `battery_masked{,_full}.png` | `battery_panels.py` | shipped |
-| `battery_ablation{,_full}.png` | `battery_ablation_fig.py` | shipped |
-| `battery_masked_ablation{,_full}.png` | `battery_masked_ablation_fig.py` | shipped |
-| `consensus_robustness.png` | `consfull_fig.py robustness` | shipped |
-| `consensus_whitebox_readouts.png` | `regen_whitebox_figs.py` | shipped |
-| `isolate_gating.png` | `isolate_fig.py` | shipped |
-| `libnum_voice_gap.png` | `libnum_voice_gap_fig.py` | shipped |
-| `libnum_voice_ladder.png` | `libnum_voice_ladder_fig.py` | shipped |
-| `nummask_lift_voice.png` | `nummask_lift_fig.py` | shipped |
-| `orthohon_voice2x2.png` | `orthohon_voice2x2_fig.py` | shipped |
-| `patch_dissociation.png` | `patch_dissociation_fig.py` | shipped |
-| `steer_input_level.png`, `steer_activation_level.png` | `steer_causal_fig.py` | shipped |
-| `masking_blackbox_datasets.png` | `masking_datasets_fig.py` | **`BENCHMARK_OPT_DATA`** |
-| `masking_voice.png` | `masking_voice_fig.py` | **`BENCHMARK_OPT_DATA`** |
-| `pair_spacing.png`, `pair_mister.png`, `pair_spacing_white.png` | `paired_grids.py` | **`BENCHMARK_OPT_DATA`** |
+| `wer_vs_badref.png` | `wer_vs_badref_fig.py` | in repo |
+| `battery_consensus{,_full}.png` | `battery_panels.py` | in repo |
+| `battery_masked{,_full}.png` | `battery_panels.py` | in repo |
+| `battery_ablation{,_full}.png` | `battery_ablation_fig.py` | in repo |
+| `battery_masked_ablation{,_full}.png` | `battery_masked_ablation_fig.py` | in repo |
+| `consensus_robustness.png` | `consfull_fig.py robustness` | in repo |
+| `consensus_whitebox_readouts.png` | `regen_whitebox_figs.py` | in repo |
+| `isolate_gating.png` | `isolate_fig.py` | in repo |
+| `libnum_voice_gap.png` | `libnum_voice_gap_fig.py` | in repo |
+| `libnum_voice_ladder.png` | `libnum_voice_ladder_fig.py` | in repo |
+| `nummask_lift_voice.png` | `nummask_lift_fig.py` | in repo |
+| `orthohon_voice2x2.png` | `orthohon_voice2x2_fig.py` | in repo |
+| `patch_dissociation.png` | `patch_dissociation_fig.py` | in repo |
+| `steer_input_level.png`, `steer_activation_level.png` | `steer_causal_fig.py` | in repo |
+| `masking_blackbox_datasets.png` | `masking_datasets_fig.py` | `BENCHMARK_OPT_DATA` |
+| `masking_voice.png` | `masking_voice_fig.py` | `BENCHMARK_OPT_DATA` |
+| `pair_spacing.png`, `pair_mister.png`, `pair_spacing_white.png` | `paired_grids.py` | `BENCHMARK_OPT_DATA` |
 
-The three `paired_grids.py` figures pair a switch-rate panel with a white-box
-NLL panel. **The switch-rate panels are reproducible from shipped data** via
-`ortho_switch_fig.py`, which recomputes them with `benchmark_optimization.ortho` from
-`data/ortho_switch.json`; only the NLL panels need the raw root. The library's
-switch rates were checked against `paired_grids.py` on the paper's data and
-agree exactly (46 models on pooled spacing, 43 on the honorific comparison, max
-difference 0.000000).
+`paired_grids.py` pairs a switch-rate panel with a white-box NLL panel. The
+switch-rate panels rebuild from data in the repository via `ortho_switch_fig.py`,
+which recomputes them with `benchmark_optimization.ortho`; only the NLL panels
+need the raw root. Those switch rates match `paired_grids.py` exactly on the
+paper's data (46 models pooled spacing, 43 cross-corpus honorific, max
+difference 0).
 
-## Verifying the extraction
-
-`benchmark_optimization.refdis` is a rewrite of the internal script behind the paper's
-reference-disagreement numbers, so it is checked rather than assumed:
+## Checking the extraction
 
 ```bash
 pytest tests/test_paper_equivalence.py -v
 ```
 
-This replays the original run's exact inputs from
-`data/consensus/vox_en_newwl4_samples.json` and asserts that every edit, every
-per-model verdict (1,338 edits × 39 models), and every accept-ref rate in the
-published leaderboard comes out identical.
+Replays the original reference-disagreement run's inputs from
+`data/consensus/vox_en_newwl4_samples.json` and requires identical output: every
+edit, every per-model verdict (1,338 edits × 39 models), every published rate.
 
-## Using a full results root
+## Full results root
 
 Set `BENCHMARK_OPT_DATA` to a directory laid out as:
 
@@ -90,10 +79,7 @@ $BENCHMARK_OPT_DATA/
   results/{corpus}/{model}/{split}/results.jsonl    # legacy layout, also read
 ```
 
-`*.wsds` files are Arrow IPC. `hyp_raw` is preferred over `hyp` per row, since
-the orthographic probe needs un-normalized text.
-
-Then:
+`*.wsds` are Arrow IPC. `hyp_raw` is preferred per row, falling back to `hyp`.
 
 ```bash
 cd repro
@@ -101,32 +87,28 @@ BENCHMARK_OPT_DATA=/path/to/results make all     # all 24 figures
 BENCHMARK_OPT_DATA=/path/to/results make cells   # re-derive data/ortho_switch.json
 ```
 
-Environment variables: `BENCHMARK_OPT_CELLS` (derived data, default `repro/data`),
-`BENCHMARK_OPT_FIGURES` (output, default `repro/out`), `BENCHMARK_OPT_DATA` (raw root),
-`BENCHMARK_OPT_FONT_DIR` (optional directory holding the Fellix family used in the
-paper; matplotlib's default font is used when unset, so figures render slightly
-differently from the published PDF).
+Other variables: `BENCHMARK_OPT_CELLS` (derived data, default `repro/data`),
+`BENCHMARK_OPT_FIGURES` (output, default `repro/out`), `BENCHMARK_OPT_FONT_DIR`
+(Fellix, used in the paper; matplotlib's default otherwise, so figures differ
+slightly from the published PDF).
 
 ## Audio-side probes
 
-`repro/probes/` holds the probes that need audio and model weights, and so
-cannot run from prediction files:
+`repro/probes/` needs audio and model weights.
 
-| script | what it does |
+| script | purpose |
 |---|---|
-| `build_entity_masked_dataset.py` | silences a chosen word (name, number) in each clip and records the hidden reference, producing the masked corpora |
+| `build_entity_masked_dataset.py` | silence a chosen word per clip, record the hidden reference |
 | `align_words_en.py` | forced word alignment, to locate the span to silence |
-| `probe_decoder_memorization.py` | the white-box engine: teacher-forces candidate transcripts and reads per-token log-probabilities |
+| `probe_decoder_memorization.py` | teacher-force candidate transcripts, read per-token log-probabilities |
 
 ```bash
-pip install -e ".[probes]"     # torch, torchaudio, soundfile
+pip install -e ".[probes]"
 export BENCHMARK_OPT_DATA=/path/to/results BENCHMARK_OPT_MODELS=/path/to/weights
 python repro/probes/probe_decoder_memorization.py --help
 ```
 
-Two caveats. Model loading covers the public checkpoints in the paper's roster;
-the `omni` backend needed an internal loader that is not part of this release,
-so its family is gated off, with the teacher-forcing logic kept as a reference
-implementation. And these scripts are research code, lifted with paths
-parameterized and internal imports replaced — they are less polished than
-`src/benchmark_optimization`, which is the part meant for reuse.
+Model loading covers the public checkpoints in the paper's roster. The `omni`
+backend needed an internal loader that is not part of this release and is gated
+off; its teacher-forcing code is kept for reference. These scripts are research
+code with paths parameterized and internal imports replaced.

@@ -1,37 +1,20 @@
-"""Orthographic switch rate: does a model's spelling follow the corpus?
+"""Orthographic switch rate.
 
 For a convention family whose arms sound identical (see
-:mod:`benchmark_optimization.conventions`), split the clips by which arm the *reference*
-uses. A model that transcribes audio has one habit and keeps it, so it scores
-high on the arm matching its habit and near zero on the other. A model whose
-output follows the reference scores high on both.
+:mod:`benchmark_optimization.conventions`), partition clips by which arm the
+reference uses, then per model:
 
-The switch rate is therefore the **minimum agreement across arms**:
+    switch = min over arms a of  P(model emits arm a | reference uses a)
 
-    switch(model) = min over arms a of  P(model emits arm a | reference uses a)
+A model with a fixed habit is right on one arm and wrong on the other, so its
+minimum is near 0; only a model that changes arm with the reference raises it.
+Chance for two arms is 0.5.
 
-A fixed-convention model is pinned near 0 whatever its habit is; only a model
-that changes arm with the reference can raise the minimum. The chance level for
-a two-arm family is 0.5, reached by a model picking an arm at random. Read
-switch rates against 0.5, not against 0.
+Arms may come from one corpus (compound spacing) or from two with opposing
+conventions (honorifics, which no single corpus uses both of). The latter varies
+register along with the arm.
 
-Two ways to obtain the arms, with different confounds:
-
-``within-dataset``
-    Both arms appear inside one corpus. This holds for compound spacing
-    (:data:`benchmark_optimization.conventions.SPACING_PAIRS`) and is the cleanest test:
-    speaker, register, and recording conditions are matched by construction.
-
-``cross-dataset``
-    Each arm comes from a different corpus, which is the only option for
-    honorifics — a single corpus almost never uses both. Register then differs
-    with the arm, so a model could be responding to register rather than to text
-    convention. Prefer corpora of the same register; the paper's headline
-    comparison uses two read-speech corpora that happen to have opposite
-    honorific conventions, which holds register roughly fixed.
-
-Matching runs on **raw text**, before normalization, since normalization is
-what erases these distinctions.
+Matching runs on raw text; normalization erases these distinctions.
 """
 
 from __future__ import annotations
@@ -145,18 +128,12 @@ def switch_rate(
 ) -> dict[str, SwitchResult]:
     """Switch rate per model for one convention family.
 
-    ``clips`` is a list of ``(reference_text, {model: hypothesis_text})``. Both
-    the reference and the hypotheses must be **raw**, un-normalized text. Clips
-    where the family does not appear in the reference are skipped, so it is fine
-    to pass an entire corpus.
+    ``clips`` is ``[(reference, {model: hypothesis})]``, all raw text. Clips
+    where the family does not appear in the reference are skipped.
 
-    ``min_per_arm`` drops any model without that many clips on *every* arm.
-    Without the floor, a model with two clips on one arm can post 1.0.
-
-    The returned interval is a Wilson interval on the limiting arm alone; it
-    does not account for having taken a minimum over arms, so it is
-    anti-conservative when the arms are close. Treat near-chance results as
-    near-chance.
+    ``min_per_arm`` drops models without that many clips on every arm. The
+    interval covers the limiting arm only, so it is anti-conservative when arms
+    are close.
     """
     tally, labels = _tally([family], clips, None)
     return _score(tally, labels, family.name, min_per_arm)
@@ -170,17 +147,12 @@ def pooled_switch_rate(
     name: str = "pooled",
     min_per_arm: int = 5,
 ) -> dict[str, SwitchResult]:
-    """Switch rate over several families sharing a common arm structure.
+    """Switch rate over several families sharing an arm structure.
 
-    Arms are pooled by position, so arm *i* of every family counts toward
-    ``arm_names[i]``. Use this for families that test the same convention in
-    different words and are individually too rare to bound tightly — the
-    spacing group (``any one``/``anyone``, ``every one``/``everyone``, …) is the
-    motivating case.
-
-    Only pool families where the positions genuinely mean the same thing.
-    Pooling "abbreviated" with "spaced" would produce a number with no
-    interpretation.
+    Arms pool by position: arm *i* of every family counts toward
+    ``arm_names[i]``. Needed for the spacing group, whose families are each too
+    rare to bound tightly. Only pool families whose positions mean the same
+    thing.
     """
     if len(arm_names) != pooled_arms(families):
         raise ValueError(f"got {len(arm_names)} arm names for families with {pooled_arms(families)} arms")
@@ -194,13 +166,11 @@ def switch_rates(
     *,
     min_per_arm: int = 5,
 ) -> dict[str, dict[str, SwitchResult]]:
-    """Run :func:`switch_rate` over several families, each scored separately.
+    """Run :func:`switch_rate` per family, scored separately.
 
-    Returns ``{family_name: {model: SwitchResult}}``, omitting families no model
-    was measurable on. Families are kept separate rather than averaged: they
-    differ in base rate and in coverage, so a pooled *average* would be
-    dominated by whichever family is most frequent. To combine families that
-    test the same convention, use :func:`pooled_switch_rate`.
+    Returns ``{family: {model: SwitchResult}}``, omitting families no model was
+    measurable on. Not averaged across families: they differ in base rate and
+    coverage. Use :func:`pooled_switch_rate` to combine.
     """
     out = {}
     for fam in families:

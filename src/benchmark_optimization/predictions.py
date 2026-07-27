@@ -1,24 +1,18 @@
-"""Loading per-clip predictions from several models into one aligned table.
+"""Loading per-clip predictions from several models into one table.
 
-Both probes need the same thing: for each clip, one reference and one
-hypothesis per model. This module builds that from whatever files you have.
+The native format is the Open ASR Leaderboard prediction manifest, one JSON
+object per clip::
 
-The native format is the Open ASR Leaderboard's prediction manifest, a JSONL
-file with one object per clip:
-
-    {"audio_filepath": ..., "duration": ..., "time": ...,
-     "text": "<reference>", "pred_text": "<prediction>"}
+    {"audio_filepath": ..., "text": "<reference>", "pred_text": "<prediction>"}
 
 Those manifests hold **raw** text — the leaderboard normalizes only when
-computing WER, after writing the manifest. That matters, because the
-orthographic switch probe measures exactly the distinctions that normalization
-erases, and so can only run on raw text. Anything already normalized supports
-the reference-disagreement probe but not the switch probe.
+computing WER, after writing the manifest. The switch rate measures distinctions
+normalization erases, so it needs raw text; already-normalized input supports
+reference disagreement only.
 
-Clips are joined on ``audio_filepath``. A model missing a clip is absent from
-that clip's hypotheses rather than present with an empty string: the probes
-distinguish "did not run" from "transcribed nothing", and conflating them puts
-infrastructure failures in the numerator.
+Clips join on ``audio_filepath``. A model missing a clip is absent from that
+clip's hypotheses rather than present with an empty string, so that "did not
+run" stays distinct from "transcribed nothing".
 """
 
 from __future__ import annotations

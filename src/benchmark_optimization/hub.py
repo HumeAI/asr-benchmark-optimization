@@ -12,7 +12,7 @@ from __future__ import annotations
 
 from .predictions import PredictionSet, load_manifest
 
-DATASET = "HumeAI/ASR-benchmark-optimization"
+DATASET = "HumeAI/ASR-benchmark-optimization-predictions"
 
 
 def _api(token: str | None):

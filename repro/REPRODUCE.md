@@ -70,7 +70,7 @@ edit, every per-model verdict (1,338 edits × 39 models), every published rate.
 ## Published predictions
 
 The five raw-data figures re-score per-model output. That output is published at
-[HumeAI/ASR-benchmark-optimization](https://huggingface.co/datasets/HumeAI/ASR-benchmark-optimization);
+[HumeAI/ASR-benchmark-optimization-predictions](https://huggingface.co/datasets/HumeAI/ASR-benchmark-optimization-predictions);
 `export_predictions.py` is the script that produced it.
 
 ## Full results root

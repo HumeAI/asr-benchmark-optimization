@@ -1,7 +1,7 @@
 """Export our result shards to the published prediction dataset.
 
 Produces the layout of
-[HumeAI/ASR-benchmark-optimization](https://huggingface.co/datasets/HumeAI/ASR-benchmark-optimization):
+[HumeAI/ASR-benchmark-optimization-predictions](https://huggingface.co/datasets/HumeAI/ASR-benchmark-optimization-predictions):
 
     predictions/{corpus}/{model}.jsonl    Open ASR Leaderboard manifest format
     masks/{variant}.parquet               truncation_meta, the mask recipes

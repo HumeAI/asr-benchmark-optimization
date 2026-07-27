@@ -134,12 +134,12 @@ corrected comparison and the masked-word readouts.
 ## Input format
 
 Predictions for the paper's models are published at
-[HumeAI/ASR-benchmark-optimization](https://huggingface.co/datasets/HumeAI/ASR-benchmark-optimization)
+[HumeAI/ASR-benchmark-optimization-predictions](https://huggingface.co/datasets/HumeAI/ASR-benchmark-optimization-predictions)
 — 17 corpora, 308 model runs — so the paper's numbers are reproducible without
 re-running inference:
 
 ```bash
-hf download HumeAI/ASR-benchmark-optimization --repo-type dataset --local-dir data/
+hf download HumeAI/ASR-benchmark-optimization-predictions --repo-type dataset --local-dir data/
 benchmark-optimization switch-rate --preds data/predictions/librispeech-clean --spacing
 ```
 

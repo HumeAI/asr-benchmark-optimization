@@ -67,6 +67,12 @@ Replays the original reference-disagreement run's inputs from
 `data/consensus/vox_en_newwl4_samples.json` and requires identical output: every
 edit, every per-model verdict (1,338 edits × 39 models), every published rate.
 
+## Published predictions
+
+The five raw-data figures re-score per-model output. That output is published at
+[HumeAI/ASR-benchmark-optimization](https://huggingface.co/datasets/HumeAI/ASR-benchmark-optimization);
+`export_predictions.py` is the script that produced it.
+
 ## Full results root
 
 Set `BENCHMARK_OPT_DATA` to a directory laid out as:

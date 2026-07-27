@@ -24,6 +24,8 @@ dependencies = ["transformers>=4.40"]
 [project.optional-dependencies]
 # Parquet prediction files.
 parquet = ["pyarrow>=14"]
+# Loading the published predictions from the Hub.
+hub = ["huggingface_hub>=0.24", "polars>=0.20"]
 # Spelled-number canonicalization, so word-vs-digit formatting is not counted as
 # a reference error. Matters most outside English.
 numbers = ["text2num>=3.0"]

@@ -111,6 +111,13 @@ their audio span with silence, and writes a corpus plus `truncation_meta.parquet
 holding the removed text. Scoring is then a regex match of the hidden word
 against the hypothesis.
 
+The paper's masked corpora are published as **recipes rather than audio** under
+`masks/` in the dataset above: `entity_t0`/`entity_t1` give the silenced span and
+`hidden_ref` the removed word. Since the mask is `samples[t0:t1] = 0` and the
+source corpora are natively 16 kHz, applying a recipe to the source clip
+reproduces the masked audio exactly — 5.8 MB of recipes in place of 10.6 GB of
+wavs, and no forced aligner needed.
+
 ## Teacher-forced NLL
 
 Score candidate transcripts against the audio to see which the model prefers.
@@ -126,7 +133,18 @@ corrected comparison and the masked-word readouts.
 
 ## Input format
 
-One JSONL per model, named after the model, in the leaderboard's manifest format:
+Predictions for the paper's models are published at
+[HumeAI/ASR-benchmark-optimization](https://huggingface.co/datasets/HumeAI/ASR-benchmark-optimization)
+— 17 corpora, 308 model runs — so the paper's numbers are reproducible without
+re-running inference:
+
+```bash
+hf download HumeAI/ASR-benchmark-optimization --repo-type dataset --local-dir data/
+benchmark-optimization switch-rate --preds data/predictions/librispeech-clean --spacing
+```
+
+For your own models: one JSONL per model, named after the model, in the
+leaderboard's manifest format:
 
 ```json
 {"audio_filepath": "...", "text": "<reference>", "pred_text": "<prediction>"}
@@ -134,6 +152,19 @@ One JSONL per model, named after the model, in the leaderboard's manifest format
 
 Text must be **raw**. `text`/`pred_text`, `reference`/`hypothesis` and `ref`/`hyp`
 column names are all accepted, as are CSV and Parquet.
+
+Or straight from the Hub:
+
+```python
+from benchmark_optimization import hub, conventions, ortho
+
+preds = hub.load_predictions("librispeech-clean")
+ortho.pooled_switch_rate(list(conventions.SPACING_PAIRS), list(preds.clips()),
+                         arm_names=conventions.SPACING_ARMS)
+
+hub.available()                                          # 17 corpora
+hub.load_masks("voxpopuli-mask-num-all-numexp-silence")  # a mask recipe
+```
 
 ```python
 from benchmark_optimization import load_dir
@@ -153,6 +184,11 @@ preds.normalized()    # for reference-error detection; NOT for switch rate
   anti-conservative when arms are close.
 
 ## Provenance
+
+Inference used our own model wrappers, which are not part of this release: the
+paper's roster spans eight different loaders (`hf_transformers`, `nemo`, `salm`,
+`granite_speech`, `voxtral`, `phi4_multimodal`, `qwen3_asr`, plus one API). The
+published predictions are the reproducibility artifact instead.
 
 The reference-error implementation is a rewrite of the script used for the paper.
 `tests/test_paper_equivalence.py` replays that run's inputs and requires identical

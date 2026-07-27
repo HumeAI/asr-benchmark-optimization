@@ -21,7 +21,7 @@ Quick start::
 
 from __future__ import annotations
 
-from . import align, conventions, normalize, ortho, predictions, refdis
+from . import align, conventions, hub, normalize, ortho, predictions, refdis
 from .conventions import Family, families_for, family, make_family
 from .normalize import tokenize
 from .ortho import switch_rate, switch_rates
@@ -33,6 +33,7 @@ __version__ = "0.1.0"
 __all__ = [
     "align",
     "conventions",
+    "hub",
     "normalize",
     "ortho",
     "predictions",

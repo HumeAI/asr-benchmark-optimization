@@ -14,6 +14,34 @@ per-clip predictions; the last two need audio and model weights.
 | [masked-entity recovery](#masked-entity-recovery) | whether a model still emits a word after that word is silenced | audio |
 | [teacher-forced NLL](#teacher-forced-nll) | which of two candidate transcripts a model assigns higher likelihood, given the audio | audio + weights |
 
+## Quick start
+
+Run the orthographic switch-rate probe on Whisper large-v3's published raw
+predictions for the LibriSpeech clean test set:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -e ".[hub]"
+
+hf download HumeAI/ASR-benchmark-optimization-predictions \
+  predictions/librispeech-clean/whisper-large-v3.jsonl \
+  --repo-type dataset --local-dir data/
+
+benchmark-optimization switch-rate \
+  --preds data/predictions/librispeech-clean/whisper-large-v3.jsonl \
+  --spacing
+```
+
+This downloads one prediction manifest, not model weights, so it runs on CPU in
+a few seconds after installation. The output reports whether Whisper follows
+the reference's choice between forms such as `any one` and `anyone`; a score near
+0 indicates a fixed spelling habit, while 0.5 is chance for the two arms. To test
+another model, replace the JSONL with predictions in the same
+[input format](#input-format).
+
+## Installation
+
 ```bash
 pip install -e .          # methods 1-2
 pip install -e ".[probes]"  # 3-4: torch, torchaudio, soundfile

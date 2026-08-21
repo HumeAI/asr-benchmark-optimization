@@ -6,6 +6,7 @@ dist/
 .venv*/
 .pytest_cache/
 .ruff_cache/
+.DS_Store
 
 # Rendered figures — rebuild with `cd repro && make figures`.
 repro/out/
@@ -16,3 +17,7 @@ repro/out/
 /data/
 /results/
 /models/
+
+# Manifests written by the README's examples. The shipped example set lives
+# under examples/predictions and is not affected.
+/predictions/

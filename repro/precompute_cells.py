@@ -129,6 +129,7 @@ def main() -> None:
         arm_names=conventions.SPACING_ARMS,
         name="spacing",
         min_per_arm=5,
+        interval_method="legacy-wilson",  # preserve the paper's published intervals
     )
     print(f"  pooled spacing: {len(spacing)} models measurable")
 
@@ -137,7 +138,10 @@ def main() -> None:
     # Cross-corpus: VoxPopuli references abbreviate, LibriSpeech spells out, so
     # the two arms come from different corpora. min_per_arm is lower here
     # because honorifics are rarer than the pooled spacing group.
-    mister = ortho.switch_rate(conventions.family("hon_mister"), both, min_per_arm=3)
+    mister = ortho.switch_rate(
+        conventions.family("hon_mister"), both, min_per_arm=3,
+        interval_method="legacy-wilson",  # preserve the paper's published intervals
+    )
     print(f"  honorific mister: {len(mister)} models measurable")
 
     payload = {

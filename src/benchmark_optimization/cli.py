@@ -139,13 +139,16 @@ def cmd_switch_rate(args) -> None:
         arm_names = conventions.SPACING_ARMS if args.spacing else fams[0].arm_labels
         try:
             pooled = ortho.pooled_switch_rate(
-                fams, clips, arm_names=arm_names, name="pooled", min_per_arm=args.min_per_arm
+                fams, clips, arm_names=arm_names, name="pooled", min_per_arm=args.min_per_arm,
+                interval_method=args.interval_method,
             )
         except ValueError as e:
             sys.exit(f"cannot pool the requested families: {e}")
         results = {"pooled(" + ",".join(f.name for f in fams) + ")": pooled} if pooled else {}
     else:
-        results = ortho.switch_rates(fams, clips, min_per_arm=args.min_per_arm)
+        results = ortho.switch_rates(
+            fams, clips, min_per_arm=args.min_per_arm, interval_method=args.interval_method,
+        )
 
     if not results:
         sys.exit(
@@ -173,6 +176,9 @@ def cmd_switch_rate(args) -> None:
     print("switch = min over arms of P(model emits the arm the reference used).")
     print("Chance is 0.500 for a two-arm family. A model with a fixed convention")
     print("sits near 0; only reference-following raises the minimum.")
+    print(f"Interval method: {args.interval_method} (per model/family, not across all results).")
+    if args.interval_method == "legacy-wilson":
+        print("Historical limiting-arm interval: not adjusted for arm selection.")
 
     if args.out:
         payload = {
@@ -180,6 +186,7 @@ def cmd_switch_rate(args) -> None:
                 m: {
                     "switch": r.switch, "lo": r.lo, "hi": r.hi,
                     "limiting_arm": r.limiting_arm,
+                    "interval_method": r.interval_method,
                     "arms": {a: {"hits": t.hits, "n": t.n} for a, t in r.arms.items()},
                 }
                 for m, r in per_model.items()
@@ -244,6 +251,13 @@ def build_parser() -> argparse.ArgumentParser:
         "occur inside a single read-speech corpus, so register is matched.",
     )
     sr.add_argument("--min-per-arm", type=int, default=5)
+    sr.add_argument(
+        "--interval-method",
+        choices=ortho.INTERVAL_METHODS,
+        default="simultaneous",
+        help="simultaneous exact binomial bounds (default), or historical limiting-arm "
+        "Wilson bounds for paper reproduction",
+    )
     sr.set_defaults(func=cmd_switch_rate)
     return p
 

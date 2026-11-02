@@ -255,8 +255,19 @@ preds.normalized()    # for reference-error detection; NOT for switch rate
   establishes that a model was trained on evaluation data.
 - Denominators differ per model. Report `n_eligible` with any rate.
 - Chance for a two-arm switch rate is 0.5, not 0.
-- The switch-rate interval covers the limiting arm only, so it is
-  anti-conservative when arms are close.
+- Switch-rate intervals use simultaneous Clopper–Pearson binomial bounds:
+  with `m` required arms, each arm receives error budget `0.05/m`, then the
+  reported endpoints are the minimum lower and minimum upper bounds. This
+  gives at least 95% coverage for the minimum under fixed-arm binomial
+  sampling, without requiring independence between arms. It does not address
+  correlated clips within an arm, post-hoc family selection, or simultaneous
+  inference across models/families. A missing required arm is not scored.
+- For historical reproduction use `--interval-method legacy-wilson`, or
+  `interval_method="legacy-wilson"` in the Python API. This retains the old
+  interval on the empirically limiting arm, which is not selection-adjusted.
+  The method is recorded in CLI JSON. Point estimates and tallies are unchanged
+  when every required arm is present. `repro/precompute_cells.py` explicitly
+  uses legacy mode, and shipped figure data are unchanged.
 
 ## Provenance
 
